@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projekt_Grafy_i_sieci.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace Projekt_Grafy_i_sieci
         public MainWindow()
         {
             InitializeComponent();
+            Main.Content = new MainPage();
+            this.Closed += CloseApp;
+        }
+
+        private void CloseApp(Object Sender, EventArgs E)
+        {
+            Application.Current.Shutdown();
+            this.Close();
         }
     }
 }

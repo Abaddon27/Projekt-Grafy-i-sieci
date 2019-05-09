@@ -1,0 +1,91 @@
+﻿<Page x:Class="Projekt_Grafy_i_sieci.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Projekt_Grafy_i_sieci.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Grid Name="grid1">
+        <Grid.Resources>
+            <Style x:Name="textBoxStyle" TargetType="TextBox">
+                <Setter Property="Visibility" Value="Visible"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Background" Value="#FF767676"/>
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="MaxLength" Value="2"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="TextAlignment" Value="Center"/>
+                <EventSetter Event="MouseEnter" Handler="TextBox_MouseEnter"/>
+                <EventSetter Event="MouseLeave" Handler="TextBox_MouseLeave"/>
+                <EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotFocus"/>
+                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="TextBox_PreviewMouseLeftButtonDown"/>
+
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="s"/>
+
+        <TextBox Text="A" Grid.Row="0" Grid.Column="1"/>
+        <TextBox Text="B" Grid.Row="0" Grid.Column="2"/>
+        <TextBox Text="C" Grid.Row="0" Grid.Column="3"/>
+        <TextBox Text="D" Grid.Row="0" Grid.Column="4"/>
+        <TextBox Text="E" Grid.Row="0" Grid.Column="5"/>
+        <TextBox Text="F" Grid.Row="0" Grid.Column="6"/>
+        <TextBox Text="G" Grid.Row="0" Grid.Column="7"/>
+        <TextBox Text="H" Grid.Row="0" Grid.Column="8"/>
+        <TextBox Text="I" Grid.Row="0" Grid.Column="9"/>
+        <TextBox Text="J" Grid.Row="0" Grid.Column="10"/>
+        <TextBox Text="A" Grid.Column="0" Grid.Row="1"/>
+        <TextBox Text="B" Grid.Column="0" Grid.Row="2"/>
+        <TextBox Text="C" Grid.Column="0" Grid.Row="3"/>
+        <TextBox Text="D" Grid.Column="0" Grid.Row="4"/>
+        <TextBox Text="E" Grid.Column="0" Grid.Row="5"/>
+        <TextBox Text="F" Grid.Column="0" Grid.Row="6"/>
+        <TextBox Text="G" Grid.Column="0" Grid.Row="7"/>
+        <TextBox Text="H" Grid.Column="0" Grid.Row="8"/>
+        <TextBox Text="I" Grid.Column="0" Grid.Row="9"/>
+        <TextBox Text="J" Grid.Column="0" Grid.Row="10"/>
+
+    </Grid>
+</Page>
