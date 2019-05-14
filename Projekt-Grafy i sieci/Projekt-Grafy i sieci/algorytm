@@ -1,0 +1,100 @@
+using System;
+
+namespace algorytm2
+{
+    class Program
+    {
+        class Wierzcholek
+        {
+            public int dist { get; set; } //dystans
+            public int prev { get; set; } //poprzednik
+            public bool odwiedzony { get; set; }
+        };
+
+        static int ZnajdzMinDist(Wierzcholek[] tab)
+        {
+            int min = -1;
+            int mindist = 2147483647;
+            for (int i = 0; i < tab.Length; i++)
+            {
+                if (tab[i].odwiedzony==false && tab[i].dist < mindist)
+                {
+                    min = i;
+                    mindist = tab[i].dist;
+                }
+            }
+            return min;
+        }
+        
+        static Wierzcholek[] Dijkstry(int[,] macierz, int startowy)
+        {
+            //przygotowanie macierzy, dla wierzch startowego dist = 0
+            int iloscW = macierz.GetLength(0);
+            Wierzcholek[] tab = new Wierzcholek[iloscW];
+            for (int i = 0; i < iloscW; i++)
+            {
+                if (i == startowy)
+                {
+                    tab[i].dist = 0;
+                    tab[i].odwiedzony = false;
+                    tab[i].prev = -1;
+                }
+                else
+                {
+                    tab[i].dist = 2147483647; //zamiast nieskonczonosci
+                    tab[i].odwiedzony = false;
+                    tab[i].prev = -1;
+                }
+            }
+
+            int u = startowy;
+            while (u != -1) 
+            {
+                tab[u].odwiedzony = true;
+                for (int i = 0; i < iloscW; i++)
+                {
+                    if (macierz[u, i] > 0)
+                        if (tab[u].dist + macierz[u, i] < tab[i].dist)
+                        {
+                            {
+                                tab[i].dist = tab[u].dist + macierz[u, i];
+                                tab[i].prev = u;
+                            }
+                        }
+                }
+                u = ZnajdzMinDist(tab);
+            }
+            return tab;
+        }
+
+        
+        static void Main(string[] args)
+        {
+            int[,] tab = new int[4,4];
+
+            tab[0, 0] = -1;
+            tab[0, 1] = -1;
+            tab[0, 2] = 3;
+            tab[0, 3] = 2;
+
+            tab[1, 0] = -1;
+            tab[1, 1] = -1;
+            tab[1, 2] = 1;
+            tab[1, 3] = 4;
+
+            tab[2, 0] = 3;
+            tab[2, 1] = 1;
+            tab[2, 2] = -1;
+            tab[2, 3] = -1;
+
+            tab[3, 0] = 2;
+            tab[3, 1] = 4;
+            tab[3, 2] = -1;
+            tab[3, 3] = -1;
+
+            
+
+            Console.ReadKey();
+        }
+    }
+}
