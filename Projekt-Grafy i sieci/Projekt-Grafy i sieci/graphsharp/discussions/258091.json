@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "614650",
+    "ThreadId": "258091",
+    "Html": "\r\n<p>Hello!</p>\r\n<p>I need to implement a reset function to clean a visualized graph layout. I tried to set _graphToVisualize = null, the graph layout doesn't update. I tried to create a _graphToVisualize with no vertex, and my application just crashed. Anybody has an idea\r\n how I should do?</p>\r\n<p>Thanks!</p>\r\n<p>lys06&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-05-18T07:55:22.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "640536",
+    "ThreadId": "258091",
+    "Html": "<p>My suggestion would be to remove the vertices and edges from the underlying graph.</p>\r\n<p>For example:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>List&lt;TEdge&gt; elist = Graph.Edges.ToList();\r\nList&lt;TVertex&gt; vlist = Graph.Vertices.ToList();\r\n<span style=\"color: blue;\">foreach</span> (<span style=\"color: blue;\">var</span> e <span style=\"color: blue;\">in</span> elist)\r\n     Graph.RemoveEdge(e);\r\n<span style=\"color: blue;\">foreach</span> (<span style=\"color: blue;\">var</span> v <span style=\"color: blue;\">in</span> vlist)\r\n     Graph.RemoveVertex(v);\r\n</pre>\r\n</div>",
+    "PostedDate": "2011-07-11T10:08:31.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

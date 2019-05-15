@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1044438",
+    "ThreadId": "443896",
+    "Html": "Hi there, finally i've managed to complete my own graph rendering library to the state it can be shown to the community. Based on the Graph# algorithms it provides extensibility and performance to the whole processes of calculation and rendering.\r<br />\n<br />\nFeel free to look at it on: <a href=\"https://graphx.codeplex.com/\" rel=\"nofollow\">https://graphx.codeplex.com/</a><br />\n",
+    "PostedDate": "2013-05-16T04:56:41.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450374",
+    "ThreadId": "443896",
+    "Html": "Bump. Relocated to <a href=\"https://github.com/panthernet/GraphX\" rel=\"nofollow\">https://github.com/panthernet/GraphX</a>. It's already far gone from GraphSharp core, almost completely rewritten and provides many nice features.<br />\n",
+    "PostedDate": "2015-10-29T17:22:44.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

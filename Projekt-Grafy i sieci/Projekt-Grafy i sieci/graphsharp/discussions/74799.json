@@ -1,0 +1,106 @@
+[
+  {
+    "Id": "255992",
+    "ThreadId": "74799",
+    "Html": "<p>Hi, has anybody had a go at making GraphLayout into a MultiSelector, Selector or ItemsControl? This would be an extremely handy thing to do.</p>\r\n<p>If not, how have you handled selection?</p>\r\n<p>Cheers,</p>\r\n<p>Graeme.</p>",
+    "PostedDate": "2009-11-11T07:42:58.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "256810",
+    "ThreadId": "74799",
+    "Html": "<p>Currently is not possible to natively select vertex/edge on the graph layout. Actually I have used a trick to do this.</p>\r\n<p>In a fast way:</p>\r\n<p>_ implement a bool property on your vertex type (exampe. isSelected)</p>\r\n<p>_ catch the click of one vertexControl and set the isSelected property to true (or false) of the vertex property of your vertexcontrol.</p>\r\n<p>_ to store your selection add the vertex control selected to a collection</p>\r\n<p>_ to show the selection use a trigger (i have marked the selected index by adding a strong black border)</p>\r\n<p>Let me know if this help. Otherwise i will provide more code.</p>\r\n<p>&nbsp;</p>\r\n<p>BadAng</p>",
+    "PostedDate": "2009-11-13T08:28:03.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "415847",
+    "ThreadId": "74799",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>badang wrote:</strong><br>\r\n<p>Currently is not possible to natively select vertex/edge on the graph layout. Actually I have used a trick to do this.</p>\r\n<p>In a fast way:</p>\r\n<p>_ implement a bool property on your vertex type (exampe. isSelected)</p>\r\n<p>_ catch the click of one vertexControl and set the isSelected property to true (or false) of the vertex property of your vertexcontrol.</p>\r\n<p>_ to store your selection add the vertex control selected to a collection</p>\r\n<p>_ to show the selection use a trigger (i have marked the selected index by adding a strong black border)</p>\r\n<p>Let me know if this help. Otherwise i will provide more code.</p>\r\n<p>&nbsp;</p>\r\n<p>BadAng</p>\r\n</blockquote>\r\n<p>Please put this code here or send me to icq/e-mail 663619/ducebod(a)gmail.com. Thanks a lot!</p>\r\n<p>Dmitry</p>",
+    "PostedDate": "2010-03-09T01:54:12.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425890",
+    "ThreadId": "74799",
+    "Html": "<p>Hey guys,</p>\r\n<p>Ran into the same problem.</p>\r\n<p>Could you please post the code on the forum that we can use it too. :)</p>\r\n<p>Thanking you.</p>\r\n<p>rootme</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-31T03:03:38.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436941",
+    "ThreadId": "74799",
+    "Html": "I have successfully made a &quot;area select&quot; that enables you to select multiple vertices at once with a on screen block and then move them around.",
+    "PostedDate": "2010-04-29T00:52:03.15-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1039895",
+    "ThreadId": "74799",
+    "Html": "A code sample would still be nice and helpful. Thx.<br />\n",
+    "PostedDate": "2013-05-06T07:32:03.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070920",
+    "ThreadId": "74799",
+    "Html": "Is there anyone that can post the code sample please?<br />\n",
+    "PostedDate": "2013-07-21T01:08:50.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070923",
+    "ThreadId": "74799",
+    "Html": "Let me advice you to look at <a href=\"http://panthernet.ru/en/projects-en/graphx-en\" rel=\"nofollow\">http://panthernet.ru/en/projects-en/graphx-en</a><br />\nThis functions are native supported there and there are sample application which shows how to handle multiple selection.<br />\n",
+    "PostedDate": "2013-07-21T01:29:11.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251108",
+    "ThreadId": "74799",
+    "Html": "plz provide me the code for area-select. Badly in need off<br />\n",
+    "PostedDate": "2014-05-29T23:28:05.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1353599",
+    "ThreadId": "74799",
+    "Html": "Hii..\r<br />\nIs there any way to select multiple vertices/nodes through a mouse drag operation like zooming (using alt+mouse drag to zoom a part) ?\r<br />\n<br />\nWith Regards\r<br />\n<br />\nAMB<br />\n",
+    "PostedDate": "2015-02-17T21:41:38.42-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354394",
+    "ThreadId": "74799",
+    "Html": "There is such feature in GraphX, if you want it BADLY in GraphSharp you can look how it is implemented in GraphX and try to implement by yourself.\r<br />\nLook at <a href=\"https://github.com/panthernet/GraphX/blob/PCL/Examples/ShowcaseApp.WPF/Pages/DynamicGraph.xaml.cs\" rel=\"nofollow\">https://github.com/panthernet/GraphX/blob/PCL/Examples/ShowcaseApp.WPF/Pages/DynamicGraph.xaml.cs</a>\r<br />\nfor dg_zoomctrl_AreaSelected() method and look for all underlying logic which includes DragBehaviour and ZoomControl modifications.<br />\n",
+    "PostedDate": "2015-02-20T09:38:56.203-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356217",
+    "ThreadId": "74799",
+    "Html": "Thank you panthernet. I implemented that feature in Graph Sharp itself..  I used an article on \r<br />\n<a href=\"http://www.c-sharpcorner.com/UploadFile/393ac5/simple-drag-selection-of-items-in-wpf/\" rel=\"nofollow\">http://www.c-sharpcorner.com/UploadFile/393ac5/simple-drag-selection-of-items-in-wpf/</a>  to implement it. <br />\n",
+    "PostedDate": "2015-02-26T21:50:40.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1356223",
+    "ThreadId": "74799",
+    "Html": "But a small change in   ApplyDragSelectionRect() from article <a href=\"http://www.c-sharpcorner.com/UploadFile/393ac5/simple-drag-selection-of-items-in-wpf/\" rel=\"nofollow\">http://www.c-sharpcorner.com/UploadFile/393ac5/simple-drag-selection-of-items-in-wpf/</a><br />\n<br />\n/// &lt;summary&gt;<br />\n<pre><code>    /// Select all nodes that are in the drag selection rectangle.\n    /// &lt;/summary&gt;\n    private void ApplyDragSelectionRect()\n    {\n        dragSelectionCanvas.Visibility = Visibility.Collapsed;\n</code></pre>\n\n/*<br />\n//selected nodes  is  an global variable, declared as<br />\n// public List&lt;String&gt; selected_nodes = new List&lt;string&gt;(); <br />\n*/<br />\n<br />\n//to clear if already any nodes were selected<br />\n<pre><code>            selected_nodes.Clear();</code></pre>\n\n//to make all nodes background color as black in default<br />\n<pre><code>            foreach (PocVertex vertex in graphLayout.Graph.Vertices)\n            {\n                vertex.Color_val = &quot;Black&quot;;\n\n            }\n\n        double x = Canvas.GetLeft(dragSelectionBorder);\n        double y = Canvas.GetTop(dragSelectionBorder);\n\n        double width = dragSelectionBorder.Width;\n        double height = dragSelectionBorder.Height;\n        Rect dragRect = new Rect(x, y, width, height);\n</code></pre>\n\n// creating an item rectangle for each node,and to check whether any nodes is under the selection rectangle dragrect<br />\n<pre><code>        foreach (PocVertex vertex in graphLayout.Graph.Vertices)\n        {\n            VertexControl vs;\n            double vertexX=0;\n            double vertexY=0;\n            vs = graphLayout.GetVertexControl(vertex);\n            Point relativePoint = vs.TransformToAncestor(this).Transform(new Point(0, 0));\n            vertexX = relativePoint.X;\n            vertexY = relativePoint.Y;\n            Rect itemrect = new Rect(vertexX,vertexY, vs.ActualWidth, vs.ActualHeight);\n</code></pre>\n\n//checking itemrectangle (of node) is inside selection rectangle dragRect or not<br />\n<pre><code>            if (dragRect.Contains(itemrect))\n            {\n\n                selected_nodes.Add(vertex.ID.ToString());</code></pre>\n\n//changing Background of node this particular node which is inside the selection rectangle dragRect  from black to red to identify the selected nodes<br />\n<pre><code>                vertex.Color_val = &quot;red&quot;;\n            } \n        }\n\n</code></pre>\n\n//mapping graph again<br />\n<pre><code>        this.DataContext = vm;\n\n    }\n\n\n\n</code></pre>\n\n//the pocvertex.cs file <br />\n<br />\npublic class PocVertex:INotifyPropertyChanged<br />\n<pre><code>{\n    public string ID { get;  set; }\n    public string colorval=&quot;Black&quot;;\n    public string Color_val { \n        get{\n            return colorval;\n                }\n        set\n        {\n            colorval = value;\n            NotifyPropertyChanged(&quot;Color_val&quot;);\n        }\n    }\n</code></pre>\n\n#region INotifyPropertyChanged Implementation<br />\n<pre><code>    public event PropertyChangedEventHandler PropertyChanged;\n\n    private void NotifyPropertyChanged(string info)\n    {\n        if (PropertyChanged != null)\n        {\n            PropertyChanged(this, new PropertyChangedEventArgs(info));\n        }\n    }\n\n    #endregion\n\n</code></pre>\n\n// Vertex Control modification in xml side<br />\n<br />\n  &lt;Style TargetType=&quot;{x:Type graphsharp:VertexControl}&quot; x:Name=&quot;Vertex_Control&quot; &gt;<br />\n<pre><code>        &lt;Setter Property=&quot;Template&quot;&gt;\n            &lt;Setter.Value&gt;\n                &lt;ControlTemplate TargetType=&quot;{x:Type graphsharp:VertexControl}&quot; x:Name=&quot;Vertex_Control_Control_Template&quot;&gt;\n\n                        &lt;Border x:Name=&quot;Vertex_Border&quot;\n                               BorderBrush=&quot;White&quot;\n                                BorderThickness=&quot;2&quot; Background=&quot;{Binding Color_val,UpdateSourceTrigger=PropertyChanged}&quot;\n                                CornerRadius=&quot;10,10,10,10&quot;  \n                                Padding=&quot;{TemplateBinding Padding}&quot;&gt;\n\n                            &lt;StackPanel Orientation=&quot;Vertical&quot; x:Name=&quot;Vertex_Stack_Panel&quot; &gt;\n                            &lt;ContentPresenter Content=&quot;{TemplateBinding Vertex}&quot; \n                                       ContentTemplate=&quot;{StaticResource demoTemplate}&quot; /&gt;\n\n                            &lt;/StackPanel&gt;\n\n                    &lt;/Border&gt;\n\n\n                &lt;/ControlTemplate&gt;\n\n            &lt;/Setter.Value&gt;\n        &lt;/Setter&gt;\n\n\n    &lt;/Style&gt;\n\n</code></pre>\n\n",
+    "PostedDate": "2015-02-26T22:07:12.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

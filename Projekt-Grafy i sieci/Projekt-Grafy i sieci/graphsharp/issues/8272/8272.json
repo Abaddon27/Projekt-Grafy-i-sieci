@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Create the tutorial, and add it to the wiki.",
+    "LastUpdatedDate": "2017-11-28T01:15:54.777-08:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-04-20T00:48:11.943-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Tutorial - new tutorial about handling onclick events for vertices",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 2,
+    "Id": 8272
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "542675",
+    "ThreadId": "240149",
+    "Html": "\r\n<p>Hi,<br>\r\n<br>\r\nI arrived here thanks to Sacha Barber's blog. I want to create a hierarchical layout, but I can't figure out how to accomplish this.<br>\r\n<br>\r\nBasically I've four categories of vertexes. Say A till D. Each of them have about 10 vertexes. There is a unidirectional link from A vertexes to B or C, B to C and C to D. (eg A1-&gt;B1, A1-&gt;B2, A2-&gt;C1...). I want to create a layout where the first &quot;row&quot;\r\n contains all A vertexes, the second row all B vertexes, etc. I tried the Sugiyama, but how can I set the A layer to 1, B to layer 2, etc. before the algorthm starts?<br>\r\n<br>\r\nThanks for your help,<br>\r\nFrank</p>\r\n",
+    "PostedDate": "2011-01-01T07:54:32.14-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "544741",
+    "ThreadId": "240149",
+    "Html": "\r\n<p>does a tree layout handle this? if not you might need to look at a compound layout - there is an example in the sample app.</p>\r\n",
+    "PostedDate": "2011-01-06T03:42:10.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "545555",
+    "ThreadId": "240149",
+    "Html": "\r\n<p>I tried the tree layout, but you may get something like this:</p>\r\n<p>A1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A2</p>\r\n<p>B1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C2</p>\r\n<p>C1</p>\r\n<p>And I would like to have the C's on the same level. I think my question looks like what pirobox asked in\r\n<a href=\"http://graphsharp.codeplex.com/Thread/View.aspx?ThreadId=64760\">http://graphsharp.codeplex.com/Thread/View.aspx?ThreadId=64760</a></p>\r\n<p>It isn't clear to me what the compound layout does. I looked at the sample and the CompoundFDP sample at Sacha's blog, but I don't think that will help me.</p>\r\n",
+    "PostedDate": "2011-01-07T10:54:17.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546241",
+    "ThreadId": "240149",
+    "Html": "\r\n<p>I don't think this is possible without writing your own layout algorithm.</p>\r\n<p>you might try the &quot;efficient Sugiyama&quot; algorithm which tends to give deeper trees than the simple tree algorithm.</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-01-09T08:43:46.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "560821",
+    "ThreadId": "240149",
+    "Html": "\r\n<p>I'm interested in something similar.</p>\r\n<p>I have a ring of vertices, all neighbours connected with edges these i call first class edges. But there are some edges between vertices that are not neighbours, those are second class edges. None of the builtin algorithms make difference between those two\r\n classes and layout my ring into something completly different.</p>\r\n<p>So the only solution is to inherit an own layout?</p>\r\n<p>The best way would be to layout the graph using the first class edges, and after the layout finished, draw the remaining second classes edges. Any direction where to start?</p>\r\n<p>&nbsp;</p>\r\n<p>ps. grapsharp anyway is a superb component! glad to found it!</p>\r\n",
+    "PostedDate": "2011-02-04T07:54:56.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

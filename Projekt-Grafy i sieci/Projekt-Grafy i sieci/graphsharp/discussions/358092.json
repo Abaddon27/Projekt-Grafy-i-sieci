@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "843904",
+    "ThreadId": "358092",
+    "Html": "\r\n<p>Hey,</p>\r\n<p>I need to give each edge a weight and i have to set each edge color depends on it's weight .</p>\r\n<p>I think the best way would be by setting the style of the EdgeControl , but i'm making something wrong . plz help !</p>\r\n<p>Or at least if there is a way to do it by code ..</p>\r\n<p>Like graphLayout.HighLightEdge(myEdge);</p>\r\n<p>but it's not working for me !</p>\r\n<p>&nbsp;</p>\r\n<p>Any help will be appreciated</p>\r\n<p>Thanx</p>\r\n",
+    "PostedDate": "2012-06-02T12:29:34.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "949523",
+    "ThreadId": "358092",
+    "Html": "\r\n<p>If your custom edge has an int Weight property you could use the EdgeControl style to set the edge Foreground by binding to the Weight and using a converter to convert it into a color.</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">Setter</span> <span style=\"color:red\">Property</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">Foreground</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">Value</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{Binding Path=Weight, Converter={StaticResource MyConverter}}</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">/&gt;</span>\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>And then in MyConverter's Convert <a id=\"_GPLITA_0\" title=\"Click to Continue &gt; by Shopping Sidekick\" href=\"\" style=\"text-decoration:underline\">\r\nmethod</a>:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>        <span style=\"color:blue\">public</span> <span style=\"color:blue\">object</span> Convert(<span style=\"color:blue\">object</span> value, Type targetType, <span style=\"color:blue\">object</span> parameter, System.Globalization.CultureInfo culture)\n        {\n            <span style=\"color:blue\">int</span> weight = value <span style=\"color:blue\">as</span> <span style=\"color:blue\">int</span>;\n            <span style=\"color:blue\">if</span>(weight &lt; 10) <span style=\"color:blue\">return</span> new SolidColorBrush(Colors.Blue);\n            <span style=\"color:blue\">else</span> <span style=\"color:blue\">if</span>(weight&lt;50) <span style=\"color:blue\">return</span> new SolidColorBrush(Colors.Yellow);\n            <span style=\"color:blue\">else</span> <span style=\"color:blue\">if</span>(weight&lt;100) <span style=\"color:blue\"><a id=\"_GPLITA_1\" title=\"Click to Continue &gt; by Shopping Sidekick\" href=\"\" style=\"text-decoration:underline\">return</a></span> new SolidColorBrush(Colors.Red);\n            <span style=\"color:green\">// or whatever other colors need to be returned</span>\n        }\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-11-30T06:29:58.163-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

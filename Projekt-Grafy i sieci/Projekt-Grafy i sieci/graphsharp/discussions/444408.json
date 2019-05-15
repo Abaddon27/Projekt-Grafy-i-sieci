@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "1046448",
+    "ThreadId": "444408",
+    "Html": "Hi,\r<br />\n<br />\nIs it possible to have dotted lines for edges. If so, please help me how to proceed with this.\r<br />\n<br />\nThanks in Advance<br />\n",
+    "PostedDate": "2013-05-21T04:23:11.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1046873",
+    "ThreadId": "444408",
+    "Html": "You can add <strong>StrokeDashArray=&quot;1 2&quot;</strong> param to the Path object in the EdgeControl template. Just play with the values and look help on this param.\r<br />\n<br />\nAlso you can look at my project at <a href=\"http://graphx.codeplex.com\" rel=\"nofollow\">http://graphx.codeplex.com</a> . It is being actively developed and you may found it interesting. Cheers!<br />\n",
+    "PostedDate": "2013-05-21T23:32:08.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1046878",
+    "ThreadId": "444408",
+    "Html": "Thanks Panthernet. I tried that yesterday and got it working. But my requirement is to have dotted lines and solid lines for edges based on a value of the property of custom data type (e.g. assume property1 is part of pocEdge. if property1 = &quot;value1&quot; then edge should have solid lines and property1=&quot;value2&quot; then edge should have dotted lines).\r<br />\nNot sure how to achieve this. \r<br />\n<br />\nThanks in advance <br />\n",
+    "PostedDate": "2013-05-21T23:41:07.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047052",
+    "ThreadId": "444408",
+    "Html": "I haven't tested it but it should be something like this:<br />\n<ol>\n<li>Create converter to return <strong>DoubleCollection</strong> data based on edge data:</li>\n</ol>\n<pre><code>public class EdgeDashConverter : IValueConverter\n{\n    public object Convert(object value, Type targetType, \n        object parameter, CultureInfo culture)\n    {\n        var edgedata = value as YOUR EDGE DATA TYPE HERE;\n        if(edgedata.prop == 0) return new System.Windows.Media.DoubleCollection(new double[] { 1, 2 }); // PLAY with values \n        else return new System.Windows.Media.DoubleCollection(new double[] { 3, 4 });\n    }\n \n    public object ConvertBack(object value, Type targetType, \n        object parameter, CultureInfo culture)\n    {\n        return null;\n    }\n}</code></pre>\n\nIn the template file define new object for converter instance:<br />\n<pre><code>&lt;local:EdgeDashConverter x:Key=&quot;dconv&quot; /&gt;</code></pre>\n\nAdd converter to needed property in EdgeControl template:<br />\n<pre><code>StrokeDashArray=&quot;{Binding Path=Edge, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource dconv}}&quot;</code></pre>\n\n",
+    "PostedDate": "2013-05-22T05:12:46.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047551",
+    "ThreadId": "444408",
+    "Html": "Super!! Its working!! Thanks a lot panthernet!!!<br />\n",
+    "PostedDate": "2013-05-23T00:38:33.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047638",
+    "ThreadId": "444408",
+    "Html": "But Pahternet, there is a small issue with this. When  the line is dotted, the arrow is also dotted in the edge and it looks weird. So can u please help me on achieving a dotted line with solid arrow  in the edge? somethign like ----&gt;<br />\n",
+    "PostedDate": "2013-05-23T04:15:57.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047685",
+    "ThreadId": "444408",
+    "Html": "You can try to add arrow <strong>LineSegment</strong> s in <strong>EdgeRoutetoPointConverter</strong> this way:<br />\n<pre><code>                        new LineSegment(p2 + v - n, true) { IsStroked = false },\n                        new LineSegment(p2 + v + n, true) { IsStroked = false }}, true)</code></pre>\n\n<strong>IsStroked</strong> property set to false should not stroke an arrow. Though i've alsoi havn't tested it :)<br />\nAs a huge workaround you can try to split Path objects into two - for arrow and line respectedly.<br />\n",
+    "PostedDate": "2013-05-23T05:37:26.963-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1048091",
+    "ThreadId": "444408",
+    "Html": "Panternet, I had tried that IsStroked yesterday, It isn't working :-( . As you said having two Paths would be a huge workaround.  :(. \r<br />\nThanks anyways!!<br />\n",
+    "PostedDate": "2013-05-24T00:04:56.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1048450",
+    "ThreadId": "444408",
+    "Html": "Well, then i think the second Path is the only way. It is simple, but i can't provide detailed example as my own library is already have many differences in edge rendering from Graph#. Though all you need is define the second Path object in the EdgeControl template, define another converter for that Path. If you have simple edges you can even have single converter with simple calculations done. Now you set the dashed path in the first converter and normal arrowhead path in the second converter.\r<br />\nOr you can add additional DependencyProperty to EdgeControl class and store arrowhead coordinates (or even Path object already built) calculated in first converter and then bind this new property to the second path object.<br />\n",
+    "PostedDate": "2013-05-24T13:56:39.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1049099",
+    "ThreadId": "444408",
+    "Html": "Let me try and see. Will update you.\r<br />\nAnyways thanks a lot. <br />\n",
+    "PostedDate": "2013-05-27T03:28:42.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

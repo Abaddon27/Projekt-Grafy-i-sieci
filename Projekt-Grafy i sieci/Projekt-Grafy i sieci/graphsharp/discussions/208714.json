@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "428849",
+    "ThreadId": "208714",
+    "Html": "<p>I have write a User control in xmal where the graph draw&nbsp;and consume this in the win form when i&nbsp;debug the project it will generate the graph but not display that on the form. can any one suggest me this one or send me this kind of sample where a grap[h is generated as user control and consumed any&nbsp;where also need to define the tooltip and right clik on edge or node remove that one.</p>\r\n<p>Thanks in advance Nitin Singhal&nbsp;</p>",
+    "PostedDate": "2010-04-08T08:20:20.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "429213",
+    "ThreadId": "208714",
+    "Html": "<p>My requirement is to show tool tip on edge as well as on vertices and on right click of vertices or edge i can remove the node or edge. i suppose this sample is tightly bound for the functionality. due to which i am not able to make changes in the sample graph code. Please help me or send me a examle code for these functionalities.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Nitin Singhal</p>",
+    "PostedDate": "2010-04-09T04:36:12.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "431508",
+    "ThreadId": "208714",
+    "Html": "<p>This is a badly formulated question... please provide more information on what you did, any sample, etc.</p>",
+    "PostedDate": "2010-04-15T08:27:10.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "597222",
+    "ThreadId": "208714",
+    "Html": "<p>I am having a similar issue. &nbsp;I basically took the example (from youtube), created a WPF User Control. &nbsp;I then took that user control and added it to a Win Form using an ElementHost. &nbsp;Everything compiles and it debugs, however when the control is displayed  on the WinForm the actual nodes aren't visible. &nbsp;The nodes may be drawn somewhere on the graph but I cannot see them.</p>\n<p>Any suggestions on what could be happening are most welcome. &nbsp;If I find a solution I'll post it here.</p>\n<p>&nbsp;</p>\n<p>I had a very stupid mistake in my code. &nbsp;Add the below to your partial class for the WPF User Control:</p>\n<p>&nbsp;</p>\n<p>DataContext = this;</p>\n<p>&nbsp;</p>\n<p>Adding the above line should allow the graph to grab the data you're attempting to use (ie: if you're creating the data manually like I did in my test). &nbsp;Hopefully this helps someone.</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2011-04-14T07:18:38.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

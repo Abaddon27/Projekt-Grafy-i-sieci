@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1447061",
+    "ThreadId": "645804",
+    "Html": "Hi there,\r<br />\n<br />\nTrying to create an application which will export the graph positions.\r<br />\n<br />\nI'm wanting to somehow read the XY positions of each Edge similar to how you are able to read the X and Y of a Vertex:\r<br />\n<br />\nDim vc As VertexControl = graphLayout.GetVertexControl(entity)\r<br />\ndim xval as integer = (vc.GetValue(GraphCanvas.XProperty))\r<br />\n<br />\nIs there any equivalent for edges? I mean there will be two X and two Y for the start and end of the line, but I can't seem to retrieve these details.\r<br />\n<br />\nThere are details being stored in the PreviousArrangeRect of the Edge control - but that is not accessible.\r<br />\n<br />\nThanks in advance.<br />\n",
+    "PostedDate": "2015-10-05T01:54:24.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

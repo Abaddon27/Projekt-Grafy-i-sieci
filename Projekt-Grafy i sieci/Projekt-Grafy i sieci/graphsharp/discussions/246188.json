@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "566791",
+    "ThreadId": "246188",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Is it possible to generate a graph with curved edges?</p>\r\n<p>What I'm thinking about is something like;&nbsp;http://ashitani.jp/gv/#</p>\r\n",
+    "PostedDate": "2011-02-15T15:27:18.91-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "596114",
+    "ThreadId": "246188",
+    "Html": "<p>This would be very helpful. I saw in a Sugiyama layout Graph# draws elbowed edges (not straight from source to destination). It should be very simple to take middles of all straight lines and draw a B-Spline curve.</p>",
+    "PostedDate": "2011-04-12T12:01:40.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "688991",
+    "ThreadId": "246188",
+    "Html": "<p>Hi guys,</p>\r\n<p>I try to do the same and found that there is nothing done about that issue yet. The class \"StandardEdgeRoutingAlgorithmFactory\" is just a dummy and does nothing as creating null's. The RoutedEdges method then should do the work in algorithm.Compute() but this only leads to the interface of it. My question is, is there any information available how to implement a routing algorithm correctly.</p>",
+    "PostedDate": "2011-10-25T06:28:17.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "932370",
+    "ThreadId": "246188",
+    "Html": "<p>hi, i'd like to bump this, i tried replacing the edgecontrol contentpresenter with a custom one that can draw bezier curves from a custom generated point list, but the problem is that it's only generated once, and i can't figure out to which layoutupdate/edge change events i can listen to force a redraw</p>",
+    "PostedDate": "2012-10-25T06:07:55.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "932679",
+    "ThreadId": "246188",
+    "Html": "\r\n<div dir=\"ltr\">Thanks for the reply,\r\n<div><br>\r\n</div>\r\n<div>Thank you for working on this problem, but <span style=\"font-size:10pt\">I do not need this any more feel free to do as you please.</span></div>\r\n<div><br>\r\n<div>\r\n<div id=\"SkyDrivePlaceholder\"></div>\r\n<hr id=\"stopSpelling\">\r\nFrom: [email removed]<br>\r\nTo: [email removed]<br>\r\nDate: Thu, 25 Oct 2012 06:08:06 -0700<br>\r\nSubject: Re: Curved Edges [graphsharp:246188]<br>\r\n<br>\r\nFrom: cppanda<br>\r\n<div id=\"ecxThreadNotificationPostBody\">hi, i'd like to bump this, i tried replacing the edgecontrol contentpresenter with a custom one that can draw bezier curves from a custom generated point list, but the problem is that it's only generated once, and i\r\n can't figure out to which layoutupdate/edge change events i can listen to force a redraw<br>\r\n</div>\r\n<div id=\"ecxThreadNotificationFooter\">Read the <a href=\"http://graphsharp.codeplex.com/discussions/246188#post932370\" target=\"_blank\">\r\nfull discussion online</a>.<br>\r\nTo add a post to this discussion, reply to this email (<a href=\"mailto:graphsharp@discussions.codeplex.com?subject=[graphsharp:246188]\">graphsharp@discussions.codeplex.com</a>)<br>\r\nTo start a new discussion for this project, email <a href=\"mailto:graphsharp@discussions.codeplex.com\">\r\ngraphsharp@discussions.codeplex.com</a><br>\r\nYou are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://graphsharp.codeplex.com/discussions/246188/unsubscribe/\" target=\"_blank\">\r\nunsubscribe</a> on CodePlex.com.<br>\r\nPlease note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com<br>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2012-10-25T14:43:14.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "932693",
+    "ThreadId": "246188",
+    "Html": "<p>could you tell me what kind of solution you came up with?</p>",
+    "PostedDate": "2012-10-25T15:52:49.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "941047",
+    "ThreadId": "246188",
+    "Html": "\r\n<div dir=\"ltr\">Hi Cppanda<br>\r\n<br>\r\nI never found a solution to this. The project I was working on simply didn't need this in the end.<br>\r\n<br>\r\n<div>\r\n<div id=\"SkyDrivePlaceholder\"></div>\r\n<hr id=\"stopSpelling\">\r\nFrom: [email removed]<br>\r\nTo: [email removed]<br>\r\nDate: Thu, 25 Oct 2012 15:52:53 -0700<br>\r\nSubject: Re: Curved Edges [graphsharp:246188]<br>\r\n<br>\r\nFrom: cppanda<br>\r\n<div id=\"ecxThreadNotificationPostBody\">could you tell me what kind of solution you came up with?<br>\r\n</div>\r\n<div id=\"ecxThreadNotificationFooter\">Read the <a href=\"http://graphsharp.codeplex.com/discussions/246188#post932693\" target=\"_blank\">\r\nfull discussion online</a>.<br>\r\nTo add a post to this discussion, reply to this email (<a href=\"mailto:graphsharp@discussions.codeplex.com?subject=[graphsharp:246188]\">graphsharp@discussions.codeplex.com</a>)<br>\r\nTo start a new discussion for this project, email <a href=\"mailto:graphsharp@discussions.codeplex.com\">\r\ngraphsharp@discussions.codeplex.com</a><br>\r\nYou are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://graphsharp.codeplex.com/discussions/246188/unsubscribe/\" target=\"_blank\">\r\nunsubscribe</a> on CodePlex.com.<br>\r\nPlease note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com<br>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2012-11-13T08:16:26.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "941651",
+    "ThreadId": "246188",
+    "Html": "\r\n<p>Yes, curved edges will definitely be very desirable. I'm willing to help implement this if someone can guide me in the right direction.</p>\r\n",
+    "PostedDate": "2012-11-14T08:23:27.283-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "998076",
+    "ThreadId": "246188",
+    "Html": "I also need curved edges for my project. I posted in another thread being told that I should implement my own edgerouting algorithm. However, I have no idea how to implement it following the design of Graph#........\r<br />\nAny help on how the empty interface like edgeroutingfactory plays the magical trick here? Guidance please.... :(\r<br />\nReading the code figuring out everything on my own is like a torture...<br />\n",
+    "PostedDate": "2013-02-07T10:04:07.73-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1030804",
+    "ThreadId": "246188",
+    "Html": "Hello everyone,\r<br />\n<br />\nI would also need curved edges for my project, cause I m developing a Finite State Machine graph and needs to have curved edges. Please if anyone finds a solution let us know.<br />\n",
+    "PostedDate": "2013-04-15T13:13:08.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052963",
+    "ThreadId": "246188",
+    "Html": "I've done some work on edges curving in my library. If you are interested you can check it at <a href=\"http://graphx.codeplex.com\" rel=\"nofollow\">http://graphx.codeplex.com</a>\r<br />\nThough it works right now it is not yet polished and i'll be glad if someone can make an ER curving algo using external interface provided as i have no time to work in all directions at the same time :)<br />\n",
+    "PostedDate": "2013-06-05T00:49:41.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

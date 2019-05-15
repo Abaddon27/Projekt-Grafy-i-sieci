@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "425616",
+    "ThreadId": "207831",
+    "Html": "<p>Hello! Is it possible to highlight needed edges?</p>",
+    "PostedDate": "2010-03-30T11:51:47.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "640761",
+    "ThreadId": "207831",
+    "Html": "<p>yes</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>graphLayout.HighlightEdge(graph.Edges.Where(q =&gt; q.Source.ToString() == TextBoxSource.Text &amp;&amp; q.Target.ToString() == TextBoxTarget.Text).First(), <span style=\"color: blue;\">null</span>);\r\n</pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2011-07-11T17:09:16.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

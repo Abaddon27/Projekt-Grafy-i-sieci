@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "684229",
+    "ThreadId": "275898",
+    "Html": "\r\n<p>I get this exception sometimes for the same data, and i'm not able to catch where it happens.</p>\r\n<p>It get triggered in the class &quot;AlgorithmBase.cs&quot; in method &quot;Compute&quot; when the method &quot;InternalCompute&quot; is&nbsp;invoiced!</p>\r\n<p>I get &quot;The given key was not&nbsp;present in the dictionary&quot;.</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-10-14T04:29:45.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684251",
+    "ThreadId": "275898",
+    "Html": "<p>Which layout algorithm do you use? Stacktrace?</p>",
+    "PostedDate": "2011-10-14T05:37:09.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685030",
+    "ThreadId": "275898",
+    "Html": "<p>Actually Tree</p>",
+    "PostedDate": "2011-10-16T23:23:32.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685104",
+    "ThreadId": "275898",
+    "Html": "<p>Anyone have any idea where the&nbsp;problem&nbsp;is?</p>\r\n<p>Thanks&nbsp;</p>",
+    "PostedDate": "2011-10-17T02:35:10.26-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685120",
+    "ThreadId": "275898",
+    "Html": "<p>Could you send me a stacktrace, please?</p>",
+    "PostedDate": "2011-10-17T03:19:31.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685123",
+    "ThreadId": "275898",
+    "Html": "<p>Hi, That is the stack Trace.</p>\r\n<p>Thanks for your help...</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;at System.Collections.Generic.Dictionary`2.get_Item(TKey key)&nbsp;</p>\r\n<p>&nbsp;at QuickGraph.BidirectionalGraph`2.OutDegree(TVertex v)&nbsp; &nbsp;</p>\r\n<p>at QuickGraph.BidirectionalGraph`2.Degree(TVertex v)&nbsp;</p>\r\n<p>&nbsp;at GraphSharp.Controls.GraphLayout`3.InitializePosition(TVertex vertex) in C:\\Users\\exalt\\Downloads\\graphsharp-fdc61b0ab7b9\\Source\\Graph#.Controls\\Controls\\GraphLayout.GraphElements.cs:line 267&nbsp; &nbsp;</p>\r\n<p>at GraphSharp.Controls.GraphLayout`3.OnMutation() in C:\\Users\\exalt\\Downloads\\graphsharp-fdc61b0ab7b9\\Source\\Graph#.Controls\\Controls\\GraphLayout.GraphElements.cs:line 162&nbsp; &nbsp;</p>\r\n<p>at GraphSharp.Controls.GraphLayout`3.&lt;DoNotificationLayout&gt;b__24(Object s, RunWorkerCompletedEventArgs e) in C:\\Users\\exalt\\Downloads\\graphsharp-fdc61b0ab7b9\\Source\\Graph#.Controls\\Controls\\GraphLayout.GraphElements.cs:line 129&nbsp; &nbsp;</p>\r\n<p>at System.ComponentModel.BackgroundWorker.OnRunWorkerCompleted(RunWorkerCompletedEventArgs e)&nbsp; &nbsp;</p>\r\n<p>at System.ComponentModel.BackgroundWorker.AsyncOperationCompleted(Object arg)&nbsp;</p>\r\n<p>at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)&nbsp; &nbsp;</p>\r\n<p>at MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.DispatcherOperation.InvokeImpl()&nbsp;</p>\r\n<p>at System.Windows.Threading.DispatcherOperation.InvokeInSecurityContext(Object state)&nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.runTryCode(Object userData) &nbsp;</p>\r\n<p>at System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup(TryCode code, CleanupCode backoutCode, Object userData) &nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)&nbsp; &nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)&nbsp; &nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.DispatcherOperation.Invoke()&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.Dispatcher.ProcessQueue()&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&nbsp; &nbsp;</p>\r\n<p>at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&nbsp; &nbsp;</p>\r\n<p>at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)&nbsp; &nbsp;</p>\r\n<p>at MS.Internal.Threading.ExceptionFilterHelper.TryCatchWhen(Object source, Delegate method, Object args, Int32 numArgs, Delegate catchHandler)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)&nbsp; &nbsp;</p>\r\n<p>at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)&nbsp; &nbsp;</p>\r\n<p>at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG&amp; msg)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Threading.Dispatcher.PushFrame(DispatcherFrame frame)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Application.RunDispatcher(Object ignore)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Application.RunInternal(Window window)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Application.Run(Window window)&nbsp; &nbsp;</p>\r\n<p>at System.Windows.Application.Run()&nbsp; &nbsp;</p>\r\n<p>at IFlow.App.Main() in C:\\Local-IFlow\\IFlow\\IFlow\\obj\\x86\\Debug\\App.g.cs:line 0&nbsp; &nbsp;</p>\r\n<p>at System.AppDomain._nExecuteAssembly(RuntimeAssembly assembly, String[] args)&nbsp; &nbsp;</p>\r\n<p>at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)&nbsp; &nbsp;</p>\r\n<p>at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()&nbsp; &nbsp;</p>\r\n<p>at System.Threading.ThreadHelper.ThreadStart_Context(Object state)&nbsp; &nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean ignoreSyncCtx)&nbsp; &nbsp;</p>\r\n<p>at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)&nbsp;</p>\r\n<p>at System.Threading.ThreadHelper.ThreadStart()</p>",
+    "PostedDate": "2011-10-17T03:35:09.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685142",
+    "ThreadId": "275898",
+    "Html": "<p>Get the latest source... I hope it won't happen again.</p>",
+    "PostedDate": "2011-10-17T04:44:59.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

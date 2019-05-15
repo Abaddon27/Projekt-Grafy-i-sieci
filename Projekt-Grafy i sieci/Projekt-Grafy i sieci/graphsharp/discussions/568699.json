@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1309328",
+    "ThreadId": "568699",
+    "Html": "Hello!\r<br />\nI am a user control GraphX in my program 'mpd' - page <a href=\"http://www.mpd-online.home.pl\" rel=\"nofollow\">www.mpd-online.home.pl</a>, but encoutered a certain problem.\r<br />\nI would like to set up a graph add more objects (Vertices) and connections (Edges), but so that there is no need to re-generate the entire graph - in short: add the Vertex without generating the chart again.\r<br />\nIs it possible?\r<br />\nPlease help how to do this - it is basically the only thing that I can not do it alone.\r<br />\nThis is a sample of my program using control GraphX - chart calls.<br />\n",
+    "PostedDate": "2014-09-30T11:19:52.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1355904",
+    "ThreadId": "568699",
+    "Html": "Hi,<br />\n<br />\nfor GraphX, better ask in the GraphX forum:<br />\n<a href=\"http://www.panthernet.ru/en/\" rel=\"nofollow\">click here</a><br />\n<br />\ngreetings<br />\nXDskynet<br />\n",
+    "PostedDate": "2015-02-26T02:16:58.423-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

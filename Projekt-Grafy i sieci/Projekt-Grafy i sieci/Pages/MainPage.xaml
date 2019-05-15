@@ -29,11 +29,29 @@
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 <Setter Property="TextAlignment" Value="Center"/>
+                <Setter Property="Visibility" Value="Hidden"/>
                 <EventSetter Event="MouseEnter" Handler="TextBox_MouseEnter"/>
                 <EventSetter Event="MouseLeave" Handler="TextBox_MouseLeave"/>
                 <EventSetter Event="GotKeyboardFocus" Handler="TextBox_GotFocus"/>
                 <EventSetter Event="PreviewMouseLeftButtonDown" Handler="TextBox_PreviewMouseLeftButtonDown"/>
-
+                <EventSetter Event="TextChanged" Handler="TextBox_TextChanged"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Visibility" Value="Visible"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Width" Value="30"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="Background" Value="#FF767676"/>
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="BorderBrush" Value="White"/>
+                <Setter Property="BorderThickness" Value="3"/>
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
         </Grid.Resources>
         <Grid.ColumnDefinitions>
@@ -64,28 +82,29 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <TextBox Name="s"/>
 
-        <TextBox Text="A" Grid.Row="0" Grid.Column="1"/>
-        <TextBox Text="B" Grid.Row="0" Grid.Column="2"/>
-        <TextBox Text="C" Grid.Row="0" Grid.Column="3"/>
-        <TextBox Text="D" Grid.Row="0" Grid.Column="4"/>
-        <TextBox Text="E" Grid.Row="0" Grid.Column="5"/>
-        <TextBox Text="F" Grid.Row="0" Grid.Column="6"/>
-        <TextBox Text="G" Grid.Row="0" Grid.Column="7"/>
-        <TextBox Text="H" Grid.Row="0" Grid.Column="8"/>
-        <TextBox Text="I" Grid.Row="0" Grid.Column="9"/>
-        <TextBox Text="J" Grid.Row="0" Grid.Column="10"/>
-        <TextBox Text="A" Grid.Column="0" Grid.Row="1"/>
-        <TextBox Text="B" Grid.Column="0" Grid.Row="2"/>
-        <TextBox Text="C" Grid.Column="0" Grid.Row="3"/>
-        <TextBox Text="D" Grid.Column="0" Grid.Row="4"/>
-        <TextBox Text="E" Grid.Column="0" Grid.Row="5"/>
-        <TextBox Text="F" Grid.Column="0" Grid.Row="6"/>
-        <TextBox Text="G" Grid.Column="0" Grid.Row="7"/>
-        <TextBox Text="H" Grid.Column="0" Grid.Row="8"/>
-        <TextBox Text="I" Grid.Column="0" Grid.Row="9"/>
-        <TextBox Text="J" Grid.Column="0" Grid.Row="10"/>
+        <TextBox Name="_01" Text="A" Grid.Row="0" Grid.Column="1" Visibility="Visible"/>
+        <TextBox Name="_02" Text="B" Grid.Row="0" Grid.Column="2" Visibility="Visible"/>
+        <TextBox Name="_03" Text="C" Grid.Row="0" Grid.Column="3"/>
+        <TextBox Name="_04" Text="D" Grid.Row="0" Grid.Column="4"/>
+        <TextBox Name="_05" Text="E" Grid.Row="0" Grid.Column="5"/>
+        <TextBox Name="_06" Text="F" Grid.Row="0" Grid.Column="6"/>
+        <TextBox Name="_07" Text="G" Grid.Row="0" Grid.Column="7"/>
+        <TextBox Name="_08" Text="H" Grid.Row="0" Grid.Column="8"/>
+        <TextBox Name="_09" Text="I" Grid.Row="0" Grid.Column="9"/>
+        <TextBox Name="_010" Text="J" Grid.Row="0" Grid.Column="10"/>
+        <TextBox Name="_10" Text="A" Grid.Column="0" Grid.Row="1" Visibility="Visible"/>
+        <TextBox Name="_20" Text="B" Grid.Column="0" Grid.Row="2" Visibility="Visible"/>
+        <TextBox Name="_30"  Text="C" Grid.Column="0" Grid.Row="3"/>
+        <TextBox Name="_40" Text="D" Grid.Column="0" Grid.Row="4"/>
+        <TextBox Name="_50" Text="E" Grid.Column="0" Grid.Row="5"/>
+        <TextBox Name="_60" Text="F" Grid.Column="0" Grid.Row="6"/>
+        <TextBox Name="_70" Text="G" Grid.Column="0" Grid.Row="7"/>
+        <TextBox Name="_80" Text="H" Grid.Column="0" Grid.Row="8"/>
+        <TextBox Name="_90" Text="I" Grid.Column="0" Grid.Row="9"/>
+        <TextBox Name="_100" Text="J" Grid.Column="0" Grid.Row="10"/>
+        <Button Content="Zamień na liste" HorizontalAlignment="Left" Margin="317,11,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="CreateMatrix" Grid.Column="11"/>
+        <Button Content="Dodaj wierchułek" HorizontalAlignment="Left" Margin="317,23,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="AddTextBoxMatrix" Grid.Column="11" Grid.Row="1"/>
 
     </Grid>
 </Page>

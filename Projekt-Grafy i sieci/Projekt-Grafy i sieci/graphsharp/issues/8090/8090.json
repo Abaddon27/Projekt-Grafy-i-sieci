@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It'd be very useful for the Efficient Sugiyama layout to have Layout Direction parameter\r\n\r\nfrom sourcecode :\r\n\r\n\r\n        //it will be available on next releases\r\n        /*public LayoutDirection Direction\r\n        {\r\n            get { return _direction; }\r\n            set\r\n            {\r\n                if (value == _direction)\r\n                    return;\r\n\r\n                _direction = value;\r\n                NotifyPropertyChanged(\"Direction\");\r\n            }\r\n        }*/\r\n\r\nhas anyone implemented it?",
+    "LastUpdatedDate": "2012-04-03T13:42:45.173-07:00",
+    "PlannedForRelease": "GraphSharp v2.0",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-01-07T06:28:08.657-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Layout direction for Efficient Sugiyama",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 5,
+    "Id": 8090
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

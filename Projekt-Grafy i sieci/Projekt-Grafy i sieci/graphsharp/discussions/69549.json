@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "236690",
+    "ThreadId": "69549",
+    "Html": "<p>First of all, thanks for this great library. There is one issue i faced while integrating graph# into one of my projects. GraphLayout' s ChangeState functions throws ArgumentOutOfRange exception wile executing the line below.&nbsp;</p>\r\n<p>\r\n<p><span style=\"color:#400080;font-size:x-small\"><span style=\"color:#400080;font-size:x-small\">protected</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#400080;font-size:x-small\"><span style=\"color:#400080;font-size:x-small\">void</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#010001;font-size:x-small\"><span style=\"color:#010001;font-size:x-small\">ChangeState</span></span></p>\r\n<p><span style=\"color:#010001\">{</span></p>\r\n</p>\r\n<p><span style=\"font-size:x-small\">(</span><span style=\"color:#400080;font-size:x-small\"><span style=\"color:#400080;font-size:x-small\">int</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#010001;font-size:x-small\"><span style=\"color:#010001;font-size:x-small\">stateIndex</span></span><span style=\"font-size:x-small\">)</span><span style=\"color:#400080;font-size:x-small\"><span style=\"color:#400080;font-size:x-small\">var</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#010001;font-size:x-small\"><span style=\"color:#010001;font-size:x-small\">activeState</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#2e53d1;font-size:x-small\"><span style=\"color:#2e53d1;font-size:x-small\">=</span></span><span style=\"font-size:x-small\"> </span><span style=\"color:#010001;font-size:x-small\"><span style=\"color:#010001;font-size:x-small\">_layoutStates</span></span><span style=\"font-size:x-small\">[</span><span style=\"color:#010001;font-size:x-small\"><span style=\"color:#010001;font-size:x-small\">stateIndex</span></span><span style=\"font-size:x-small\">];</span></p>\r\n<p>...</p>\r\n<p>}</p>\r\n<p>Is this an initialization issue? I based my implementation on the samples, probably missed some steps.</p>\r\n<p>Thanks in advance.</p>",
+    "PostedDate": "2009-09-20T16:43:56.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244527",
+    "ThreadId": "69549",
+    "Html": "<p>I have the same problem,</p>\r\n<p>An attempt to add a check (if _layoutStates.Count==0) return;) does work, but nothing is shown as a result.</p>\r\n<p>The problem in figuring out what happens is that you need to dive deep in the code, due to lack of comments or documentation. This is really to bad.</p>",
+    "PostedDate": "2009-10-11T23:35:40.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250862",
+    "ThreadId": "69549",
+    "Html": "<p>I posted a similar problem to the issue list here <a href=\"http://graphsharp.codeplex.com/WorkItem/View.aspx?WorkItemId=3933\">http://graphsharp.codeplex.com/WorkItem/View.aspx?WorkItemId=3933</a></p>",
+    "PostedDate": "2009-10-28T13:14:34.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

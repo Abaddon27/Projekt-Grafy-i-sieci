@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "767566",
+    "ThreadId": "316458",
+    "Html": "\r\n<p>I started my testproject and included the GRaphSharp, GRaphsharp.Controls, QuickGRaph and WPFextensions.</p>\r\n<p>When I declare the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xmlns:graphsharp=&quot;clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls&quot; part into my xaml it compiles but will generate problem loading on my XAML viewer.</p>\r\n<p>My error message tells me following:</p>\r\n<p>Error&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; Unable to load the metadata for assembly 'GraphSharp.Controls'. This assembly may have been downloaded from the web.&nbsp; See http://go.microsoft.com/fwlink/?LinkId=179545.&nbsp; The following error was encountered\r\n during load: Could not load file or assembly 'GraphSharp.Controls, Version=1.0.3438.42202, Culture=neutral, PublicKeyToken=null' or one of its dependencies. Operation is not supported. (Exception from HRESULT: 0x80131515)&nbsp;&nbsp;&nbsp; c:\\users\\gabriel\\documents\\visual\r\n studio 2010\\Projects\\GraphSharp\\GraphSharp\\MainWindow.xaml&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; GraphSharpTest</p>\r\n<p>&nbsp;</p>\r\n<p>Any suggestions?</p>\r\n",
+    "PostedDate": "2012-02-15T06:22:24.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816872",
+    "ThreadId": "316458",
+    "Html": "<p>You have to navigate to the dll in windows explorer, open its properties panel and select Unblock. &nbsp;If you download a zip file, save yourself a lot of time and do this on the zip file before you extract the contents.</p>",
+    "PostedDate": "2012-03-28T17:18:28.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "826280",
+    "ThreadId": "352916",
+    "Html": "<p><strong>How i can change layout direction of Sugiyama from \"TopToBottom\" to \"RightToLeft\"?</strong></p>\n<p>Does anyone have a solution to this problem?</p>\n<p>Is it possible rotate layout?</p>\n<p><strong>And how i can change &nbsp;thickness of the Edge?</strong></p>\n<p>I know how change brush</p>\n<p>EdgeControl Edge1 = graphLayout.GetEdgeControl(LastEdge);<br /> &nbsp;Brush brush = new SolidColorBrush(Colors.Black);<br /> &nbsp;Edge1.Foreground = brush;</p>\n<p>But i cant find how change thickness</p>\n<p>Please who can help me</p>",
+    "PostedDate": "2012-04-19T19:12:11.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

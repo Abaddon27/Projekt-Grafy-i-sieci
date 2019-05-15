@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1113501",
+    "ThreadId": "464024",
+    "Html": "Hi,\r<br />\n<br />\ncan anybody help me, how to implement Drag&amp;Drop for nodes in graph#?\r<br />\n<br />\nThanks a lot:\r<br />\nKovRobert<br />\n",
+    "PostedDate": "2013-10-29T00:39:19.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1113518",
+    "ThreadId": "464024",
+    "Html": "Hi, as i remember they are already implemented using attached properties in <strong>DragBehaviour</strong> class.\r<br />\nYou can edit them in the <strong>VertexControl</strong> template using smth like this:<br />\n<pre><code>xmlns:extbehaviour=&quot;clr-namespace:WPFExtensions.AttachedBehaviours;assembly=WPFExtensions&quot;\n\n        &lt;Setter Property=&quot;extbehaviour:DragBehaviour.IsDragEnabled&quot;\n                Value=&quot;True&quot; /&gt;\n        &lt;Setter Property=&quot;extbehaviour:DragBehaviour.X&quot;\n                Value=&quot;{Binding RelativeSource={RelativeSource Self},Path=(Controls:GraphCanvas.X),Mode=TwoWay}&quot; /&gt;\n        &lt;Setter Property=&quot;extbehaviour:DragBehaviour.Y&quot;\n                Value=&quot;{Binding RelativeSource={RelativeSource Self},Path=(Controls:GraphCanvas.Y),Mode=TwoWay}&quot; /&gt;</code></pre>\n\nAlso you can take a look at <a href=\"http://graphx.codeplex.com\" rel=\"nofollow\">http://graphx.codeplex.com</a>\r<br />\nThis is my enchancement of Graph# project.<br />\n",
+    "PostedDate": "2013-10-29T01:28:25.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2013-10-29T11:43:46.917-07:00"
+  },
+  {
+    "Id": "1113607",
+    "ThreadId": "464024",
+    "Html": "Hi,\r<br />\n<br />\nthank you for your answer, it was very helpful.\r<br />\n<br />\nThe other project is also great. In the near future i want to use that. :)\r<br />\n<br />\nThanks:\r<br />\nKovRobert.<br />\n",
+    "PostedDate": "2013-10-29T05:36:08.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

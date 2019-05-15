@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "937976",
+    "ThreadId": "402270",
+    "Html": "\r\n<p>I have customized my Vertices using a Style to set the Template property to a ControlTemplate, that itself references a DataTemplate.</p>\r\n<p>I'm now trying to highlight vertices that match a pattern after they've been added to the graph.</p>\r\n<p>But although I seem to be able to find the vertex any changes I make don't seem to be applied:(</p>\r\n",
+    "PostedDate": "2012-11-07T07:34:15.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

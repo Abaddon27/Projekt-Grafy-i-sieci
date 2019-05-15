@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1004079",
+    "ThreadId": "433826",
+    "Html": "Hey there,<br />\n<br />\nI have to visualize a Traceroute with different hops from a startpoint (source) to an endpoint (sink).<br />\n<br />\nI have 75 Vertices and 216 edges. The Problem is (regardless which Tree Generation Algorithm I use to create the Tree) the start node is on the left side, the end node is in the middle and 40 nodes are on the right side.<br />\n<br />\nI need something like that:<br />\n<br />\n<img src=\"http://i.stack.imgur.com/RkEeZ.jpg\" alt=\"Image\" />.<br />\n<br />\nIn addition the layout overlap removal algorithms also take no effect.<br />\n<br />\nThanks in advance :-)<br />\n<br />\nRegards <br />\nMarkus<br />\n",
+    "PostedDate": "2013-02-20T08:18:17.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1005016",
+    "ThreadId": "433826",
+    "Html": "Attach a picture how the wrong layout looks like.<br />\n",
+    "PostedDate": "2013-02-21T21:14:05.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1005066",
+    "ThreadId": "433826",
+    "Html": "Hey, <br />\n<br />\nthe graph looks like this at the moment:<br />\n<br />\n<img src=\"http://imageshack.us/a/img254/7552/part1e.th.png\" alt=\"Image\" /><br />\n<img src=\"http://imageshack.us/a/img545/9484/part2j.th.png\" alt=\"Image\" /><br />\n<img src=\"http://imageshack.us/a/img845/1865/part3n.th.png\" alt=\"Image\" /><br />\n<br />\n...the graph continues on the left side.<br />\n<br />\nIf I limit the count of &quot;paths&quot; through the network, it looks a little bit better. <br />\n<br />\nAnother thing are the overlapping paths (the algorithm to remove overlapping paths is enabled) .<br />\n<br />\nShould I use another graph than the BidirectionalGraph?<br />\n<br />\nThanks in advance :)<br />\n<br />\nRegards<br />\nMarkus<br />\n",
+    "PostedDate": "2013-02-21T23:32:03.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

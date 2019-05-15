@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "286193",
+    "ThreadId": "83245",
+    "Html": "<p>Hi,</p>\r\n<p>Does anyone have a sample/workaround to get and set the X and Y Coordiantes of a vertex on a Bidirectional graph.</p>\r\n<p>I am trying to drag and drop vertices from a list on the side onto the graph, which works, but they do not get created where I dropped them, they are created in the center of the screen.</p>\r\n<p>Any ideas will be appreciated,</p>\r\n<p>rootme</p>",
+    "PostedDate": "2010-02-05T05:06:46.063-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "287132",
+    "ThreadId": "83245",
+    "Html": "<p>Ok.</p>\r\n<p>I can drag and drop vertices from a list of icons onto the graph. I can also link them on the canvas with a line like link thing.</p>\r\n<p>I just need to get and set the X and Y of the vertices for layout reasons.</p>\r\n<p>How does the layout algorithms set the X and Y of the vertices? Is there some method I can call???</p>\r\n<p>thanks,</p>\r\n<p>&nbsp;</p>\r\n<p>rootme</p>",
+    "PostedDate": "2010-02-08T06:13:55.72-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "640928",
+    "ThreadId": "83245",
+    "Html": "<p>&nbsp;</p>\r\n<pre>IDictionary vertexPositions = new Dictionary(graph.VertexCount);\r\n            vertexPositions = graphLayout.GetLatestVertexPositions();</pre>\r\n<p>but first you should change something, GetLatestVertexPositions() is a method in GraphSharp.Controls.GraphLayout change its return type from private to public</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-07-12T02:15:37.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

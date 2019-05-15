@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "1326358",
+    "ThreadId": "573208",
+    "Html": "Hi,<br />\n<pre><code>I am a newbie to graphsharp. I have succesfully managed to use Graph# in Windows Form.</code></pre>\n\nI have defined a custom vertex<br />\n<pre><code> public class MyVertex\n    {\n        public string Name{ get; private set; }\n\n        public MyVertex(string name)\n        {\n            User = name;\n        }\n    }</code></pre>\n\nNow when I add vertexes and edges into my graphcontrol instance, which is defined as<br />\n<pre><code> public classMyGraphControl : BidirectionalGraph&lt;MyVertex, MyEdge&gt;\n\n</code></pre>\n\nThere are duplicate vertex created.<br />\n<br />\nThis behaviour is observed when custom vertices are created. However if I do not define custom vertices. the graph is shown without any duplicate<br />\n<br />\nExample :<br />\n<pre><code>       graphCtrl.AddVerticesAndEdge(new MyEdge(new MyVertex(&quot;A&quot;),\n                                                               new MyVertex(&quot;B&quot;)));\n\n            graphCtrl.AddVerticesAndEdge(new MyEdge(new MyVertex(&quot;B&quot;),\n                                                              new MyVertex(&quot;C&quot;)));</code></pre>\n\nThe above creates 4 vertices and 2 edges in the graphcontrol (Vertex B is getting duplicated in the control)<br />\n<br />\n A -&gt; B<br />\n B -&gt; C<br />\n<br />\nwhereas the expected behavior should be 3 vertices and 2 edges <br />\n<br />\nA -&gt; B -&gt; C<br />\n<br />\n<br />\nCan somebody please suggest how I can overcome this?<br />\n",
+    "PostedDate": "2014-11-26T04:08:02.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326374",
+    "ThreadId": "573208",
+    "Html": "I think that <strong>new SysVertexControl(&quot;B&quot;) != new MyVertex(&quot;B&quot;)</strong> thats why you get 4 vertices instead of 3. You create two different objects, so if you want to create only 3 you should declare smth like <strong>var vertex = new MyVertex(&quot;B&quot;);</strong> before the code presented above and use this <strong>vertex</strong> variable in your edge creation code.<br />\n",
+    "PostedDate": "2014-11-26T04:44:04.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326428",
+    "ThreadId": "573208",
+    "Html": "Sorry that was a typo error in the post, In my code MyVertex is used , I have edited and made the change in the post. so, the problem remains<br />\n",
+    "PostedDate": "2014-11-26T06:44:12.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326459",
+    "ThreadId": "573208",
+    "Html": "I even tried :<br />\n<pre><code>                MyVertex source = new MyVertex(strSource);\n                MyVertex Target = new MyVertex (strTarget);\n\n                if (!graphCtrl.ContainsVertex(source))\n                    graphCtrl.AddVertex(source);\n             \n                if (!graphCtrl.ContainsVertex(Target))\n                    graphCtrl.AddVertex(Target);\n             \n\n               if (!graphCtrl.ContainsEdge(source, Target))\n                      graphCtrl.AddEdge(Edge);</code></pre>\n\nbut duplicate Vertex always get created.<br />\n<pre><code> if (!graphCtrl.ContainsVertex(source))</code></pre>\n\nalways returns false even though a given vertex has already been added.<br />\n",
+    "PostedDate": "2014-11-26T07:16:33.17-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326469",
+    "ThreadId": "573208",
+    "Html": "Every time you create an object with the <strong>new</strong> operator a new unique instance of an object is created. if you use cycles make sure you create source, target and all corresponding edges and add them to graphCtrl only once.<br />\n<br />\nThe code you provided doesn't make sense as you create new object (source, Target) and try to look for it in the collection using <strong>ContainsVertex</strong> method (ofcause it isn't there, it's the new one ). I can't see all the logic, but it seems that you create new objects in the cycle. I think you should create all needed vertex and edge connections before trying to add them into ctrl.<br />\n<br />\nPS: If you want you can look at <a href=\"https://github.com/panthernet/GraphX/tree/PCL\" rel=\"nofollow\">GraphX</a>, it was initialy based on Graph# and far more advanced and user friendly.<br />\n",
+    "PostedDate": "2014-11-26T07:29:33.787-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-11-30T21:47:04.35-08:00"
+  },
+  {
+    "Id": "1326482",
+    "ThreadId": "573208",
+    "Html": "Yes you guessed it right.  The code mentioned runs in a cycle, Pardon me for not adding the complete code. Does graphX overcome this problem? I will give it a try , thanks for the link.<br />\n",
+    "PostedDate": "2014-11-26T08:05:11.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

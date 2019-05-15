@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "614141",
+    "ThreadId": "257980",
+    "Html": "\r\n<p>This tool looks really cool. I have watched the youtube videos and have been reading through the discussions, but the light hasn't gone on. I have been able to get the basic samples working but anything more complex is lost on me so far.</p>\r\n<p>All I want to do at this point is to create a simple graph with nodes that have borders and text. If I get the borders to work, I lose the text in the node. At some point I will want to creatre different shapes depending on node properties, but that is another\r\n battle for another day.</p>\r\n<p>I have a lot of .NET experience, but I guess I haven't had enough coffee yet. Can someone please point me to relevant discussions, docs, or&nbsp;code snippets that will help me get&nbsp;going?</p>\r\n<p>BTW... I am doing all of this is a WPF Browser app.</p>\r\n<p>Thanks</p>\r\n<p>John</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-05-17T12:01:36.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "614309",
+    "ThreadId": "257980",
+    "Html": "<p>Your problem is not a GraphSharp problem, it's basically a WPF problem.</p>\r\n<p>You need to get some WPF experience. Search these keywords: 'WPF datatemplate', 'WPF controltemplate'</p>\r\n<p>Create a new controltemplate for the VertexControl, or create&nbsp;a new DataTemplate for your vertex type.</p>",
+    "PostedDate": "2011-05-17T17:48:51.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "614520",
+    "ThreadId": "257980",
+    "Html": "<p>Thanks. I will do that.</p>",
+    "PostedDate": "2011-05-18T04:17:04.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "614558",
+    "ThreadId": "257980",
+    "Html": "<p>Thanks again for a well-timed kick in the a$$ to do my homework. Things are looking better.</p>\r\n<p>I will no doubt be back for more info, but I am&nbsp;up and running now!</p>",
+    "PostedDate": "2011-05-18T05:50:38.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

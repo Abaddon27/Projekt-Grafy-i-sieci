@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "186510",
+    "ThreadId": "55247",
+    "Html": "Hiya<br>\r\n<br>\r\nI just downloaded and compiled GraphSharp (with VS2008 express) which worked fine (other than the contract references). Now I have a compiled binary but I can't figure out how to use the controls in my XAML file. Each time I try to add a GraphLayout to my window Blend starts complaining that GraphLayout is not a WPF class or that it doesn't exist in the GraphLayout.Controls namespace. Does anybody have any ideas on how to get this to work. I would really like to try out the graph panel but currently it's not working :(<br>\r\n<br>\r\nRegards<br>\r\n<br>\r\nPetrik \r\n",
+    "PostedDate": "2009-05-04T05:45:28.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "190733",
+    "ThreadId": "55247",
+    "Html": "<p>Sorry for the late answer.</p>\r\n<p>At this moment i did not tried that in Blend. I will try it out tomorrow, i will let you know how to do it...</p>",
+    "PostedDate": "2009-05-15T07:03:34.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "191248",
+    "ThreadId": "55247",
+    "Html": "<p>so, i tried out the actual version with Blend 2, and it works with it. I just dragged 'n dropped the GraphLayout control from the custom controls to the WPF Window, and it worked.</p>",
+    "PostedDate": "2009-05-17T14:11:12.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "191249",
+    "ThreadId": "55247",
+    "Html": "<p>mmm ok. For some reason I couldn't get blend to find the components in the assembly :( When I add the assembly as reference it won't add the components to the component list. Not entirely sure what I did as I'm at work now and don't have access to the machine which has blend on it. Did you do something special in order to get the components to show up in the component list.</p>\r\n<p>I did try adding the components manually by editing the XAML but that led to the error I was talking about above.&nbsp;</p>\r\n<p>Anyway thanks heaps for your help :)</p>\r\n<p>Regards</p>\r\n<p>Patrick</p>",
+    "PostedDate": "2009-05-17T14:15:23.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193645",
+    "ThreadId": "55247",
+    "Html": "<p>No, i didn't do anything special, my components just appeared in the list of the custom controls.</p>\r\n<p>Anyway, do you use Blend or Blend 2? I've tried with Blend2.</p>",
+    "PostedDate": "2009-05-24T02:06:15.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193748",
+    "ThreadId": "55247",
+    "Html": "<p>Ok I will try this again. I must have done something wrong.</p>\r\n<p>As for Blend I've been using the beta for Blend 3 :) It looks pretty but I'm not entirely sure I get how works ;)</p>\r\n<p>Thanks heaps for helping me out.</p>",
+    "PostedDate": "2009-05-24T16:41:42.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

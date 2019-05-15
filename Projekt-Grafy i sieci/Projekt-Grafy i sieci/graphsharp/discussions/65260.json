@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "222264",
+    "ThreadId": "65260",
+    "Html": "<p>What would be the basic steps of creating a layout factory class? I tried a copypaste of StandardLayoutAlgorithmFactory, renaming it and then setting GraphLayout.LayoutAlgorithmFactory to a new instance of this. The result unfortunatly was an error :)</p>",
+    "PostedDate": "2009-08-11T16:46:15.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

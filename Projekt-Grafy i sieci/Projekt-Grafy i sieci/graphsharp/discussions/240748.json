@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "545004",
+    "ThreadId": "240748",
+    "Html": "\r\n<p>Hi All</p>\r\n<p>I've been trying to use GraphSharp to display the hierarchical relation between different datasets. This all works fine until I start adding datasets at runtime. At some point in the adding process I get the following exception</p>\r\n<pre>System.InvalidOperationException was unhandled\r\n  Message=The calling thread cannot access this object because a different thread owns it.\r\n  Source=WindowsBase\r\n  StackTrace:\r\n       at System.Windows.Threading.DispatcherObject.VerifyAccess()\r\n       at System.Windows.DependencyObject.GetValue(DependencyProperty dp)\r\n       at GraphSharp.Controls.GraphLayout`3.get_Graph()\r\n       at GraphSharp.Controls.GraphLayout`3.CreateVertexControl(TVertex vertex)\r\n       at GraphSharp.Controls.GraphLayout`3.OnMutation()\r\n       at GraphSharp.Controls.GraphLayout`3.b__24(Object s, RunWorkerCompletedEventArgs e)\r\n       at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)\r\n       at System.Threading._ThreadPoolWaitCallback.PerformWaitCallbackInternal(_ThreadPoolWaitCallback tpWaitCallBack)\r\n       at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback(Object state)\r\n  InnerException: \r\n</pre>\r\n<p>From the looks of it this happens because GraphLayout.Graph is a dependency property on a UI control which is being accessed by a non-UI thread. The interesting thing is that I call the NotifyPropertyChanged method on the UI thread but then graphsharp pushes\r\n the layout updating onto a background thread (which is obviously not the UI thread).</p>\r\n<p>Does anybody know how to solve this problem? I suspect that either graphsharp has to get the graph through a non-dependency property or some of the work has to be moved to the UI thread.</p>\r\n<p>Thanks</p>\r\n<p>Patrick</p>\r\n",
+    "PostedDate": "2011-01-06T11:28:05.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "549722",
+    "ThreadId": "240748",
+    "Html": "\r\n<p>It turns out it was a problem with the SynchronizationContext on the UI thread. Something my app was doing was removing the WPF version (i.e. DispatcherSynchronizationContext) which means that the first time it was needed again a default context was made.\r\n Obviously that was the wrong thing to do because that caused the GraphLayout.OnMutation to be run on the incorrect thread.</p>\r\n<p>Anyway I hope this helps somebody else :)</p>\r\n",
+    "PostedDate": "2011-01-14T20:10:23.84-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "855525",
+    "ThreadId": "240748",
+    "Html": "<p>I realize this is a very old thread, but I was wondering if you could say what you did to fix the issue. I am having the same problem and I understand generally what the issue is. But I don't know how to set the WPF version of the SynchronizationContext and/or prevent my app from removing it. Just wondering if you could tell me what you had to do to fix it.</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2012-06-29T09:24:17.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "909579",
+    "ThreadId": "394748",
+    "Html": "\r\n<p>Hi everybody!</p>\r\n<p>I would like to know if there is any way to save the location of the nodes in the graph after generating it, so you can load it when starting the program again in order to&nbsp;maintain&nbsp;the disposition of the nodes.</p>\r\n<p>Thanks in advance!</p>\r\n",
+    "PostedDate": "2012-09-07T05:10:25.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1019765",
+    "ThreadId": "394748",
+    "Html": "Ever figure this out?<br />\n",
+    "PostedDate": "2013-03-22T12:49:55.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1021229",
+    "ThreadId": "394748",
+    "Html": "I'm using the following method to serialize each node and their position to a string. ComponentVertex is the class of the vertices that I add to my graph.\r<br />\n<br />\nHope you can use it.<br />\n<pre><code>    public string SaveDiagramToString()\n    {\n        var sb = new StringBuilder();\n\n        foreach (var vertex in graphControl.Children.OfType&lt;VertexControl&gt;())\n        {\n            double? x = vertex.GetValue(GraphCanvas.XProperty) as double?;\n            double? y = vertex.GetValue(GraphCanvas.YProperty) as double?;\n\n            if (x == null || y == null) continue;\n\n            var obj = vertex.Vertex as ComponentVertex;\n\n            if (sb.Length &gt; 0) sb.AppendLine();\n\n            sb.AppendFormat(&quot;{0}|{1}|{2}&quot;, obj.Id, Math.Round(x ?? 0), Math.Round(y ?? 0));\n        }\n\n        return sb.ToString();\n    }</code></pre>\n\n",
+    "PostedDate": "2013-03-26T07:09:37.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

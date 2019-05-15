@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have verified that this problem lies in Graph# and that new correct coordinates comes from QuickGraph.\r\n\r\nI first saw this problem in the Compoundtest in the Sample-application shipped with version 1.0. The child-vertices in CompoundVertexControls fails to layout. The only child VertexControl that is layed out correctly is the last one. All others ends up in the opposite corner which may shoot of in any direction and distance.\r\nThis problem only occurs when any combination of vertices reaches above 200.\r\n\r\nTo reproduce the error:\r\nCreate about 10 parents with 20 children in each.\r\n\r\nTo avoid the problem (kinda):\r\nThis is an extreme hack but seems to resolve the issue with a large number of nodes / compound nodes. The animation dissappears though but we need to move on so this \"solution\" have to do for now.\r\nIn GraphSharp.Controls.CompoundVertexControl.OnPositionChanged I commented out the entire block of code in the else case (when compoundVertexControl != args.OriginalSource). \r\nResult: The nodes are layed out correctly and animated when the number of items are few. When the total number of nodes are large (above 200) the nodes are layed out correctly but no animation is done to get there.\r\n\r\nKind regards Richard",
+    "LastUpdatedDate": "2013-05-18T11:30:01.877-07:00",
+    "PlannedForRelease": "GraphSharp v2.0",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2010-07-08T06:15:04.98-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Compound graphs fails to layout correctly when the number of nodes are large (around 200 or above)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6489
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

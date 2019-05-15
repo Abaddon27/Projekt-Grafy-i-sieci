@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "226567",
+    "ThreadId": "66664",
+    "Html": "<p>Hi everyone,</p>\r\n<p>Before this project I stuck strictly to C# when I worked with .Net, so what I'm about to ask might be blindingly obvious to a lot of you.</p>\r\n<p>Basically I want to be able to do a few  things:</p>\r\n<p>1) I'd like mouse events to dispatch from vertices and edges. I wrote a graph layout library a long time ago in C# (UserControl abuse!) that was easy... but with WPF/Graph# I don't even know inherently where the vertex/edge objects live? I presume that's a blessing in disguise, as you guys and gals knowing WPF better wouldn't do it that way anyway?</p>\r\n<p>2) I'd like to be able style graph elements dependent on the type of data they represent/connect. Obviously there is only so much flexibility afforded within the generics that are already written in - but maybe there could be overrides to specify independent styles when adding vertices and edges programmatically. Or maybe there is a better way and I'm missing the point?</p>\r\n<p>Naturally I could put these things in place myself, but I don't want to add a less than universal fixup if these things are already on the roadmap.</p>\r\n<p>Thank you, and props for the truly fantastic work!</p>",
+    "PostedDate": "2009-08-21T17:43:05.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

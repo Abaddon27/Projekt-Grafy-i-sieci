@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "926217",
+    "ThreadId": "399242",
+    "Html": "\r\n<p>Hi folks</p>\r\n<p>I tried to use the Graph# like shown in the tutorial video (<a href=\"http://www.youtube.com/watch?v=VTbuvkaPGxE&feature=related\">http://www.youtube.com/watch?v=VTbuvkaPGxE&amp;feature=related</a>) but when I try to build my project I get an &quot;Assembly generation\r\n failed&quot; error since the<strong> referenced assembly has no strong name</strong>.</p>\r\n<p>I'm new to .NET and WPF, so could maybe anybody help me with this issue?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance!</p>\r\n",
+    "PostedDate": "2012-10-13T13:30:51.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "930305",
+    "ThreadId": "399242",
+    "Html": "<p>I figured this one out. Either you sign the assemblies yourself (i.e. give it a strong name) using the provided source code or you unsign your own project.</p>",
+    "PostedDate": "2012-10-22T01:03:01.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

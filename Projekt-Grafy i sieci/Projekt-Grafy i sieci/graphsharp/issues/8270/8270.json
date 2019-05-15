@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "The following graph, which is g.10.0.graphml in the test suite for QuickGraph (...\\QuickGraph\\Tests\\GraphML\\g.10.0.graphml if you have the source) crashes my recent copy of Graph# [the sample app, that is]. If I remove lines 2 and 3 (comment and DOCTYPE), I can load the test file. I spot-checked a few other graphs in the QuickGraph test suite and they all cause Graph# to crash, possibly with the same fix).\r\n\r\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<!-- This file was written by the internal XML-Handler of Y-Files.-->\r\n<!DOCTYPE graphml SYSTEM \"http://www.graphdrawing.org/dtds/graphml.dtd\">\r\n<graphml>\r\n<graph id=\"G\">\r\n<node id=\"n0\"/>\r\n<node id=\"n1\"/>\r\n<node id=\"n2\"/>\r\n<node id=\"n3\"/>\r\n<node id=\"n4\"/>\r\n<node id=\"n5\"/>\r\n<node id=\"n6\"/>\r\n<node id=\"n7\"/>\r\n<node id=\"n8\"/>\r\n<node id=\"n9\"/>\r\n<edge id=\"e0\" source=\"n8\" target=\"n0\"/>\r\n<edge id=\"e1\" source=\"n8\" target=\"n3\"/>\r\n<edge id=\"e2\" source=\"n8\" target=\"n4\"/>\r\n<edge id=\"e3\" source=\"n8\" target=\"n5\"/>\r\n<edge id=\"e4\" source=\"n8\" target=\"n6\"/>\r\n<edge id=\"e5\" source=\"n3\" target=\"n4\"/>\r\n<edge id=\"e6\" source=\"n4\" target=\"n5\"/>\r\n<edge id=\"e7\" source=\"n5\" target=\"n7\"/>\r\n<edge id=\"e8\" source=\"n0\" target=\"n1\"/>\r\n<edge id=\"e9\" source=\"n0\" target=\"n2\"/>\r\n<edge id=\"e10\" source=\"n0\" target=\"n9\"/>\r\n</graph>\r\n</graphml>",
+    "LastUpdatedDate": "2011-04-20T01:20:57.447-07:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-01-30T18:15:29.193-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Some QuickGraph tests may crash Graph#",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8270
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I think [workitem:8271] will solve this problem.",
+      "PostedDate": "2011-04-20T01:20:49.307-07:00",
+      "Id": 34494
+    }
+  ]
+}

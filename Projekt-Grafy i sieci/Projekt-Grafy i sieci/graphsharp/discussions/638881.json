@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1427882",
+    "ThreadId": "638881",
+    "Html": "Hi,\r<br />\n<br />\nI have created a ClassDiagram using QuickGraph whose Vertex control has UI as a sqaure box and list of child elements in it. The child elements are the Class members in the class diagram. There are edges between one class to other. \r<br />\nNow i want to further modify it as have the edges between the child elements of the classes. i.e for eg: \r<br />\nif my code is : \r<br />\nClass1\r<br />\n{\r<br />\n   Method1() \r<br />\n   {<br />\n<pre><code>  //Calls Class2.Method2();\n}\nMethod11() {}</code></pre>\n\n}\r<br />\nClass2\r<br />\n{\r<br />\n  Method2()\r<br />\n  {}\r<br />\n}\r<br />\n<br />\nWhen i view this in my graph, i get 2 vertices (Class1 &amp; Class2) i.e 2 rectangles with its methods as child elements and one edge between these 2 classes. \r<br />\nNow, I want to also have a edge between Method1() and Method2() (As Method1 calls method2)\r<br />\nIf i make this methods also as vertex and add to graph, the layout changes completely.\r<br />\nCan you please help me how to get these child vertices into the vertex control and have edges between them.\r<br />\n<br />\nRegards,\r<br />\nNAK<br />\n",
+    "PostedDate": "2015-05-28T00:05:48.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\nI need BalloonTree, but vertices are stacked into one place and cannot expand to show a balloon layout, anyone knows how to fix this?\r\n\r\nMy code:\r\n\r\n\r\n            <Sample:MyGraphLayout x:Name=\"layout\"\r\n                                  LayoutAlgorithmType=\"BalloonTree\"\r\n                                  OverlapRemovalAlgorithmType=\"FSA\"\r\n                                  Graph=\"{Binding}\"\r\n                                  AsyncCompute=\"true\"\r\n                                  ShowAllStates=\"false\"\r\n                                  HighlightAlgorithmType=\"Simple\">\r\n            </Sample:MyGraphLayout>",
+    "LastUpdatedDate": "2014-08-28T02:52:36.893-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2014-08-28T02:52:36.6-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "BalloonTreeLayout pins all vertices in one place",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 8293
+  },
+  "FileAttachments": [
+    {
+      "FileId": 901112,
+      "FileName": "balloon.PNG",
+      "DownloadUrl": ".\\901112"
+    }
+  ],
+  "Comments": []
+}

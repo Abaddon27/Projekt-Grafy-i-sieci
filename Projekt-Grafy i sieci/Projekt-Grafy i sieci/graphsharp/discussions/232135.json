@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "511820",
+    "ThreadId": "232135",
+    "Html": "\r\n<p>Is there any possibility to use this in Microsoft Surface App? For sure I can just use the WPF control, but then all the interaction with the graph is lost.</p>\r\n",
+    "PostedDate": "2010-10-24T13:38:55.28-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "535208",
+    "ThreadId": "232135",
+    "Html": "\r\n<p>Hi Roflcoptr, thank you for your interest about Graph#</p>\r\n<p>Currently there in no Microsoft Surface support.</p>\r\n<p>We will discuss this opportunity fot next release.</p>\r\n",
+    "PostedDate": "2010-12-13T13:43:56.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

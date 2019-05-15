@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1069523",
+    "ThreadId": "450327",
+    "Html": "Hi,\r<br />\n<br />\ni just found out that multiple edges between two vertexes are drawn behind each other, so that they seem to be only one edge.\r<br />\n<br />\nDoes anyone know how to draw multiple edges between two vertexes side by side?\r<br />\n<br />\nThanks in advance,\r<br />\nJasmin<br />\n",
+    "PostedDate": "2013-07-17T06:49:07.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1069857",
+    "ThreadId": "450327",
+    "Html": "Hi, accidently thought you have replied in my library discussion :) Though i can't tell you how to do it with Graph# you can code it with GraphX (<a href=\"http://graphx.codeplex.com\" rel=\"nofollow\">http://graphx.codeplex.com</a>) as it have solid EdgeRouting implementation.<br />\n<br />\nThough 1st answer is likely fit into Graph# logic i can't assist you much on that case because of Graph# have only rudimentary EdgeRouting capabilities.<br />\n<br />\nHi, i don't think i have ready solution for this right now. But there are several ways to do this:<br />\n<ol>\n<li>\nWrite custom EdgeRouting algorithm (for straight edges) and:<br />\n<ul>\n<li>Check that there are many edges between two vertices</li>\n<li>Find out the center of the edges and slightly shift center coordinates in opposite directions</li>\n<li>\nBuild RoutingPoints based on the shifted centers (3 coordinate: start, center, end)<br />\n</li>\n</ul>\n</li>\n<li>\nGraphX: Modify <em>EdgeControl.PrepareEdgePath()</em>  method for different edges to have shifted connection points.<br />\n</li>\n</ol>\nIts pretty interesting task and it would be great if you can handle it and share the results :)<br />\n",
+    "PostedDate": "2013-07-17T23:11:14.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

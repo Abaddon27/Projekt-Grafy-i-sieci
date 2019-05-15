@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "600565",
+    "ThreadId": "254701",
+    "Html": "\r\n<p>Hi everyone</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Do you have any idea about how to add &quot;Double Click&quot; event on each Vertex?</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks for help.</p>\r\n",
+    "PostedDate": "2011-04-20T11:33:47.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600679",
+    "ThreadId": "254701",
+    "Html": "<p>I figured it out.</p>\r\n<p>in Graph Loaded event, add MouseDoubleClick on each VertexControl in a loop. Something like this:</p>\r\n<p>foreach (var v in graphLayout.Children)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(v is VertexControl)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (v as VertexControl).MouseDoubleClick += new MouseButtonEventHandler(v_MouseDoubleClick);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>",
+    "PostedDate": "2011-04-20T14:19:14.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600847",
+    "ThreadId": "254701",
+    "Html": "<p>This is a solution, but another solution could be:</p>\r\n<p>Create a new ControlTemplate for your VertexControl (or a DataTemplate for your Vertex type) and put this event handler binding into that xaml.</p>",
+    "PostedDate": "2011-04-21T01:22:09.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "651198",
+    "ThreadId": "254701",
+    "Html": "<p>The predecessor of EdgeControl supports 'MouseButtonEventHandler MouseDoubleClick' can you show how to bind that handler to a view model?</p>",
+    "PostedDate": "2011-08-02T08:01:19.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "995532",
+    "ThreadId": "254701",
+    "Html": "where did you define the Graph Loaded event?\r<br />\n I found a way to define it only in the graphlayout xaml tag and I can't get to vertex control from it<br />\n",
+    "PostedDate": "2013-02-02T04:00:50.477-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "995534",
+    "ThreadId": "254701",
+    "Html": "<strong>Troy96 wrote:</strong><br />\n<blockquote>\nI figured it out. in Graph Loaded event, add MouseDoubleClick on each VertexControl in a loop. Something like this: foreach (var v in graphLayout.Children)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(v is VertexControl)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (v as VertexControl).MouseDoubleClick += new MouseButtonEventHandler(v_MouseDoubleClick);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />\n</blockquote>\nwhere did you define the Graph Loaded event?\r<br />\n I found a way to define it only in the graphlayout xaml tag and I can't get to vertex control from it<br />\n",
+    "PostedDate": "2013-02-02T04:01:30.447-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1014721",
+    "ThreadId": "254701",
+    "Html": "In VertexControl.cs<br />\n<pre><code>        public VertexControl()\n        {\n            MouseDoubleClick += VertexControl_MouseDoubleClick;\n        }\n\n        void VertexControl_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)\n        {\n            RootCanvas.OnVertexSelected(this);\n        }</code></pre>\n\nIn GraphCanvas.cs add:<br />\n<pre><code>        public virtual event VertexSelectedEventHandler VertexSelected;\n\n        public virtual void OnVertexSelected(VertexControl vc)\n        {\n            if (VertexSelected != null)\n                VertexSelected(this, new VertexSelectedEventArgs(vc));\n        }</code></pre>\n\nIn any new code file add:<br />\n<pre><code>    public delegate void VertexSelectedEventHandler(object sender, VertexSelectedEventArgs args);\n\n    public class VertexSelectedEventArgs : System.EventArgs\n    {\n        public VertexControl VertexControl { get; set; }\n\n        public VertexSelectedEventArgs(VertexControl vc)\n            : base()\n        {\n            VertexControl = vc;\n        }\n    }</code></pre>\n\nNow you can bind to GraphCanvas (or GraphLayout) event: <strong>VertexSelected</strong> and get the VertexControl you double clicked on.<br />\n",
+    "PostedDate": "2013-03-13T10:34:55.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,190 @@
+[
+  {
+    "Id": 2396,
+    "Title": "missing Resources.resx and settings.settings in GraphSharp.Sample project"
+  },
+  {
+    "Id": 2518,
+    "Title": "'Light' status reporting on async computing"
+  },
+  {
+    "Id": 2519,
+    "Title": "'Light' status reporting on async computing"
+  },
+  {
+    "Id": 2707,
+    "Title": "SubsetFonts.targets missing"
+  },
+  {
+    "Id": 3154,
+    "Title": "Error\t10\tFile 'Resources\\PocGraphDataTemplates.xaml' cannot be found.\tGraphSharp.Sample"
+  },
+  {
+    "Id": 3280,
+    "Title": "Trouble with vertex dragging"
+  },
+  {
+    "Id": 3433,
+    "Title": "Unable to fire MouseRightButtonDown on VertexControl"
+  },
+  {
+    "Id": 3540,
+    "Title": "Crash in GraphElementControl.cs|HighlightTrigger_Coerce"
+  },
+  {
+    "Id": 3933,
+    "Title": "ArgumentOutOfRangeException thrown in SugiyamaLayoutAlgorithm.SugiyamaPhase2Sweep()"
+  },
+  {
+    "Id": 4121,
+    "Title": "update for QuickGraph"
+  },
+  {
+    "Id": 4456,
+    "Title": "Layout likes to dance off the screen"
+  },
+  {
+    "Id": 4465,
+    "Title": "No representation for loops"
+  },
+  {
+    "Id": 4466,
+    "Title": "Null destruction transition never removes element"
+  },
+  {
+    "Id": 5039,
+    "Title": "Crashing when i used Sugiyama layout"
+  },
+  {
+    "Id": 5679,
+    "Title": "Efficient Sugiyama laying out individual nodes on-top of one another"
+  },
+  {
+    "Id": 6048,
+    "Title": "Add strong naming"
+  },
+  {
+    "Id": 6489,
+    "Title": "Compound graphs fails to layout correctly when the number of nodes are large (around 200 or above)"
+  },
+  {
+    "Id": 6490,
+    "Title": "Strange behavior when a single-child vertex (in a compound) is dragged"
+  },
+  {
+    "Id": 6611,
+    "Title": "vertex overlaping issue"
+  },
+  {
+    "Id": 7882,
+    "Title": "Typo Bug in Graph#.Controls\\Controls\\GraphLayout.DependencyProperties.cs"
+  },
+  {
+    "Id": 8001,
+    "Title": "Vertex and Edges with IDs"
+  },
+  {
+    "Id": 8090,
+    "Title": "Layout direction for Efficient Sugiyama"
+  },
+  {
+    "Id": 8270,
+    "Title": "Some QuickGraph tests may crash Graph#"
+  },
+  {
+    "Id": 8271,
+    "Title": "Opening dml file fails if graphml is not defualt namespace in Xml"
+  },
+  {
+    "Id": 8272,
+    "Title": "Tutorial - new tutorial about handling onclick events for vertices"
+  },
+  {
+    "Id": 8273,
+    "Title": "Silverlight version"
+  },
+  {
+    "Id": 8274,
+    "Title": "ArgumentOutOfRangeException on applying FSA overlap removing"
+  },
+  {
+    "Id": 8275,
+    "Title": "Added nodes from a single node overlap"
+  },
+  {
+    "Id": 8276,
+    "Title": "EfficientSugiyamaLayoutAlgorithm crash when there are no links"
+  },
+  {
+    "Id": 8277,
+    "Title": "FRLayoutAlgorithm"
+  },
+  {
+    "Id": 8278,
+    "Title": "Index out of range in .EfficientSugiyamaLayoutAlgorithm.Sweeping"
+  },
+  {
+    "Id": 8279,
+    "Title": "GraphLayout<A,B,C> : GraphLayout"
+  },
+  {
+    "Id": 8280,
+    "Title": "Compiling with AllowPartiallyTrusted callers throws exceptions at runtime"
+  },
+  {
+    "Id": 8281,
+    "Title": "Build against QuickGraph 3.6.x"
+  },
+  {
+    "Id": 8282,
+    "Title": "Problem with ordering nodes in TreeLayout"
+  },
+  {
+    "Id": 8283,
+    "Title": "Vertex Dragging is very over sensitive."
+  },
+  {
+    "Id": 8284,
+    "Title": "Unable to download the framework file(s)"
+  },
+  {
+    "Id": 8285,
+    "Title": "Incorrect handling of rapid add/remove edge/vertex mutations"
+  },
+  {
+    "Id": 8286,
+    "Title": "Initial layout wrong if GraphLayout is not initially visible (e.g. in hidden tab)"
+  },
+  {
+    "Id": 8287,
+    "Title": "Feature: Add IsComputingLayout property"
+  },
+  {
+    "Id": 8288,
+    "Title": "Improvement: CancelLayout should abort the layout computation"
+  },
+  {
+    "Id": 8289,
+    "Title": "Improvement: Don't perform graphical layout if layout was cancelled"
+  },
+  {
+    "Id": 8290,
+    "Title": "bug in Simple tree layout algorithm when graph is empty"
+  },
+  {
+    "Id": 8291,
+    "Title": "Drag a selection area and select all the vertices in that area"
+  },
+  {
+    "Id": 8292,
+    "Title": "Search vertex on plotted graph"
+  },
+  {
+    "Id": 8293,
+    "Title": "BalloonTreeLayout pins all vertices in one place"
+  },
+  {
+    "Id": 8294,
+    "Title": "Mouse on click event for vertices "
+  }
+]

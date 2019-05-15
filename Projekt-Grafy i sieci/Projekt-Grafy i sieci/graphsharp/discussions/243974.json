@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "558016",
+    "ThreadId": "243974",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm using GraphSharp library to automatically layout graph visualization application.</p>\r\n<p>I'm not an expert on layout algorithms which is exactly the reason I like this library so much.</p>\r\n<p>I want to expose the layout parameters to the user and in order to do so I need some understanding of what each parameter limits are, what are good default values etc.</p>\r\n<p>Is it possible to publish some documentation about the different layout parameters like BoundedFRLayoutParameters,&nbsp;BoundedFRLayoutParameters, LinLogLayoutParameters. etc.</p>\r\n<p>What are the limit of each property of the parameters classes?</p>\r\n<p>What each property means?</p>\r\n<p>Reference to more documentation about each layout algorithm will also be great.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you for the great work,</p>\r\n<p>Ido.</p>\r\n",
+    "PostedDate": "2011-01-31T04:39:40.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

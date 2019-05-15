@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "696200",
+    "ThreadId": "278932",
+    "Html": "\r\n<p>Hi! I would like to generate a png from a graph on aspx, but I don't know how can I do it. I've tried an approach like\r\n<a href=\"http://graphsharp.codeplex.com/discussions/63915\">http://graphsharp.codeplex.com/discussions/63915</a>, but I'm getting an imagem with all vertices\r\n<span>overlapped. I believe I'm </span>saving the graph before Layout has finished performing.</p>\r\n<p>Does anyone knows how to&nbsp;do this?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks a lot,</p>\r\n<p>Leonardo Silva.</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-11-09T16:24:47.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704388",
+    "ThreadId": "278932",
+    "Html": "<p>Have you tried my Google Visualizations for .NET [<a href=\"http://googlevisnet.codeplex.com/\">http://googlevisnet.codeplex.com/</a>]&nbsp;project? &nbsp;Did it work for you? &nbsp;I think it would be good for simple items.</p>",
+    "PostedDate": "2011-11-28T13:12:55.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "707755",
+    "ThreadId": "278932",
+    "Html": "<p>Hi Juls. I've a WPF&nbsp;application that already uses Graph# so I'd like to use the same library (and the same code) to produce the graphs...</p>\r\n<p>Anyway, thanks for the suggestion.</p>\r\n<p>Regards,</p>\r\n<p>Leonardo Silva.</p>",
+    "PostedDate": "2011-12-05T13:07:56.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

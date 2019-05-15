@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1294214",
+    "ThreadId": "562322",
+    "Html": "Hello, <br />\n I need BalloonTree, but vertices are stacked into one place and cannot expand to show a balloon layout, anyone knows how to fix this? <br />\n<br />\n My code:<br />\n<pre><code>    &lt;Sample:MyGraphLayout x:Name=&quot;layout&quot;\n                          LayoutAlgorithmType=&quot;BalloonTree&quot;\n                          OverlapRemovalAlgorithmType=&quot;FSA&quot;\n                          Graph=&quot;{Binding}&quot;\n                          AsyncCompute=&quot;true&quot;\n                          ShowAllStates=&quot;false&quot;\n                          HighlightAlgorithmType=&quot;Simple&quot;&gt;\n    &lt;/Sample:MyGraphLayout&gt;\n</code></pre>\n\n<img src=\"http://ww2.sinaimg.cn/bmiddle/d787101agw1ejsi109ukcj20iq0gtabf.jpg\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-08-28T02:54:44.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

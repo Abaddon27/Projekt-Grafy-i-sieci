@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "630777",
+    "ThreadId": "262241",
+    "Html": "<p>Hi all,</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Is there any way to move (programmatically) GraphLayout (Canvas) in order that a target Vertex is in center of screen?</p>\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thanks a lot for help.</p>",
+    "PostedDate": "2011-06-21T14:01:35.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "631225",
+    "ThreadId": "262241",
+    "Html": "<p>Actually it is nothing to do with GraphLayout but ZoomControl.</p>\r\n<p>So the following code does the trick:</p>\r\n<p>double x = GraphCanvas.GetX(vertex);<br />double y = GraphCanvas.GetY(vertex);<br />zoomCtrl.TranslateX = -(x - zoomCtrl.OrigoPosition.X);<br />zoomCtrl.TranslateY = -(y - zoomCtrl.OrigoPosition.Y);</p>",
+    "PostedDate": "2011-06-22T09:22:00.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

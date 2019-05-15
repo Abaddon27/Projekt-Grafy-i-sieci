@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "275084",
+    "ThreadId": "80266",
+    "Html": "<p>Hi my problem is that GraphLayout TGraph must be IBidirectionalGraph</p>\r\n<p>public partial class GraphLayout&lt;TVertex, TEdge, TGraph&gt; : GraphCanvas<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where TVertex : class<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where TEdge : IEdge&lt;TVertex&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where TGraph : class, IBidirectionalGraph&lt;TVertex, TEdge&gt;</p>\r\n<p>Is there any particular reason for that?</p>\r\n<p>Because i badly need to visualize unidirectional graph and shortest paths in that graph between selected nodes.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-09T02:54:15.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

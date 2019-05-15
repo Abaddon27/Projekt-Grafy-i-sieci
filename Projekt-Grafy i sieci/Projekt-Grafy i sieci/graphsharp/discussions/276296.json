@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "685732",
+    "ThreadId": "276296",
+    "Html": "\r\n<p>Hi, first of all thanks for this library is awesome. My question is how i can add KeyDown event to an Edge, i tried adding the event to style of edge, but it never fires.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>&lt;Style TargetType=<span style=\"color:#a31515\">&quot;{x:Type graphsharp:EdgeControl}&quot;</span>&gt;\r\n     &lt;EventSetter Event=<span style=\"color:#a31515\">&quot;KeyDown&quot;</span> Handler=<span style=\"color:#a31515\">&quot;delete_edge&quot;</span>/&gt;\r\n&lt;/Style&gt;\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>I can add MouseDoubleClick event and it works but i dont know why this doesn`t.</p>\r\n<p>Any idea?</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-10-18T06:21:45.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

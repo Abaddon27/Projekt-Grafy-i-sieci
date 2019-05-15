@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "534910",
+    "ThreadId": "238157",
+    "Html": "\r\n<p>Greetings, how can i save graph layout to a file programmaticaly?</p>\r\n",
+    "PostedDate": "2010-12-13T03:06:55.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "535084",
+    "ThreadId": "238157",
+    "Html": "\r\n<p>Hi Jesse, thank &nbsp;for your interest in Graph#.</p>\r\n<p>Currently you cannot save the layout position of the Graph with Graph#.</p>\r\n<p>If you need private help, please send ma a PM.</p>\r\n<p>&nbsp;</p>\r\n<p>badang</p>\r\n",
+    "PostedDate": "2010-12-13T09:06:58.553-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "592638",
+    "ThreadId": "238157",
+    "Html": "<p>hi,</p>\r\n<p>If noone's done anything like this already - I was thinking of knocking up a subclass of ILayoutAlgorithm to restore nodes to a given position (getting the positions is relatively easy if not a little more clunky that it perhaps needs to be - but I am likley to be missing something somwhere). So something like ExplicitLayoutAlgorithm to allow the client application so say where the nodes should go. Does this sound like a sensible plan?</p>\r\n<p>&nbsp;</p>\r\n<p>d</p>",
+    "PostedDate": "2011-04-06T02:09:57.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "592872",
+    "ThreadId": "238157",
+    "Html": "<p>very needed feature! and<br /><a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/drderekmarriott\">drderekmarriott</a>, sounds like a good plan! good luck and keep us in touch!))</p>",
+    "PostedDate": "2011-04-06T08:50:07.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "599954",
+    "ThreadId": "238157",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>drderekmarriott wrote:</strong><br />\r\n<p>hi,</p>\r\n<p>If noone's done anything like this already - I was thinking of knocking up a subclass of ILayoutAlgorithm to restore nodes to a given position (getting the positions is relatively easy if not a little more clunky that it perhaps needs to be - but I am likley  to be missing something somwhere). So something like ExplicitLayoutAlgorithm to allow the client application so say where the nodes should go. Does this sound like a sensible plan?</p>\r\n<p>&nbsp;</p>\r\n<p>d</p>\r\n</blockquote>\r\n<p>Have you been able to successfully do this? &nbsp;I'd like to know. &nbsp;The sample appears to save graphs, but I don't know if it saves the positions of the nodes.</p>",
+    "PostedDate": "2011-04-19T12:38:17.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600259",
+    "ThreadId": "238157",
+    "Html": "<p>hi all, I've got something working but its not entirely ideal yet. Problem being the LayoutAlgorithmBase class isn't really set up to allow for a decorator type pattern or a strategy type pattern so its a touch awkward to inject a custom class override things. The LayoutFactory class doesn't help much either.&nbsp;I'll be needing a good chat with someone before my code can get anything like checked in.</p>",
+    "PostedDate": "2011-04-20T02:12:50.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600363",
+    "ThreadId": "238157",
+    "Html": "<p>Create a fork, and commit your code, i will check it.</p>",
+    "PostedDate": "2011-04-20T06:37:03.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "468330",
+    "ThreadId": "219718",
+    "Html": "<p>Hi Could you give me a code sample that i can used to toggle graph</p>\r\n<p>for eg i have two graphs declared as&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>//CODE</p>\r\n<p>var ipG = new BidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt;();</p>\r\n<p>var wirelessG = new BidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt;();</p>\r\n<p>_graphToVisualize = wirelessG;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>//XAML</p>\r\n<p>&lt;graphsharp:GraphLayout x:Name=&quot;graphLayout&quot; Graph=&quot;{Binding ElementName=root,Path=GraphToVisualize}&quot; LayoutAlgorithmType=&quot;LinLog&quot; OverlapRemovalAlgorithmType=&quot;FSA&quot; HighlightAlgorithmType=&quot;Simple&quot; /&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>Now i have two buttons if i click 1 it should show wirelessG if i click the later it should show ipG.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>The graph comes out perfectly but it sows the pervious graph for a second after the transition to the new graph</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-16T12:42:53.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "487255",
+    "ThreadId": "219718",
+    "Html": "<p>I have the same when I switched to a different graph and the previous graph is still there.&nbsp; Did you figure it out how to remove it?</p>",
+    "PostedDate": "2010-08-31T15:24:00.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

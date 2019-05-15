@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "728236",
+    "ThreadId": "286845",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>i found these method &quot;<strong>graphLayout.HighlightEdge(Edge&lt;object, object&gt; edge, Object highlightInfo)</strong>&quot; and &quot;<strong>graphLayout.RemoveHighlightFromEdge(Edge&lt;object, object&gt; edge)</strong>&quot;&nbsp; to change selected edge color, and\r\n it works.</p>\r\n<p>But the colors I want are different from Black and Silver that these methods produce. So i ask is possible to change these colors?</p>\r\n<p>Or are there another functions to call or xaml to write to programmatically change the color of an edge?</p>\r\n<p>Thanks.</p>\r\n",
+    "PostedDate": "2012-01-20T07:27:11.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "731317",
+    "ThreadId": "286845",
+    "Html": "<p>Find it!</p>\r\n<p>Probably it can be done by xaml code, but i don't know WPF very well; so i found a solution via c# code.</p>\r\n<p>If for example e1 is the variable that contain edge to modify color, and Acqua is the color you want..:</p>\r\n<p>EdgeControl ec1 = graphLayout.GetEdgeControl(e1);<br />Brush pp1 = new SolidColorBrush(Colors.Aqua);<br />ec1.Foreground = pp1;<br /><br /><br /></p>",
+    "PostedDate": "2012-01-26T13:09:14.08-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "820640",
+    "ThreadId": "286845",
+    "Html": "<p>You can also define different styles for EdgeControl in XAML as resources.</p>\r\n<p>Then you just get an EdgeControl object for the targeted edge and change its Style property.</p>",
+    "PostedDate": "2012-04-05T16:48:15.937-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

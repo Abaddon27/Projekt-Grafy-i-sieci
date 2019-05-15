@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "In GraphCanvas.RunDestructionTransition,\r\n\r\n            if (DestructionTransition == null)\r\n                { return; }\r\n\r\nneeds to be replaced by\r\n\r\n            if (DestructionTransition == null)\r\n                { if (!dontRemoveAfter) { Children.Remove(control); return; } }\r\n\r\nOtherwise, a null destruction transition will never get rid of the element.",
+    "LastUpdatedDate": "2011-04-20T01:25:50.357-07:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2009-10-21T21:40:53.3-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Null destruction transition never removes element",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 4466
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Good solution, we should implement it.",
+      "PostedDate": "2011-04-20T01:25:50.357-07:00",
+      "Id": 34499
+    }
+  ]
+}

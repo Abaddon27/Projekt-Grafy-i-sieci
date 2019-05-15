@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1450340",
+    "ThreadId": "646803",
+    "Html": "i am using graphSharp lib for my project . in which i need to represent more than 10 elements but it did not view properply . here is the code <br />\n<pre><code>    private void CreateGraphToVisualizenode()\n    {\n        var g = new BidirectionalGraph&amp;lt;object, IEdge&amp;lt;object&amp;gt;&amp;gt;();\n        List&amp;lt;Class1&amp;gt; obj = new List&amp;lt;Class1&amp;gt;();\n        //add the vertices to the graph\n        for (int i = 0; i &amp;lt; 100; i++)\n        {\n            Class1 obj1 = new Class1(i,&quot;n&quot;);\n            obj.Add(obj1);\n\n        }\n        //add some edges to the graph\n\n        for(int i=1;i&amp;lt;100;i++)\n        {\n            Color edgeColor = (i % 2 == 0) ? Colors.Black : Colors.Red;\n            g.AddVerticesAndEdge(new MyEdge(obj[i - 1], obj[i]){\n                Id = i.ToString(),\n                EdgeColor = edgeColor });\n        }\n        g.AddVerticesAndEdge(new MyEdge(obj[99], obj[0]));\n        _graphToVisualize = g;\n\n    }\n    public class MyEdge : TypedEdge&amp;lt;Object&amp;gt;\n    {\n        public String Id { get; set; }\n\n        public Color EdgeColor { get; set; }\n\n        public MyEdge(Object source, Object target) : base(source, target, EdgeTypes.General) { }\n    }\n\n    public class EdgeColorConverter : IValueConverter\n    {\n\n        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)\n        {\n            return new SolidColorBrush((Color)value);\n        }\n\n        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)\n        {\n            throw new NotImplementedException();\n        }\n    }\n</code></pre>\n\nand xaml<br />\n&lt;window x:class=&quot;GraphSharpTutorial01.Window1&quot; xmlns:x=&quot;#unknown&quot;&gt;<br />\n<pre><code>    xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;\n    xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;\n    xmlns:graphsharp=&quot;clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls&quot;\n    xmlns:zoom=&quot;clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions&quot;\n    Title=&quot;Window1&quot;\n    Height=&quot;400&quot;\n    Width=&quot;400&quot;\n    VerticalAlignment=&quot;Stretch&quot;\n    HorizontalAlignment=&quot;Stretch&quot;\n    x:Name=&quot;root&quot;&amp;gt;\n&lt;grid&gt;\n\n    &lt;zoom:zoomcontrol xmlns:zoom=&quot;#unknown&quot;&gt;\n        &lt;graphsharp:graphlayout x:name=&quot;graphLayout&quot; xmlns:graphsharp=&quot;#unknown&quot;&gt;\n                                Graph=&quot;{Binding ElementName=root,Path=GraphToVisualize}&quot;\n                                LayoutAlgorithmType=&quot;FR&quot;\n                                OverlapRemovalAlgorithmType=&quot;FSA&quot;\n                                HighlightAlgorithmType=&quot;Simple&quot;\n\n                                /&amp;gt;\n    &lt;/graphsharp:graphlayout&gt;&lt;/zoom:zoomcontrol&gt;\n&lt;/grid&gt;</code></pre>\n\n&lt;/window&gt;<br />\n<br />\nand the solution isall node meged at single point. plz help.<br />\n",
+    "PostedDate": "2015-10-29T12:31:54.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1450373",
+    "ThreadId": "646803",
+    "Html": "Hi, you have to use <em>Layout()</em> method of <em>graphlayout</em> control to generate graph, if i remember correctly. Btw, GraphSharp is  abandoned for a long time, mind looking for GraphX if you want something fresh.<br />\n",
+    "PostedDate": "2015-10-29T17:20:04.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

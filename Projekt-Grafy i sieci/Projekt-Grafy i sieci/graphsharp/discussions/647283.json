@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1451848",
+    "ThreadId": "647283",
+    "Html": "<pre><code>var graph = new TestGraph(true);\nforeach(var vertex in vlist)\n{\n    graph.AddEdge(new TestEdge(vertex, vertex);\n}</code></pre>\n\nI cannot see the self loop of each vertex. I am wondering how to make it work for this situation.<br />\n",
+    "PostedDate": "2015-11-11T13:19:18.15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

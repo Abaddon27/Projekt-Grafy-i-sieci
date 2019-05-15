@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "748786",
+    "ThreadId": "299932",
+    "Html": "\r\n<p>Hi all!</p>\r\n<p>I have a problem wirh Graph' in a UserControl.</p>\r\n<p>Is it not possible to set a&nbsp;LayoutAlgorithmType like &quot;Tree&quot; in an User Control?&nbsp;</p>\r\n<p>Everytime when I run my project, are the verticles arranged one above the other. The&nbsp;LayoutAlgorithmType was not applied.</p>\r\n<p>Does anyone know something about it?</p>\r\n",
+    "PostedDate": "2012-02-09T08:29:23.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827621",
+    "ThreadId": "299932",
+    "Html": "<p>I have a similar problem. Setting LayoutAlgorithmType to CompoundFDP works pretty well; setting it to any other thing, like \"Tree\" ou \"KK\", throws a \"Object reference not set to an instance of an object\" Exception.</p>",
+    "PostedDate": "2012-04-23T18:51:31.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "925497",
+    "ThreadId": "299932",
+    "Html": "<p>Its not because its a UserControl, as I've got that working, I can pick any LayoutAlgorithmType (obviously some don't work though (as in they don't produce a nice layout))</p>\r\n<p>Do you have a&nbsp;&nbsp;YourGraphLayout : GraphLayout&lt;YourVertex, YourEdge, YourGraph&gt; class? and that's what's added to the UserControl?</p>\r\n<p>I needed a LayoutMode=\"Automatic\" property set before it would do anything though, and I couldn't get the switching of layouts on the fly to work.</p>",
+    "PostedDate": "2012-10-11T13:24:08.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

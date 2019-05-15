@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 7,
+    "Custom": "",
+    "Description": "Here is the exception \nType:        System.IndexOutOfRangeException\nMessage:     Index was outside the bounds of the array.\nSource:      GraphSharp\nStack Trace: at GraphSharp.Algorithms.Layout.Simple.Hierarchical.EfficientSugiyamaLayoutAlgorithm`3.Sweeping(Int32 startLayerIndex, Int32 endLayerIndex, Int32 step, Boolean enableSameMeasureOptimization, Boolean& changed, Int32& phase) in R:\\Graph#\\Source\\Graph#\\Algorithms\\Layout\\Simple\\Hierarchical\\EfficientSugiyamaAlgorithm.DoCrossingMinimizations.cs:line 92\n   at GraphSharp.Algorithms.Layout.Simple.Hierarchical.EfficientSugiyamaLayoutAlgorithm`3.DoCrossingMinimizations() in R:\\Graph#\\Source\\Graph#\\Algorithms\\Layout\\Simple\\Hierarchical\\EfficientSugiyamaAlgorithm.DoCrossingMinimizations.cs:line 58\n   at GraphSharp.Algorithms.Layout.Simple.Hierarchical.EfficientSugiyamaLayoutAlgorithm`3.InternalCompute() in R:\\Graph#\\Source\\Graph#\\Algorithms\\Layout\\Simple\\Hierarchical\\EfficientSugiyamaLayoutAlgorithm.cs:line 119\n   at GraphSharp.Algorithms.AlgorithmBase.Compute() in R:\\Graph#\\Source\\Graph#\\Algorithms\\AlgorithmBase.cs:line 36\n   at GraphSharp.Controls.GraphLayout`3.Layout(Boolean continueLayout)\n   at GraphSharp.Controls.GraphLayout`3.<>c__DisplayClass1f.<Layout>b__e(Object s, RoutedEventArgs e)\n   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)",
+    "LastUpdatedDate": "2011-09-13T04:35:24.417-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2010-01-05T09:51:58.027-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Crashing when i used Sugiyama layout",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 5039
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Do you have any edges in your graph? I was getting a similar error when I only had nodes, and no edges.",
+      "PostedDate": "2010-01-31T16:24:20.57-08:00",
+      "Id": 29778
+    },
+    {
+      "Message": "I had a similar error, and was able to work around it by adding the following code to  EfficientSugiyamaAlgorithm.BuildSparseNormalizedGraph.cs\r\n\r\nprivate void CreateInitialLayering()\r\n{\r\n            var lts = new LayeredTopologicalSortAlgorithm(_graph);\r\n            lts.Compute();\r\n\r\n            //Check for no layers, and force a single layer\r\n            if(lts.LayerCount == 0)\r\n            {\r\n                //1 layer min\r\n                _layers.Add(new List());\r\n            }\r\n            else\r\n            {\r\n                 ...",
+      "PostedDate": "2010-03-16T06:39:12.29-07:00",
+      "Id": 29779
+    },
+    {
+      "Message": "I encountered this while attempting to remove a vertex from a graph where some vertices had no edges.",
+      "PostedDate": "2010-04-16T08:09:13.567-07:00",
+      "Id": 29780
+    },
+    {
+      "Message": "Kragen2uk - try modifying the source as I suggest in my previous comment, and it shouldn't happen any more.  \r\n\r\nThe reason it is happening is that for some portion of the Sugiyama algorithm it removes all the disconnected edges, causing essentially a null graph.",
+      "PostedDate": "2010-04-16T11:09:27.17-07:00",
+      "Id": 29781
+    },
+    {
+      "Message": "I have received i think the same issue when i added a graph with no vertexes and no edges :-/ ",
+      "PostedDate": "2011-08-11T11:56:21.857-07:00",
+      "Id": 42494
+    },
+    {
+      "Message": "Alternative solution EfficientSugiyamaLayoutAlgorithm.cs\n\n        protected override void InternalCompute()\n        {\n            InitTheGraph();\n\n            //first step\n            DoPreparing();\n\n            if (_layers.Count == 0)\n            {\n                return;\n            }\n            BuildSparseNormalizedGraph();\n            DoCrossingMinimizations();\n            CalculatePositions();\n        }",
+      "PostedDate": "2011-09-13T04:05:38.613-07:00",
+      "Id": 44602
+    },
+    {
+      "Message": "Sorry should have tested my solution better. Forget previous post\n\nEfficientSugiyamaAlgorithm.DoCrossingMinimizations.cs:\n\n        private int Sweeping(int startLayerIndex, int endLayerIndex, int step, bool enableSameMeasureOptimization, out bool changed, ref int phase)\n        {\n            int crossings = 0;\n            changed = false;\n            AlternatingLayer alternatingLayer = null;\n            if (_alternatingLayers.Length > 0)\n            {\n                if (_alternatingLayers[startLayerIndex] == null)\n                {\n                    alternatingLayer = new AlternatingLayer();\n                    alternatingLayer.AddRange(_layers[startLayerIndex].OfType<IData>());\n                    alternatingLayer.EnsureAlternatingAndPositions();\n                    AddAlternatingLayerToSparseCompactionGraph(alternatingLayer, startLayerIndex);\n                    _alternatingLayers[startLayerIndex] = alternatingLayer;\n                }\n                else\n                {\n                    alternatingLayer = _alternatingLayers[startLayerIndex];\n                }\n                OutputAlternatingLayer(alternatingLayer, startLayerIndex, 0);\n                for (int i = startLayerIndex; i != endLayerIndex; i += step)\n                {\n                    int ci = Math.Min(i, i + step);\n                    int prevCrossCount = _crossCounts[ci];\n\n                    if (_alternatingLayers[i + step] != null)\n                    {\n                        alternatingLayer.SetPositions();\n                        _alternatingLayers[i + step].SetPositions();\n                        prevCrossCount = DoCrossCountingAndOptimization(alternatingLayer, _alternatingLayers[i + step], (i < i + step), false, (phase == 2), int.MaxValue);\n                        _crossCounts[ci] = prevCrossCount;\n                    }\n\n                    int crossCount = CrossingMinimizationBetweenLayers(ref alternatingLayer, i, i + step, enableSameMeasureOptimization, prevCrossCount, phase);\n\n                    if (crossCount < prevCrossCount || phase == 2 || changed)\n                    {\n                        /* set the sparse compaction graph */\n                        AddAlternatingLayerToSparseCompactionGraph(alternatingLayer, i + step);\n                        ReplaceLayer(alternatingLayer, i + step);\n                        _alternatingLayers[i + step] = alternatingLayer;\n                        OutputAlternatingLayer(alternatingLayer, i + step, crossCount);\n                        _crossCounts[i] = crossCount;\n                        crossings += crossCount;\n                        changed = true;\n                        /*if (phase == 2)\n                        {\n                            Debug.WriteLine(\"Phase changed on layer \" + (i + step));\n                            phase = 1;\n                        }*/\n                    }\n                    else\n                    {\n                        Debug.WriteLine(\"Layer \" + (i + step) + \" has not changed.\");\n                        alternatingLayer = _alternatingLayers[i + step];\n                        crossings += prevCrossCount;\n                    }\n                }\n            }\n            return crossings;\n        }\n\nEfficientSugiyamaLayoutAlgorithm.HorizontalAssignment.cs:\n        private void CalculateLayerHeightsAndPositions()\n        {\n            _layerHeights = new double[_layers.Count];\n            for (int i = 0; i < _layers.Count; i++)\n                _layerHeights[i] = _layers[i].Max(v => v.Size.Height);\n\n            double layerDistance = Parameters.LayerDistance;\n            if (_layers.Count > 0)\n            {\n                _layerPositions = new double[_layers.Count];\n                _layerPositions[0] = 0;\n                for (int i = 1; i < _layers.Count; i++)\n                    _layerPositions[i] = _layerPositions[i - 1] + _layerHeights[i - 1] + layerDistance;\n            }\n        }\n\n",
+      "PostedDate": "2011-09-13T04:35:24.417-07:00",
+      "Id": 44603
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "466125",
+    "ThreadId": "219108",
+    "Html": "<p>Hi,&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>I notice that if I layout a graph which has only isolated vertices, the EfficientSugiyama layout algorithm will throw an IndexOutOfBound exception as the field _alternativeLayers is empty. It is caused by that after the removal of the isolated vertices, the internal graph is empty.</p>\r\n<p>&nbsp;</p>\r\n<p>Chengnian.</p>",
+    "PostedDate": "2010-07-11T23:08:06.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "466257",
+    "ThreadId": "219108",
+    "Html": "<p>Could you provide a fix?</p>",
+    "PostedDate": "2010-07-12T04:50:30.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

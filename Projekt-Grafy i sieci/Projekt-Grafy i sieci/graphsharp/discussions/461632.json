@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1105495",
+    "ThreadId": "461632",
+    "Html": "Hello, I am new to Graph sharp, and I am having some problems, I have done the Simple usage scenario tutorial with great results, but what I want to do is to create a UserControl that will have the graph and the put this UserControl inside a WPF Window, here is my code for the UserControl:<br />\n<pre><code>&lt;UserControl x:Class=&quot;LMS_Pipeline_configuration.LMSPipeGraph&quot;\n             xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;\n             xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;\n             xmlns:mc=&quot;http://schemas.openxmlformats.org/markup-compatibility/2006&quot; \n             xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; \n             xmlns:graphsharp=&quot;clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls&quot;\n             xmlns:zoom=&quot;clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions&quot; \n             mc:Ignorable=&quot;d&quot; \n             d:DesignHeight=&quot;350&quot; d:DesignWidth=&quot;525&quot;&gt;\n    &lt;Grid&gt;\n        &lt;graphsharp:GraphLayout x:Name=&quot;graphlayout&quot;\n                                Graph=&quot;{Binding ElementName=root, Path=GraphToVisualize}&quot; \n                                LayoutAlgorithmType=&quot;EfficientSugiyama&quot;\n                                OverlapRemovalAlgorithmType=&quot;FSA&quot;\n                                HighlightAlgorithmType=&quot;Simple&quot;/&gt;\n    &lt;/Grid&gt;\n&lt;/UserControl&gt;</code></pre>\n\nWith this code behind:<br />\n<pre><code>namespace LMS_Pipeline_configuration\n{\n    /// &lt;summary&gt;\n    /// Lógica de interacción para LMSPipeGraph.xaml\n    /// &lt;/summary&gt;\n    public partial class LMSPipeGraph : UserControl\n    {\n        private IBidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt; _graphToVisualize;\n\n        public IBidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt; GraphToVisualize\n        {\n            get { return _graphToVisualize; }\n        }\n\n        public LMSPipeGraph()\n        {\n            createGraphToVisualize();\n            InitializeComponent();\n        }\n\n        private void createGraphToVisualize()\n        {\n            var g = new BidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt;();\n\n            string[] vertex = new string[5];\n            for (int i = 0; i &lt; 5; i++)\n            {\n                vertex[i] = i.ToString();\n                g.AddVertex(vertex[i]);\n            }\n\n            //add some edges\n            g.AddEdge(new Edge&lt;object&gt;(vertex[0], vertex[1]));\n            g.AddEdge(new Edge&lt;object&gt;(vertex[1], vertex[2]));\n            g.AddEdge(new Edge&lt;object&gt;(vertex[2], vertex[3]));\n            g.AddEdge(new Edge&lt;object&gt;(vertex[3], vertex[1]));\n            g.AddEdge(new Edge&lt;object&gt;(vertex[1], vertex[4]));\n            _graphToVisualize = g;\n        }\n    }\n}</code></pre>\n\nit's the same code from the tutorial, and this is the Window where I want to insert it:<br />\n<pre><code>&lt;Window x:Class=&quot;LMS_Pipeline_configuration.pruebas&quot;\n        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;\n        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;\n        xmlns:local=&quot;clr-namespace:LMS_Pipeline_configuration&quot;\n        Title=&quot;pruebas&quot; Height=&quot;300&quot; Width=&quot;300&quot;&gt;\n    &lt;Grid&gt;\n        &lt;local:LMSPipeGraph/&gt;\n    &lt;/Grid&gt;\n&lt;/Window&gt;</code></pre>\n\nwith this code behind<br />\n<pre><code>namespace LMS_Pipeline_configuration\n{\n    /// &lt;summary&gt;\n    /// Lógica de interacción para pruebas.xaml\n    /// &lt;/summary&gt;\n    public partial class pruebas : Window\n    {\n        public pruebas()\n        {\n            InitializeComponent();\n        }\n    }\n}</code></pre>\n\nWhen I run the application I see the window but there is no graph there, I did some debugging and the createGraphToVisualize is executed and it seems to work fine, but I can't see the graph.\r<br />\n<br />\nDo anyone know what the error is?\r<br />\nThanks a lot!<br />\n",
+    "PostedDate": "2013-10-09T07:35:16.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105858",
+    "ThreadId": "461632",
+    "Html": "Hi, try to initialize GraphSharp on UserControl <strong>Loaded</strong> event instead of the constructor.\r<br />\n<br />\nBtw, take a look at my enchanced graph library : <a href=\"https://graphx.codeplex.com/\" rel=\"nofollow\">https://graphx.codeplex.com/</a><br />\n",
+    "PostedDate": "2013-10-10T00:50:03.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1105999",
+    "ThreadId": "461632",
+    "Html": "<pre><code>x:Name=&quot;root&quot;</code></pre>\n\nIn the xaml file. I will have a look to your library\r<br />\nThanks<br />\n",
+    "PostedDate": "2013-10-10T07:08:19.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When running a project that uses the library, modified with AllowPartiallyTustedCallers, I get exception when GraphLayout is instantiated. Any idea what is causing this?\r\n\r\n\r\nSystem.Windows.Markup.XamlParseException occurred\r\n  HResult=-2146233087\r\n  Message='The invocation of the constructor on type 'UserControl.MyGraphLayout' that matches the specified binding constraints threw an exception.' Line number '197' and line position '14'.\r\n  Source=PresentationFramework\r\n  LineNumber=197\r\n  LinePosition=14\r\n  StackTrace:\r\n       at System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)\r\n       at System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)\r\n       at System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)\r\n       at System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)\r\n       at UserControl.GraphUserControl.InitializeComponent()\r\n       at UserControl.GraphUserControl..ctor()\r\n  InnerException: System.TypeInitializationException\r\n       HResult=-2146233036\r\n       Message=The type initializer for 'GraphSharp.Controls.GraphLayout`3' threw an exception.\r\n       Source=GraphSharp.Controls\r\n       TypeName=GraphSharp.Controls.GraphLayout`3\r\n       StackTrace:\r\n            at GraphSharp.Controls.GraphLayout`3..ctor()\r\n            at UserControl.MyGraphLayout..ctor()\r\n       InnerException: System.Security.VerificationException\r\n            HResult=-2146233075\r\n            Message=Operation could destabilize the runtime.\r\n            Source=GraphSharp.Controls\r\n            StackTrace:\r\n                 at GraphSharp.Controls.GraphLayout`3..cctor()\r\n            InnerException: \r\n",
+    "LastUpdatedDate": "2012-05-09T15:44:01.173-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2012-05-09T15:44:01.173-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Compiling with AllowPartiallyTrusted callers throws exceptions at runtime",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8280
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

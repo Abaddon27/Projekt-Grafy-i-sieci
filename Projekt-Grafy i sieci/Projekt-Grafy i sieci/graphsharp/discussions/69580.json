@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "236825",
+    "ThreadId": "69580",
+    "Html": "<p>Hey guys,</p>\r\n<p>I'd like to be able to double click/right click on an edge and fire off events (e.g. display a dialog) - does anyone have any experience of doing this in graphsharp and, if so, does anyone have any code samples?</p>\r\n<p>Thanks!</p>\r\n<p>Martin BG</p>",
+    "PostedDate": "2009-09-21T03:34:41.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242366",
+    "ThreadId": "69580",
+    "Html": "<p>I don't have a code sample for you, but the easiest thing to do would be to make a style that applies to the EdgeControl class that attaches your event (implemented in your view).&nbsp; This could fire a command on your view model for the edge.&nbsp; Alternatively, you could write an attached behavior that turns clicks / right-clicks / double-clicks into various different commands that it looks for via bindings on your edge view model.</p>",
+    "PostedDate": "2009-10-05T18:02:50.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

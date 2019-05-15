@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1260100",
+    "ThreadId": "549762",
+    "Html": "First, thank you for this excellent library. This was (almost) exactly what I was looking for to use with my current project.<br />\n<br />\nI managed to incorporate the Sugiyama layout algorithm from Graph# into a web page for displaying a flow diagram. It works very well except for one issue where it will randomly change the order of nodes that are at the same layer. Is there some way to get the algorithm to sort the nodes in a consistent and predictable way? Like an option to set or by adding a weight or sort ordinal to the nodes?<br />\n<br />\nFinally, this library would be so much more useful if it wasn't tied to xaml. If the layouts could be virtualized and normalized to a 1x1 grid so that it would scale to any size grid and displayed with any renderer, it could be used for many more applications.<br />\n",
+    "PostedDate": "2014-06-26T09:21:53.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1260132",
+    "ThreadId": "549762",
+    "Html": "Hi, you can also check GraphX at : <a href=\"http://panthernet.ru/forum/\" rel=\"nofollow\">http://panthernet.ru/forum/</a>\r<br />\nI'm currently in the process of making it portable so XAML isn't an issue anymore. You can use portable logic library and write your own visualization on any compatible platform.\r<br />\n<br />\nPS: GraphX uses the same algorithms as Graph#. You can check algorithm parameters settings to look what options are available there.<br />\n",
+    "PostedDate": "2014-06-26T10:46:06.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

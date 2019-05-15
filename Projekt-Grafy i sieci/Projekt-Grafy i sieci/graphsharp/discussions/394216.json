@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "907814",
+    "ThreadId": "394216",
+    "Html": "\r\n<p>hi, i need to set x and y coordinates when add new vertex to graph.</p>\r\n<p>&nbsp;</p>\r\n<p>this is my code:</p>\r\n<p>&nbsp;</p>\r\n<p>public class PocGraph : BidirectionalGraph&lt;PocVertex, PocEdge&gt;,INotifyPropertyChanged</p>\r\n<p>{</p>\r\n<p>.......</p>\r\n<p>}</p>\r\n",
+    "PostedDate": "2012-09-03T07:49:23.32-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "908546",
+    "ThreadId": "394216",
+    "Html": "\r\n<p>is there a way to get and set x and y coordinates for a vertex?</p>\r\n",
+    "PostedDate": "2012-09-05T01:33:54.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

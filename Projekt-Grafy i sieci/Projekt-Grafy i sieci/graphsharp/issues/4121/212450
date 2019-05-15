@@ -1,0 +1,13 @@
+Index: GraphHelper.cs
+===================================================================
+--- GraphHelper.cs	(revision 29730)
++++ GraphHelper.cs	(working copy)
+@@ -148,7 +148,7 @@
+             {
+                 //compute the distances from the 'source'
+                 var spaDijkstra =
+-                    new UndirectedDijkstraShortestPathAlgorithm<Vertex, Edge>( undirected, ( edge ) => weights[edge], ShortestDistanceRelaxer.Instance );
++                    new UndirectedDijkstraShortestPathAlgorithm<Vertex, Edge>( undirected, ( edge ) => weights[edge] );
+                 spaDijkstra.Compute( source );
+ 
+                 int j = 0;

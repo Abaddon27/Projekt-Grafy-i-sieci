@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "818356",
+    "ThreadId": "350787",
+    "Html": "\r\n<p>Hi</p>\r\n<p>I want my vertices to be immovable. Setting IsEnabled to false is no option for me, because this disables the ability to drop as well, which I need.</p>\r\n<p>Regards</p>\r\n",
+    "PostedDate": "2012-04-01T03:19:15.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "818686",
+    "ThreadId": "350787",
+    "Html": "<p>Ok,, with</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>&lt;Setter Property=<span style=\"color: #a31515;\">\"extbehaviour:DragBehaviour.IsDragEnabled\"</span> Value=<span style=\"color: #a31515;\">\"False\"</span> /&gt;\r\n</pre>\r\n</div>\r\n</p>\r\n<p>the Vertex is immovable inside the graph. My new problem is, that the whole graph is still movable and the IsDragEnabled-Property above doesn't work on the graph. Any ideas?</p>",
+    "PostedDate": "2012-04-02T02:55:57.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "820044",
+    "ThreadId": "350787",
+    "Html": "<p>Take your graph out of a ZoomControl. &nbsp; The ZoomControl is what allows panning.</p>",
+    "PostedDate": "2012-04-04T13:28:06.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

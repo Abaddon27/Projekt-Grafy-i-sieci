@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "648207",
+    "ThreadId": "266697",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm working on adding multitouch capabilities to the graphsharp, and normally we can see the other parts of the graph by dragging the mause hence we can move along with respect to our mouse coordinates.</p>\r\n<p>I want this also to be with multitouch feature, when user touches the screen and moves his/her finger, I can track the coordinates, but I don't know which method should I call to navigate graph.</p>\r\n<p>What should I do to do that ?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks.</p>\r\n",
+    "PostedDate": "2011-07-27T03:57:35.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843138",
+    "ThreadId": "266697",
+    "Html": "<p>Maybe this helps:</p>\r\n<p><a href=\"http://graphsharp.codeplex.com/discussions/357856\">http://graphsharp.codeplex.com/discussions/357856</a></p>",
+    "PostedDate": "2012-05-31T07:51:07.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

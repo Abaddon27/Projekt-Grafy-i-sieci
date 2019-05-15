@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "252347",
+    "ThreadId": "73791",
+    "Html": "<p>Hi,</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp; I'm using the Compound FDP layout but I can't figure out whether it is possible to set some fixed nodes.</p>\r\n<p>&quot;Fixed&quot; means exactly that: the algorythm should not move them at all. In particular I'm trying to set fixed positions for compound nodes while their children can move freely.</p>\r\n<p>I've tried to set the&nbsp;I<span style=\"font-size:x-small\">sFixedToParent property to true&nbsp;of the VertexData class but still the ApplyForce method moves those fixed nodes.</span></p>\r\n<p><span style=\"font-size:x-small\">Am I doing something wrong?</span></p>\r\n<p><span style=\"font-size:x-small\">Thanks in advance, pirobox</span></p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-02T03:01:54.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

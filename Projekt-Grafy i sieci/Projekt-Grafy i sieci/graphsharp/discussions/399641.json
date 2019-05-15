@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "927611",
+    "ThreadId": "399641",
+    "Html": "\r\n<p>Hi, I'd like to change the colors for certain edges.&nbsp;</p>\r\n<p>Effectively something like this (this would make this edge red).</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>g.AddEdge(<span style=\"color:blue\">new</span> Edge&lt;<span style=\"color:blue\">object</span>&gt;(<span style=\"color:#a31515\">&quot;A&quot;</span>,<span style=\"color:#a31515\">&quot;B&quot;), </span>Color.Red);\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>Does anyone have any code snippets for this?</p>\r\n",
+    "PostedDate": "2012-10-16T12:17:24.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "928404",
+    "ThreadId": "399641",
+    "Html": "<p>See the answer here:&nbsp;<a href=\"http://stackoverflow.com/questions/12935835/adding-custom-style-to-edge-in-graphsharp\">http://stackoverflow.com/questions/12935835/adding-custom-style-to-edge-in-graphsharp</a></p>",
+    "PostedDate": "2012-10-17T14:47:07.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "928454",
+    "ThreadId": "399641",
+    "Html": "<p>The answer is great! Thanks Palesz!</p>",
+    "PostedDate": "2012-10-17T16:14:51.853-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "242217",
+    "ThreadId": "71030",
+    "Html": "<p>Can some post a short example on how to build a custom edge class ?</p>\r\n<p>What I need to accomplish is to add a label/textblock next to every edge specifying the kind of relationship.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-10-05T08:42:49.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242364",
+    "ThreadId": "71030",
+    "Html": "<p>The first step would be to define your edge view model class (the one that you need to make part of your BidirectionalGraph-inheriting class) to have a property (and implement INotifyPropertyChanged if necessary) that represents the data you'd like to show in your edge labels.</p>\r\n<p>Next would be to modify the control template for the EdgeControl class (see the sample project for a customization of this - the style that applies to EdgeControl), to have a visualization of the edge labels.&nbsp; I'm not sure if your requirement is to have the labels visible at all times, or only to have them visible as tooltips when hovering.&nbsp; Depending on which it is, you may just need to set the tooltip on the path element.&nbsp; If you want &quot;permanent&quot; labels, you should add a text block and some layout to try to get it in the right place.&nbsp; Unfortunately, I don't have any recommendations on how to get labels to layout where you want them - that might be something that requires modifications to the layout algorithms to get what you want.&nbsp; Hopefully others can help you with that.</p>",
+    "PostedDate": "2009-10-05T17:59:30.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242421",
+    "ThreadId": "71030",
+    "Html": "<p>OK Thanks, I'll give it a try</p>",
+    "PostedDate": "2009-10-05T23:28:06.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "423994",
+    "ThreadId": "71030",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>kellyleahy wrote:</strong><br>\r\n<p>The first step would be to define your edge view model class (the one that you need to make part of your BidirectionalGraph-inheriting class) to have a property (and implement INotifyPropertyChanged if necessary) that represents the data you'd like to show in your edge labels.</p>\r\n<p>Next would be to modify the control template for the EdgeControl class (see the sample project for a customization of this - the style that applies to EdgeControl), to have a visualization of the edge labels.&nbsp; I'm not sure if your requirement is to have the labels visible at all times, or only to have them visible as tooltips when hovering.&nbsp; Depending on which it is, you may just need to set the tooltip on the path element.&nbsp;</p>\r\n</blockquote>\r\n<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>would you be so kind and explain your last sentence a bit?</p>\r\n<p>I don't get it. I successfully applied a style to the EdgeControl like this:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">ResourceDictionary</span>\r\n\t<span style=\"color:Red\">xmlns</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">http://schemas.microsoft.com/winfx/2006/xaml/presentation</span><span style=\"color:Black\">&quot;</span> \r\n\t<span style=\"color:Red\">xmlns:x</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">http://schemas.microsoft.com/winfx/2006/xaml</span><span style=\"color:Black\">&quot;</span> \r\n\t<span style=\"color:Red\">xmlns:GraphSharp_Controls</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n\r\n    <span style=\"color:Green\">&lt;!-- EDGE CONTROL --&gt;</span>\r\n    <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Style</span> <span style=\"color:Red\">TargetType</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{x:Type GraphSharp_Controls:EdgeControl}</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n        <span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">Setter</span> <span style=\"color:Red\">Property</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">ToolTip</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">Value</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">{Binding Path=Edge.ToolTip}</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span>\r\n    <span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">Style</span><span style=\"color:Blue\">&gt;</span>\r\n<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">ResourceDictionary</span><span style=\"color:Blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>It works fine, if I set some static text in the ToolTips' value. But the Binding to Edge.ToolTip doesn't work. I created an extended Edge-Class like this:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>  <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">class</span> MyEdge&lt;T&gt; : Edge&lt;T&gt;\r\n  {\r\n    <span style=\"color:Blue\">public</span> MyEdge(T source, T target)\r\n      : <span style=\"color:Blue\">base</span>(source, target)\r\n    {\r\n\r\n    }\r\n\r\n    <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">override</span> <span style=\"color:Blue\">string</span> ToString()\r\n    {\r\n      <span style=\"color:Blue\">return</span> ToolTip;\r\n    }\r\n\r\n    <span style=\"color:Blue\">private</span> <span style=\"color:Blue\">string</span> _toolTip;\r\n    <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">string</span> ToolTip\r\n    {\r\n      <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> _toolTip; }\r\n      <span style=\"color:Blue\">set</span> { _toolTip = value; }\r\n    }\r\n  }\r\n</pre>\r\n</div>\r\n<p>It seems, that the EdgeControl doesn't know, how to get to the ToolTip property. It'd be great, if one can provide a little hint for me.</p>\r\n<p>Regards,</p>\r\n<p>Florian</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-26T03:08:55.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426568",
+    "ThreadId": "71030",
+    "Html": "<p>It's been a while since I did this, and I don't have time to look into it right now, but did you see any binding errors in the output window when running under the debugger?&nbsp; Also, when were you setting the ToolTip property - before or after the edge was added to the graph?&nbsp; If the tooltip was being set after the edge was added to the graph, then you need to properly implement INotifyPropertyChanged in order for the binding to refresh itself.</p>\r\n<p>Kelly</p>",
+    "PostedDate": "2010-04-01T10:27:23.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "559767",
+    "ThreadId": "71030",
+    "Html": "\r\n<p>I have the exact same problem, how to specify the binding in that specific case ?</p>\r\n",
+    "PostedDate": "2011-02-02T15:30:24.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562902",
+    "ThreadId": "71030",
+    "Html": "\r\n<p>Problem solved here:&nbsp;<a href=\"http://graphsharp.codeplex.com/Thread/View.aspx?ThreadId=70832\">http://graphsharp.codeplex.com/Thread/View.aspx?ThreadId=70832</a></p>\r\n",
+    "PostedDate": "2011-02-08T13:33:24.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

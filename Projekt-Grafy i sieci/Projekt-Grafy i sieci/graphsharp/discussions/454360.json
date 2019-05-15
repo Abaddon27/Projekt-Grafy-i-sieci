@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1084188",
+    "ThreadId": "454360",
+    "Html": "Hi all!<br />\nI want to set a class to listen the click event on vertex,and record the string (for example the id) of that vertex.(The difficult part for me is to get the strings).<br />\nI am not sure is the TouchEventArgs Class relevant or not.If it is so,how can I imply it?<br />\nCan anyone help me? Or kindly give me some samples?<br />\n",
+    "PostedDate": "2013-08-23T07:32:08.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1084229",
+    "ThreadId": "454360",
+    "Html": "Hi, that depends on the actual implementation. If you catch <strong>MouseDown</strong> event on <strong>VertexControl</strong> object then you can get <strong>VertexControl.Vertex</strong> property to get vertex data object associated with this visual.\r<br />\n<br />\nAlso let me advice you to check <a href=\"http://graphx.codeplex.com\" rel=\"nofollow\">http://graphx.codeplex.com</a> library there you can easily get what you want.<br />\n",
+    "PostedDate": "2013-08-23T09:36:56.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

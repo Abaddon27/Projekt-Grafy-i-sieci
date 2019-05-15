@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "210668",
+    "ThreadId": "62067",
+    "Html": "<p>A great library, I have a couple of questions:</p>\r\n<p>Did you consider making the graph control an ItemsControl, with maybe an attached property on the itemcontainer to link to a list of other nodes?</p>\r\n<p>Could you refer me to any books/articles on the layout algorithms?&nbsp; or just some general info on graph layout?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-07-09T19:28:41.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

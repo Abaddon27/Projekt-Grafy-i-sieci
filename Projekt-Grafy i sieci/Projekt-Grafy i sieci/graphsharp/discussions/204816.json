@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "417619",
+    "ThreadId": "204816",
+    "Html": "<p>I have noticed that certain sets of nodes appear to be non-deterministic in terms of their layouts. &nbsp;For instance, the test set <span style=\"color:#808080\">SugiyamaTester13.gml <span style=\"color:#000000\">constantly changes (or actually alternates between a few) layouts when the &quot;Relayout&quot; button is repeatedly pressed.</span></span></p>\r\n<p>I'm not sure, as I don't totally follow the math, but I didn't think there was supposed to be non-determinism in the algorithm. &nbsp;Perhaps someone smarter than I am can enlighten me.</p>\r\n<p>I'm not sure this is a bug... &nbsp;but it kind of feels like one...</p>\r\n<p>Thanks,&nbsp;</p>\r\n<p>&nbsp;&nbsp; &nbsp; Jacob</p>",
+    "PostedDate": "2010-03-12T12:48:52.927-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

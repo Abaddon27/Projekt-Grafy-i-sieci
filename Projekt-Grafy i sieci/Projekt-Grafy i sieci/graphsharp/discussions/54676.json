@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "184368",
+    "ThreadId": "54676",
+    "Html": "Hi,<br>\r\n<br>\r\nDoes Quickgraph support manipulating graph (e.g. adding/removing edges/vertices) from non-UI thread? If yes how?<br>\r\n<br>\r\nRegards,<br>\r\nPahlevi Fikri Auliya\r\n",
+    "PostedDate": "2009-04-28T00:18:59.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "190736",
+    "ThreadId": "54676",
+    "Html": "<p>That question should be asked on the Quickgraph forum. I don't if it dispatches the events back to the thread where you have subscribed from, you should ask that from Peli. :)</p>",
+    "PostedDate": "2009-05-15T07:05:35.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

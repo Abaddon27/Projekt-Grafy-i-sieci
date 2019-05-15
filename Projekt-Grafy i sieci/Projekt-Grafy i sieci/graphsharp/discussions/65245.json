@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "222222",
+    "ThreadId": "65245",
+    "Html": "<p>Hi,</p>\r\n<p>I am trying to create a very simple application that allows a user to modify a graph.&nbsp; I am able to create the graph and display it but when the user clicks a button that modifies the graph nothing happens.&nbsp; Do I have to redraw somehow?&nbsp; I am currently working with the example from the video tutorial.&nbsp; I just added a button and that button calls a method which creates a new graph and sets _graphToVisualize to that new graph.</p>\r\n<p>Thank you in advance for the help,</p>\r\n<p>Dirk</p>",
+    "PostedDate": "2009-08-11T14:43:28.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "225098",
+    "ThreadId": "65245",
+    "Html": "<p>Can you please send us some code to investigate?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you</p>\r\n<p>&nbsp;</p>\r\n<p>badang</p>",
+    "PostedDate": "2009-08-18T12:17:47.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "226001",
+    "ThreadId": "65245",
+    "Html": "<p>Hello,</p>\r\n<p>I was able to figure out my problem with this.&nbsp; The tutorial used a bidirectionalgraph and to be able to add vertices on the fly I needed to use a MutableBidirectionalGraph.&nbsp; Once I replaced this it worked fine.</p>\r\n<p>Thanks again,</p>\r\n<p>Dirk</p>",
+    "PostedDate": "2009-08-20T12:46:24.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

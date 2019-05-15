@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Create the Silverlight version... (Basically we can reuse the classes, we just need to build them with 'Silverlight enabled' compiler option)",
+    "LastUpdatedDate": "2017-11-28T01:15:55.037-08:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-04-20T01:12:14.05-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Silverlight version",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 8273
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "hi, you mentioned you had a previously built version, may I have a look at it?",
+      "PostedDate": "2011-05-11T03:37:25.91-07:00",
+      "Id": 35559
+    }
+  ]
+}

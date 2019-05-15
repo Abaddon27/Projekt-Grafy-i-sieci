@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "496033",
+    "ThreadId": "227864",
+    "Html": "<p>Hi</p>\r\n<p>I'm trying to use GraphLyaout to display a graph based on an enum, e.g. IBiDirectionalGraph&lt;MyEnum, IEdge&lt;MyEnum&gt;.</p>\r\n<p>However, GraphLayout is defined as</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">public</span> <span style=\"color:blue\">class</span> GraphLayout&lt;TVertex, TEdge, TGraph&gt; \r\n        <span style=\"color:blue\">where</span> TVertex : <span style=\"color:blue\">class</span>\r\n        <span style=\"color:blue\">where</span> TEdge : IEdge&lt;TVertex&gt;\r\n        <span style=\"color:blue\">where</span> TGraph : <span style=\"color:blue\">class</span>, IBidirectionalGraph&lt;TVertex, TEdge&gt;\r\n</pre>\r\n</div>\r\n</p>\r\n<p>meaning that I have to wrap my enum (or int, etc.) in a class wrapper, which isn't a big deal, but I was wondering why this restriction is being imposed on GraphLayout when it isn't for IBidirectionalGraph.</p>\r\n<p>Thanks<br>Riko</p>",
+    "PostedDate": "2010-09-20T07:57:51.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

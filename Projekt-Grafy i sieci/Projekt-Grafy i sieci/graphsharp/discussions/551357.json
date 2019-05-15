@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1265072",
+    "ThreadId": "551357",
+    "Html": "Hello Everyone,\r<br />\n<br />\nI just started using this amazing library and i am trying to make a custom endpoints(vertex's)\r<br />\nand lines(edges) custom design of my own.\r<br />\n<br />\nI want to make Vertexs that contains Image + 2 Labels/TextBoxes\r<br />\nand Edge to be a image / another color.\r<br />\n<br />\nI saw Sacha blog - <a href=\"http://sachabarbs.wordpress.com/2010/08/31/pretty-cool-graphs-in-wpf/\" rel=\"nofollow\">http://sachabarbs.wordpress.com/2010/08/31/pretty-cool-graphs-in-wpf/</a>\r<br />\nbut i didn't really understood something out of what he made.\r<br />\n<br />\nIf someone could explain me how to create Custom Vertex+Edge deeply that would be awesome! :)\r<br />\n<br />\nThanks Heads up!<br />\n",
+    "PostedDate": "2014-07-12T02:04:54.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1265137",
+    "ThreadId": "551357",
+    "Html": "Hi, you must implement your own templates for VertexControl and EdgeControl. Templates are here:\r<br />\n<a href=\"https://graphsharp.codeplex.com/SourceControl/latest#Source/Graph#.Controls/Themes/Generic.xaml\" rel=\"nofollow\">https://graphsharp.codeplex.com/SourceControl/latest#Source/Graph#.Controls/Themes/Generic.xaml</a>\r<br />\n<br />\nBtw, look at the <a href=\"https://github.com/panthernet/GraphX\" rel=\"nofollow\">GraphX</a> project, i bet it will amaze you even more :)<br />\n",
+    "PostedDate": "2014-07-12T08:55:11.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

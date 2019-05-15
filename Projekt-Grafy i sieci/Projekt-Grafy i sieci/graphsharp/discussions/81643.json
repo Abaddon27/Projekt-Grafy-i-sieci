@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "280319",
+    "ThreadId": "81643",
+    "Html": "<p>I defined style different from the default one for vertex contol and my layout type is set to Tree. I am having a problem that for some of the edge controls have a very short length because the distance between the source and target vertex control is short. Is there a way to solve that problem ?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-01-21T17:40:31.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

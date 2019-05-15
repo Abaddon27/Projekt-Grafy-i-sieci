@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "497264",
+    "ThreadId": "228239",
+    "Html": "<p>I have a tree graph and have templated the edges using the template from the source code.</p>\r\n<p>&nbsp;</p>\r\n<p>I want to resize the edges to easily visualize the weight of the edge. &nbsp;Does anyone have an example of how to do this successfully?</p>",
+    "PostedDate": "2010-09-22T15:48:36.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

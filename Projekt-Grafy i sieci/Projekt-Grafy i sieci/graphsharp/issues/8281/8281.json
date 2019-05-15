@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "After referencing current available for download assembly application throws an  exception:\r\n\r\n\"Could not load file or assembly 'QuickGraph, Version=3.2.40122.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3' or one of its dependencies. An operation is not legal in the current state. (Exception from HRESULT: 0x80131509)\":\"QuickGraph, Version=3.2.40122.0, Culture=neutral, PublicKeyToken=f3fb40175eec2af3\"\r\n\r\nPlease rebuild against the recent version of the dependency or build without strict version.",
+    "LastUpdatedDate": "2012-06-15T06:37:01.29-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2012-06-15T06:37:01.29-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Build against QuickGraph 3.6.x",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8281
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

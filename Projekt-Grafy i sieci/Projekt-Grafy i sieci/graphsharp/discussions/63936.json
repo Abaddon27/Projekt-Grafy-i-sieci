@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "217391",
+    "ThreadId": "63936",
+    "Html": "<p>Hi,</p>\r\n<p>In GrahpSharp.Sample project, TestWindow.xaml shows vertices as square. but, it seems not to describe code about the shapes.</p>\r\n<p>How do I change the shapes of vertex and edges?</p>",
+    "PostedDate": "2009-07-29T17:22:25.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "217600",
+    "ThreadId": "63936",
+    "Html": "<p>The Style Setter for the example application are defined inside the GraphSharp.Controls.Themes.Generic.XAML</p>\r\n<p>There you can see the default style for the Sample application.</p>\r\n<p>Enjoy!!<br>badang</p>",
+    "PostedDate": "2009-07-30T07:16:52.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "423608",
+    "ThreadId": "63936",
+    "Html": "<p>Hi,</p>\r\n<p>Thanks for the good work of your guys first.</p>\r\n<p>I'm doing a project which integrates graph# into winform, and problem comes up that the style of the vertex and edges in my project does not obtain the &quot;pretty face&quot; as the &quot;TestWindow.xaml&quot; in the Sample project.</p>\r\n<p>I searched for an answer and finally found this thread.</p>\r\n<p>Thank Dear badang for telling about the thicks, but I'm wondering how to make it work. I will be grateful if you could give me a hand.</p>\r\n<p>Thanks again!</p>",
+    "PostedDate": "2010-03-25T07:43:08.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

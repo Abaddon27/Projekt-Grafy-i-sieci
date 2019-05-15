@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns  http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <graph id="G" edgedefault="directed" parse.nodes="3" parse.edges="1" parse.order="nodefirst" parse.nodeids="free" parse.edgeids="free">
+    <node id="0" />
+    <node id="1" />
+    <node id="2" />
+    <edge id="0to1" source="0" target="1" />
+  </graph>
+</graphml>

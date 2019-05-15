@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "904492",
+    "ThreadId": "393185",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>How to set correctly layout for Tree algorithm and LeftToRight direction to locate leafs in right side of Graph?</p>\r\n<p>In this case two marked nodes(leafs) are located in left side, but should be located in right side of graph .</p>\r\n<p>I setup layout as below:</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public MyGraphLayout()<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // disable animation and flash<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.CreationTransition = null;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.AsyncCompute = false;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.ShowAllStates = false;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.LayoutAlgorithmType = &quot;Tree&quot;;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.OverlapRemovalAlgorithmType = &quot;FSA&quot;;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.OverlapRemovalConstraint = AlgorithmConstraints.Must;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.HighlightAlgorithmType = &quot;Simple&quot;;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SimpleTreeLayoutParameters layoutParameters = new SimpleTreeLayoutParameters();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; layoutParameters.Direction = LayoutDirection.LeftToRight;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.LayoutParameters = layoutParameters;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p><img src=\"http://img88.imageshack.us/img88/6938/graphg.png\" alt=\"\"></p>\r\n",
+    "PostedDate": "2012-08-27T02:40:21.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "904594",
+    "ThreadId": "393185",
+    "Html": "<p>Please create a ticket in the issue tracker, and provide me a sample graph in some format (CSV, GML, C# code in a test case, ...).</p>\r\n<p>Your sample graph should be directed (I think there's some problem with direction of the edges).</p>\r\n<p>Thanks, palesz<span style=\"white-space: pre;\"> </span></p>",
+    "PostedDate": "2012-08-27T06:35:59.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

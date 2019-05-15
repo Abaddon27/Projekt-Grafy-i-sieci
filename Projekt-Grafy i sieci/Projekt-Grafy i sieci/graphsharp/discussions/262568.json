@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "632126",
+    "ThreadId": "262568",
+    "Html": "\r\n<p>Is there a way to obtain a SelectedItem from a Graph? &nbsp;I have a DataTemplate that describes the look of each of the Verticies and I want to show details about a Vertex when it is clicked on. &nbsp;</p>\r\n",
+    "PostedDate": "2011-06-23T14:34:51.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "632615",
+    "ThreadId": "262568",
+    "Html": "<p>Hey man, I had the same problem, here was my solution:</p>\r\n<p>You have a GraphLayout named graphLayout.&nbsp;</p>\r\n<p>Itterate through graphLayout.Children and it will contain the VertexControl and EdgeControl's. Attach event handlers to the MouseDown Events of these controls, and voila, you've got something happening when you click the vertex;</p>",
+    "PostedDate": "2011-06-24T09:40:50.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "632616",
+    "ThreadId": "262568",
+    "Html": "<p>*when you click the vertex or edge</p>",
+    "PostedDate": "2011-06-24T09:41:27.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

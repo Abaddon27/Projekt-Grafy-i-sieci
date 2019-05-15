@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "418887",
+    "ThreadId": "205158",
+    "Html": "<p>Hi guys,</p>\r\n<p>Can anyone give me a pointer for achiving this.</p>\r\n<p>Basically I want to mouse down in a blank area, drag the mouse down and to the right, to make a square selection area and select all the vertices in that area. Then I want to move all the selected vertices by by dragging them to the side(like a normal vertex, only more than one at a time).</p>\r\n<p>Any advice will be appreciated.</p>\r\n<p>rootme</p>",
+    "PostedDate": "2010-03-16T14:10:50.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "617718",
+    "ThreadId": "205158",
+    "Html": "<p>anyone have a code snipplet to move a bunch of nodes all in one shot? seems pretty critical but havent been able to find anything, or work something out myself....</p>\r\n<p>any help much appreciated..</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2011-05-24T15:12:15.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

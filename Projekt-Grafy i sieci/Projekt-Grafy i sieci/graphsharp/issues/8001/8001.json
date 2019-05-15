@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi.\r\n\r\nI am trying to use this library to draw Control Flow Graphs.\r\n\r\nSo, I would need to have Vertex and Edge with a unique ID. Is that possible?\r\n\r\nAlso, when I just copy the code of TestWindow.xaml from the Sample in the package, it loses the Rectangle around each vertex? Can anyone tell me why?\r\nHow can I customize the shape of a single vertex?\r\n\r\nThanks\r\ndaniela",
+    "LastUpdatedDate": "2011-04-20T01:09:37.757-07:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2010-12-29T16:29:44.407-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Vertex and Edges with IDs",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8001
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "We need a tutorial for vertex / edge customization... We got some good examples in the forums.",
+      "PostedDate": "2011-04-20T01:09:32.007-07:00",
+      "Id": 34493
+    }
+  ]
+}

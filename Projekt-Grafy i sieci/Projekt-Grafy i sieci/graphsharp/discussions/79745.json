@@ -1,0 +1,330 @@
+[
+  {
+    "Id": "273124",
+    "ThreadId": "79745",
+    "Html": "<p>Hi,</p>\r\n<p>I'm trying to get X and Y coordinates of the Vertex Control inside the graph canvas.&nbsp; I tried&nbsp; vertexControl.GetValue(GraphCanvas.XProperty) - vertexControl.GetValue(GraphCanvas.YProperty) but I get Nan values. Any ideas how to resolve this ?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-01-04T17:32:19.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273151",
+    "ThreadId": "79745",
+    "Html": "<p>I believe you use GraphCanvas.GetX(vertexControl) and GraphCanvas.GetY(vertexControl).</p>",
+    "PostedDate": "2010-01-04T19:57:46.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "273388",
+    "ThreadId": "79745",
+    "Html": "<p>Yes, I tried that one as well but did not work, I get Nan values.</p>",
+    "PostedDate": "2010-01-05T09:33:39.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283308",
+    "ThreadId": "79745",
+    "Html": "<p>Hello</p>\r\n<p>Same problem here, reading out the Values with GetX() just returns that there are no values assigned.</p>\r\n<p>As a consequence, SetX() ist without any effect because obviously, Graph# does not care about it.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-29T05:21:32.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "285293",
+    "ThreadId": "79745",
+    "Html": "<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>I have the same problem regarding getting AND setting the X and Y values of a vertex.</p>\r\n<p>Do I need some dependencyproperty or something in my vertex class to do this?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-02-03T06:39:06.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "286984",
+    "ThreadId": "79745",
+    "Html": "<div style=\"color:Black;background-color:White\">\r\n<pre>Just a beginner, but this thankfully works fine for me after a layout:<br><br>GraphCanvas.GetX(vc)\r\n<br><br>where vc is the VertexControl instance of the vertex I am after.<br><br>The property is also set when I move the vertex on the canvas. I have not tried the setter, nor &quot;drag-and-drop to add&quot;, yet - that's next.<br></pre>\r\n</div>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-07T23:17:11.01-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425416",
+    "ThreadId": "79745",
+    "Html": "<p>Hey, I still have this problem. I have the following:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>Size size = <span style=\"color:Blue\">new</span> Size(graphLayout.ActualWidth, graphLayout.ActualHeight);<br><br>graphLayout.Measure(size);<br>graphLayout.Arrange(<span style=\"color:Blue\">new</span> Rect(size));<br><br><span style=\"color:Blue\">foreach</span> (MyVertexBase vertex <span style=\"color:Blue\">in</span> graphLayout.Graph.Vertices)<br>{<br>     <span style=\"color:Blue\">double</span> vertexX = GraphCanvas.GetX(vertex);<br>     <span style=\"color:Blue\">double</span> vertexY = GraphCanvas.GetY(vertex);<br>     <span style=\"color:#00ff00\">//Do stuff here</span><br>}\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>but vertexX and vertexY is NaN.</p>\r\n<p>Can anyone please debunk the GraphCanvas.GetX&amp;Y and GraphCanvas.SetX&amp;Y myth for me please. I am trying to draw a rectangle on screen(working) and then moving all the vertices in that area as a collective, instead of moving the vertices one by one. Any help is appreciated.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-03-30T05:00:57.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425557",
+    "ThreadId": "79745",
+    "Html": "<p>I've done a bit of playing in that area, and I think the GetX, GetY calls are what you want. &nbsp;However, before &nbsp;layout is done, I think you will get NaNs back. &nbsp;Try doing a Relayout first just to see if you then get good values for the X and Y.</p>\r\n<p>&nbsp;&nbsp; -Jacob</p>",
+    "PostedDate": "2010-03-30T09:16:37.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425804",
+    "ThreadId": "79745",
+    "Html": "<p>Hi Jacob.</p>\r\n<p>After the Relayout() I still get NaN's.</p>\r\n<p>Can anyone please help me?</p>\r\n<p>Here is my Vertex if it helps:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">public</span> <span style=\"color:Blue\">class</span> MyVertexBase : DependencyObject\r\n    {\r\n        <span style=\"color:Blue\">#region</span> IMAGE\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> <span style=\"color:Blue\">readonly</span> DependencyProperty IMAGE_PROPERTY =\r\n           DependencyProperty.Register(<span style=\"color:#A31515\">&quot;IMAGE&quot;</span>, <span style=\"color:Blue\">typeof</span>(Image), <span style=\"color:Blue\">typeof</span>(MyVertexBase));\r\n\r\n        <span style=\"color:Blue\">public</span> Image Image\r\n        {\r\n            <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> (Image)GetValue(IMAGE_PROPERTY); }\r\n            <span style=\"color:Blue\">set</span> { SetValue(IMAGE_PROPERTY, value); }\r\n        }\r\n\r\n        <span style=\"color:Blue\">#endregion</span>\r\n\r\n        <span style=\"color:Blue\">#region</span> LABEL\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> DependencyProperty LABEL_PROPERTY =\r\n            DependencyProperty.Register(<span style=\"color:#A31515\">&quot;LABEL&quot;</span>, <span style=\"color:Blue\">typeof</span>(<span style=\"color:Blue\">string</span>), <span style=\"color:Blue\">typeof</span>(MyVertexBase));\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">string</span> LABEL\r\n        {\r\n            <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> (<span style=\"color:Blue\">string</span>)GetValue(LABEL_PROPERTY); }\r\n            <span style=\"color:Blue\">set</span> { SetValue(LABEL_PROPERTY, value); }\r\n        }\r\n\r\n        <span style=\"color:Blue\">#endregion</span>\r\n\r\n        <span style=\"color:Blue\">#region</span> SELECTED\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> DependencyProperty SELECTED_PROPERTY =\r\n            DependencyProperty.Register(<span style=\"color:#A31515\">&quot;SELECTED&quot;</span>, <span style=\"color:Blue\">typeof</span>(<span style=\"color:Blue\">bool</span>), <span style=\"color:Blue\">typeof</span>(MyVertexBase));\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">bool</span> SELECTED\r\n        {\r\n            <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> (<span style=\"color:Blue\">bool</span>)GetValue(SELECTED_PROPERTY); }\r\n            <span style=\"color:Blue\">set</span> { SetValue(SELECTED_PROPERTY, value); }\r\n        }\r\n\r\n        <span style=\"color:Blue\">#endregion</span>\r\n\r\n        <span style=\"color:Blue\">#region</span> UID\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> DependencyProperty UID_PROPERTY =\r\n            DependencyProperty.Register(<span style=\"color:#A31515\">&quot;UID&quot;</span>, <span style=\"color:Blue\">typeof</span>(<span style=\"color:Blue\">string</span>), <span style=\"color:Blue\">typeof</span>(MyVertexBase));\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">string</span> UID\r\n        {\r\n            <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> (<span style=\"color:Blue\">string</span>)GetValue(UID_PROPERTY); }\r\n            <span style=\"color:Blue\">set</span> { SetValue(UID_PROPERTY, value); }\r\n        }\r\n\r\n        <span style=\"color:Blue\">#endregion</span>\r\n\r\n        <span style=\"color:Blue\">#region</span> LEVEL\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> DependencyProperty LEVEL_PROPERTY =\r\n            DependencyProperty.Register(<span style=\"color:#A31515\">&quot;LEVEL&quot;</span>, <span style=\"color:Blue\">typeof</span>(<span style=\"color:Blue\">int</span>), <span style=\"color:Blue\">typeof</span>(MyVertexBase));\r\n\r\n        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">int</span> LEVEL\r\n        {\r\n            <span style=\"color:Blue\">get</span> { <span style=\"color:Blue\">return</span> (<span style=\"color:Blue\">int</span>)GetValue(LEVEL_PROPERTY); }\r\n            <span style=\"color:Blue\">set</span> { SetValue(LEVEL_PROPERTY, value); }\r\n        }\r\n\r\n        <span style=\"color:Blue\">#endregion</span>\r\n\r\n    }\r\n</pre>\r\n</div>\r\n<p>Should it inherit from VertexControl or something? Because everyone said: GraphCanvas.GetY(<strong><span style=\"text-decoration:underline\">vertexControl</span></strong>)???</p>\r\n<p>&nbsp;</p>\r\n<p>rootme</p>",
+    "PostedDate": "2010-03-30T23:56:38.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427903",
+    "ThreadId": "79745",
+    "Html": "<p>rootme,</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"white-space:pre\"> </span>When I've been doing it I have inherited from VertexControl (actually a few different times so different types of vertices all have their own control templates). &nbsp; I'm not sure it that will help you, but perhaps it will. &nbsp; I'd have to dig in to try and figure out where I was doing something similar.</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"white-space:pre\"> </span>-Jacob</p>",
+    "PostedDate": "2010-04-06T08:25:51.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "428539",
+    "ThreadId": "79745",
+    "Html": "<p>Hi,</p>\r\n<p>I'm having similar problem. I need to put vertices in proper places on the screen so that they will create sort of network (for example streets in the city). I'm beginner in G# and I don't know were to find this settings of positions of vertices.</p>",
+    "PostedDate": "2010-04-07T15:14:40.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "431410",
+    "ThreadId": "79745",
+    "Html": "<p>Hey guys',</p>\r\n<p>I'm still stuck here. :( Please someone, just a short sample showing a working solution.</p>\r\n<p>I think a lot of people are having this problem.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-15T05:30:11.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "431501",
+    "ThreadId": "79745",
+    "Html": "<p>I'll look&nbsp;into this *issue* tonight. I'll let you know!</p>",
+    "PostedDate": "2010-04-15T08:17:05.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "431803",
+    "ThreadId": "79745",
+    "Html": "<p>Ok thank you very much!</p>\r\n<p>Eagerly awaiting your reply!</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-16T00:03:09.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "432469",
+    "ThreadId": "79745",
+    "Html": "<p>Try GraphLayout.GetX(graphLayout.GetVertexControl(vertex))</p>\r\n<p>where:</p>\r\n<p>- vertex&nbsp;= the vertex object</p>\r\n<p>- graphLayout = the GraphLayout control</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-18T13:19:09.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436344",
+    "ThreadId": "79745",
+    "Html": "promontis you GENIUS!\r\n\r\nThank you! It works!\r\n\r\nJust a small correction from your sample. The first &quot;GraphLayout&quot; should be &quot;GraphCanvas&quot;. \r\nHere is a working sample using promontis' sample:\r\n\r\ndouble x = GraphCanvas.GetX(graphLayout.GetVertexControl(vertex));\r\ndouble y = GraphCanvas.GetY(graphLayout.GetVertexControl(vertex));\r\n\r\nGraphCanvas.SetX(graphLayout.GetVertexControl(vertex), 100);//The 100 can be whatever.\r\nGraphCanvas.SetY(graphLayout.GetVertexControl(vertex), 100); //The 100 can be whatever.\r\n\r\n\r\nHope this helps anyone having the same problem in the future.\r\n\r\n*Edit: The post thing is broken. Sorry for the formatting.*",
+    "PostedDate": "2010-04-28T00:12:57.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436724",
+    "ThreadId": "79745",
+    "Html": "<p>I and my friend have a very big problem with this solutions. In ours computer there is no such thing as GraphCanvas. Simple &quot;The name 'GraphCanvas' does not exist in the current context &quot;. We have very similar problem with GraphLayout.GetX(graphLayout.GetVertexControl(vertex)). graphLayout exist but there is no such thing in graphLayout as GetX. Should we install some special librares ?This is the list of our librares</p>\r\n<p>&quot;using System;<br>using System.Collections.Generic;<br>using System.Linq;<br>using System.Text;<br>using System.Windows;<br>using System.Windows.Controls;<br>using System.Windows.Data;<br>using System.Windows.Documents;<br>using System.Windows.Input;<br>using System.Windows.Media;<br>using System.Windows.Media.Imaging;<br>using System.Windows.Navigation;<br>using System.Windows.Shapes;<br>using QuickGraph;</p>\r\n<p>&quot;</p>\r\n<p>If you can please help us :)</p>\r\n<div id=QuickWikiQuickSearchDiv style=\"left:473.5px;top:505.7px\"><span>Press <strong>ENTER</strong> to look up in Wiktionary or <strong>CTRL+ENTER</strong> to look up in Wikipedia</span><br>&lt;input id=&quot;QuickWikiInput&quot; class=&quot;QuickWiki&quot; type=&quot;text&quot; /&gt;</div>",
+    "PostedDate": "2010-04-28T13:25:00.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436728",
+    "ThreadId": "79745",
+    "Html": "<p>From your list, I can see that you're not using GraphSharp.</p>",
+    "PostedDate": "2010-04-28T13:32:11.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436737",
+    "ThreadId": "79745",
+    "Html": "<p>ok I add GraphSharp and my list looks like</p>\r\n<p>&quot;using System;<br>using System.Collections.Generic;<br>using System.Linq;<br>using System.Text;<br>using System.Windows;<br>using System.Windows.Controls;<br>using System.Windows.Data;<br>using System.Windows.Documents;<br>using System.Windows.Input;<br>using System.Windows.Media;<br>using System.Windows.Media.Imaging;<br>using System.Windows.Navigation;<br>using System.Windows.Shapes;<br>using QuickGraph;<br>using GraphSharp;&quot;</p>\r\n<p>but there is still the same error &quot;The name 'GraphCanvas' does not exist in the current context &quot;. Moreover compilator doesn't give any error connecting with library so probably GraphSharp was founded on my computer ;/<br><br></p>",
+    "PostedDate": "2010-04-28T13:53:12.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436738",
+    "ThreadId": "79745",
+    "Html": "<p>Please try the tutorial and look for differences between that project and yours.</p>",
+    "PostedDate": "2010-04-28T13:56:24.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436758",
+    "ThreadId": "79745",
+    "Html": "<p>1. I solve part of the problem because using GraphSharp is not enought. I must use &quot;using GraphSharp.Controls;&quot;.</p>\r\n<p>2. In tutorial</p>\r\n<p>http://www.youtube.com/watch?v=VTbuvkaPGxE</p>\r\n<p>there is no &quot;using GraphSharp;&quot; at all . Only &quot;using QuickGraph;&quot; so this tutorial from my point of view is no so usefull</p>\r\n<p>3. I include all librares</p>\r\n<p>using System;<br>using System.Collections.Generic;<br>using System.Linq;<br>using System.Text;<br>using System.Windows;<br>using System.Windows.Controls;<br>using System.Windows.Data;<br>using System.Windows.Documents;<br>using System.Windows.Input;<br>using System.Windows.Media;<br>using System.Windows.Media.Imaging;<br>using System.Windows.Navigation;<br>using System.Windows.Shapes;<br>using QuickGraph;<br>using QuickGraph.Algorithms;<br>using QuickGraph.Collections;<br>using QuickGraph.Contracts;<br>using QuickGraph.Petri;<br>using QuickGraph.Predicates;<br>using QuickGraph.Serialization;<br>using GraphSharp;<br>using GraphSharp.Controls;<br>using GraphSharp.Algorithms;<br>using GraphSharp.Contracts;<br>using GraphSharp.Converters;<br>using GraphSharp.Helpers;</p>\r\n<p>but still have a problem</p>\r\n<p>&quot;\\ 'GraphSharp.Controls.GraphLayout' does not contain a definition for 'GetVertexControl' and no extension method 'GetVertexControl' accepting a first argument of type 'GraphSharp.Controls.GraphLayout' could be found (are you missing a using directive or an assembly reference?)&nbsp;&nbsp; &quot;</p>\r\n<p>so program finds GraphCanvas.GetX but in graphLayout cannot find GetVertexControl.</p>\r\n<p>I made my graph in XAML exaclty like in tutorial so it is looks like</p>\r\n<p>&quot;&lt;graphsharp:GraphLayout x:Name=&quot;graphLayout&quot; Graph=&quot;{Binding ElementName=root ,Path=GraphToVisualize}&quot; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LayoutAlgorithmType=&quot;FR&quot; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OverlapRemovalAlgorithmType=&quot;FSA&quot;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HighlightAlgorithmType=&quot;Simple&quot;&gt;&quot;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-28T14:32:08.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436938",
+    "ThreadId": "79745",
+    "Html": "Have you added the references to the GraphSharp, GraphSharp.Controls?",
+    "PostedDate": "2010-04-29T00:48:11.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "436954",
+    "ThreadId": "79745",
+    "Html": "<p>Yes I have references to the GraphSharp, GraphSharp.Controls. Here is all my project. Maybe you find what is wrong ?</p>\r\n<p>http://www.vjdw.michalin.pl/MaximalFlowNetwork.rar</p>\r\n<div id=QuickWikiQuickSearchDiv style=\"left:473.5px;top:505.7px\"><span>Press <strong>ENTER</strong> to look up in Wiktionary or <strong>CTRL+ENTER</strong> to look up in Wikipedia</span><br>&lt;input id=&quot;QuickWikiInput&quot; class=&quot;QuickWiki&quot; type=&quot;text&quot; /&gt;</div>",
+    "PostedDate": "2010-04-29T01:26:19.417-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437808",
+    "ThreadId": "79745",
+    "Html": "<p>Please guys help me. Option with set constant value of X and Y vertex position is <span id=\"result_box\"><span style=\"background-color:#e6ecf9;color:#000000\">necessary in my work. If you don't help me with this little thing I will be forced to write everything on my own. I have deadline in thursday and in this case propably I don't make whole project on time.</span></span></p>\r\n<p><br>http://www.vjdw.michalin.pl/MaximalFlowNetwork.rar</p>\r\n<p>Here is my project. If you cannot find why it isn't working maybe you give me a little working project containing only set X and set Y vertex positions.</p>\r\n<p>regards</p>",
+    "PostedDate": "2010-05-01T04:17:04.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437811",
+    "ThreadId": "79745",
+    "Html": "<p>If you download the source code, you'll find a GraphSharpTutorial01 folder with a working sample. That's your starting point. Next, look at this post on how to set positions.</p>",
+    "PostedDate": "2010-05-01T04:42:39.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437833",
+    "ThreadId": "79745",
+    "Html": "<p>are you talking about this</p>\r\n<p>http://graphsharp.codeplex.com/SourceControl/changeset/changes/24813</p>\r\n<p>because there is a floder GraphSharp Tutorial01 and there is tutorial which I find long time ago but of course it is not working. I add &quot;using GraphSharp&quot; and &quot;GraphSharp.controls&quot;and there is still the same problem. &quot;GraphSharp.Controls.GraphLayout' does not contain a definition for 'GetVertexControl' and no extension method 'GetVertexControl' accepting a first argument of type 'GraphSharp.Controls.GraphLayout' could be found (are you missing a using directive or an assembly reference?) &quot;.<br><br></p>",
+    "PostedDate": "2010-05-01T06:06:13.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437980",
+    "ThreadId": "79745",
+    "Html": "<p>GraphLayout is a partial class. Look at the code in the&nbsp;<strong>GraphLayout.GraphElements.cs </strong>file, there is a GetVertexControl method (&nbsp;<a href=\"http://graphsharp.codeplex.com/SourceControl/changeset/view/31744#529203\">http://graphsharp.codeplex.com/SourceControl/changeset/view/31744#529203</a>&nbsp;)</p>\r\n<pre>        <span>public</span> VertexControl GetVertexControl(TVertex vertex)\r\n        {\r\n            VertexControl vc = <span>null</span>;\r\n            _vertexControls.TryGetValue(vertex, <span>out</span> vc);\r\n            <span>return</span> vc;\r\n        }</pre>\r\n<p>Using this method you can get the VertexControl for a vertex, after that with the <strong>GraphCanvas.SetX , SetY</strong> methods you can set the positions. Sorry, but it's not in the latest release, you need compile the lib from the latest source code.</p>\r\n<p>palesz</p>",
+    "PostedDate": "2010-05-02T00:11:58.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "438235",
+    "ThreadId": "79745",
+    "Html": "<p>Thank you very much . Problem is solved. The solution is to download 31744 file build libriaries and change them with libriaries from tutorial.</p>\r\n<p>By the way I have some other question.There is a posibility to make that vertex will have the same position after every adding or reamoving ? Of course i can create a loop and using getX and setX do this on my own</p>\r\n<p>but i guess that there is a simple possibility to turn off function which change position during adding..</p>\r\n<p>&nbsp;</p>\r\n<div id=QuickWikiQuickSearchDiv style=\"left:473.5px;top:484.9px\"><span>Press <strong>ENTER</strong> to look up in Wiktionary or <strong>CTRL+ENTER</strong> to look up in Wikipedia</span><br>&lt;input id=&quot;QuickWikiInput&quot; class=&quot;QuickWiki&quot; type=&quot;text&quot; /&gt;</div>",
+    "PostedDate": "2010-05-03T01:44:19.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "439713",
+    "ThreadId": "79745",
+    "Html": "<p>Hi, it's me once again.</p>\r\n<p>I have very strange situation with adding vertex and changing position. I have code in button_Click this:</p>\r\n<p>\r\n<pre>BidirectionalGraph&lt;object&gt;&gt; g = (BidirectionalGraph&lt;object&gt;&gt;)_graphToVisualize.ToBidirectionalGraph&lt;object&gt;&gt;();\r\n            VertexControl vs;\r\n            int k;\r\n\r\n            g.AddVertex(textBox3.Text);\r\n\r\n            for (int i = 0; i &lt; g.Vertices.Count(); i++)\r\n            {\r\n                int.TryParse(g.Vertices.ElementAt(i).ToString(), out k);\r\n                vs = graphLayout.GetVertexControl(g.Vertices.ElementAt(i));\r\n                if (vs != null)\r\n                {\r\n                    GraphCanvas.SetX(vs, position[k, 0]);\r\n                    GraphCanvas.SetY(vs, position[k, 0]);\r\n                }\r\n\r\n            }&lt;/object&gt;&lt;/object&gt;&lt;/object&gt;</pre>\r\n</p>\r\n<p>The problem is that,, when I click &quot;add vertex&quot; all vertices totally change theirs positions. Moreover if I click once again (and&nbsp;</p>\r\n<pre>g.AddVertex is not working because textBox3.Text has value existing vertex) everything works perfectly and come back to proper positions. It looks like<br>that when  g.AddVertex(textBox3.Text) works program ignore GraphCanvas.SetX(vs, position[k, 0]) and when g.AddVertex(textBox3.Text) doesn't work <br><pre>program set GraphCanvas.SetX(vs, position[k, 0]) properly.  Do you have any idea why I have some strange problem ?</pre>\r\n</pre>",
+    "PostedDate": "2010-05-06T01:16:57.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "441253",
+    "ThreadId": "79745",
+    "Html": "<p>Ok I change in xaml to &quot;LayoutAlgorithmType=&quot;KK&quot; &quot; and now is better . When I add vertex the vertices doesn't dance so much. But they are still moving. Where I can find some information about LayoutAlgorithmType ?</p>\r\n<p>How and what I should set that after adding vertex the rest of verticies will not move at all.</p>\r\n<div id=QuickWikiQuickSearchDiv style=\"left:525px;top:505.7px\"><span><br></span></div>",
+    "PostedDate": "2010-05-10T16:14:25.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "442440",
+    "ThreadId": "79745",
+    "Html": "<p>So I change &quot;KK &quot;to &quot;FreeFR&quot; and everything working perfectly ! So cannot understand why nobody said it to me ! This is so facking easy to write if you know that and so fucking timeconsuming if you have to make it up on your own.This is only</p>\r\n<p>5 letters !!!</p>\r\n<div id=QuickWikiQuickSearchDiv style=\"left:525px;top:505.7px\"><span>Press <strong>ENTER</strong> to look up in Wiktionary or <strong>CTRL+ENTER</strong> to look up in Wikipedia</span><br>&lt;input id=&quot;QuickWikiInput&quot; class=&quot;QuickWiki&quot; type=&quot;text&quot; /&gt;</div>",
+    "PostedDate": "2010-05-13T02:53:52.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "487258",
+    "ThreadId": "79745",
+    "Html": "<p>I want to restore my vertex positions (not run the algorithm).&nbsp; When ﻿I call graphLayout.GetVertexControl(xxx), it returns empty :(&nbsp; But I did call AddVertex.&nbsp; My guess the controls aren't created yet.&nbsp;</p>\r\n<p>Do you when I set the vertex positions without running the algorithm?&nbsp;</p>\r\n<p>Any ideas?&nbsp; Thanks.</p>",
+    "PostedDate": "2010-08-31T15:31:45.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "491989",
+    "ThreadId": "79745",
+    "Html": "<p>@<a id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl60_UserNameLink\" href=\"http://www.codeplex.com/site/users/view/poprostuJanek\">poprostuJanek</a>&nbsp;Would you post your code so that others can benefit from what you learned?</p>",
+    "PostedDate": "2010-09-10T14:15:41.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "681240",
+    "ThreadId": "79745",
+    "Html": "<p>I will thank that code</p>",
+    "PostedDate": "2011-10-07T03:39:59.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "681254",
+    "ThreadId": "79745",
+    "Html": "<p>&nbsp;</p>\r\n<p>Hi, I'm having some strange trouble with this thing. When i add a vertex, the vertex count in data object(GraphToVisualize) increase but it doesn`t in Xaml object(graphsharplayout) and because of that i can&acute;t set the position of vertex. I can see the vertex, but graphsharplayout.Children.Count is not updated. All i want to do is when i add a new vertex to the graph that&nbsp;it appears in a different position than previous vertex, so i can see all vertex in the graph and draw the connections between them as i wish.</p>\r\n<p>This is what i am trying to do:</p>\r\n<p>when i add a new vertex, i try to change its position, but i receive the error&nbsp;NullReferenceException, v Vertex is not in the graph.&nbsp;</p>\r\n<p><strong>C# code</strong>&nbsp;</p>\r\n<p><span style=\"font-family: Consolas, 'Courier New', Courier, monospace; white-space: pre;\">GraphToVisualize.AddVertex(v);</span></p>\r\n<div>\r\n<pre><div style=\"color: black; background-color: white;\"><pre>                              \r\n<span style=\"color: blue;\">if</span> (GraphToVisualize.VertexCount &gt; 1)\r\n{\r\n        <span style=\"color: blue;\">double</span> x = GraphCanvas.GetX(graphsharplayout.GetVertexControl(v));\r\n        <span style=\"color: blue;\">double</span> y = GraphCanvas.GetY(graphsharplayout.GetVertexControl(v));\r\n        GraphCanvas.SetX(graphsharplayout.GetVertexControl(v), 100);\r\n        GraphCanvas.SetY(graphsharplayout.GetVertexControl(v), 100);\r\n}\r\n</pre>\r\n</div>\r\n</pre>\r\n</div>\r\n<p><strong>&nbsp;This is de xaml part:</strong>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>&lt;graphsharp:GraphLayout x:Name=\"graphsharplayout\"\r\n       Graph=\"{Binding ElementName=root,Path=GraphToVisualize, NotifyOnSourceUpdated=True}\"\r\n       LayoutAlgorithmType=\"FreeFR\"\r\n       OverlapRemovalAlgorithmType=\"FSA\"\r\n       HighlightAlgorithmType=\"Simple\" /&gt;\r\n</pre>\r\n</div>\r\n</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks for any help.</p>",
+    "PostedDate": "2011-10-07T04:36:09.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "713449",
+    "ThreadId": "79745",
+    "Html": "<p>Sorry to further extend this thread (I hope it's still alive) but I have a related question.</p>\r\n<p>I am trying to get the graph coordinates of each node as soon as possible after the graph loads. I can do this using the approach outlined above (eventually - the current release package DLLs don't seem to support the GetVertexControl method so a build is required) but only in response to a mouse event.</p>\r\n<p>If I handle the 'loaded' event on my GraphLayout object all vertex ordinates come back NaN. If I let the graph load, then mouseover and handle the 'MouseEnter' event I get useful numbers.</p>\r\n<p>I thought maybe this was related to the startup animation, but that seems kind of weird.</p>\r\n<p>Does anyone know at what point I can reliably retrieve coordinates?</p>\r\n<p>Any help much appreciated.</p>",
+    "PostedDate": "2011-12-16T15:50:30.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "719966",
+    "ThreadId": "79745",
+    "Html": "<p>I figured out my issue by handling both the Loaded and LayoutUpdated events from the GraphLayout.</p>\r\n<p>LayoutUpdated is fired several times before Loaded, but within the Loaded event I call graphLayout.UpdateLayout() and the next time LayoutUpdated is fired the coordinates are available (not NaN) as expected.</p>\r\n<p>I really like Graph# but the lack of documentation beyond a single video on Youtube and the tumbleweeds rolling through this forum are so frustrating - it seems crazy to put so much effort into writing the code but then discourage people from using it.</p>",
+    "PostedDate": "2012-01-03T11:22:23.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1261146",
+    "ThreadId": "79745",
+    "Html": "Hi, I would like to do the same thing, but according to 'rootme', I have to do something like :<br />\ndouble x = GraphCanvas.GetX(graphLayout.GetVertexControl(vertex));<br />\n<br />\nMy problem is that my graphLayout haven't got any method called GetVertexControl.<br />\n<br />\nThere is my code :<br />\n<pre><code>var g = new BidirectionalGraph&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;();\n// some code building the graph\nvar graphLayout = new GraphLayout&lt;VertexControl, IEdge&lt;VertexControl&gt;, BidirectionalGraph&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;&gt;();\ngraphLayout.Graph = g;\ndouble x = GraphCanvas.GetX(graphLayout.GetVertexControl(g.Vertices.ElementAt(0))); </code></pre>\n\nThank you !!<br />\n",
+    "PostedDate": "2014-06-30T06:15:22.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1261189",
+    "ThreadId": "79745",
+    "Html": "If you want that method you should get latest sources and build them by yourself.<br />\n",
+    "PostedDate": "2014-06-30T07:37:27-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1261584",
+    "ThreadId": "79745",
+    "Html": "Oh Nice ! Thank you @panthernet :) Now I can use the GetVertexControl method ! <br />\nThe value that I get is still NaN. I guess that it is not normal ? I probably forgot something.<br />\nDo you see something wrong ?<br />\n(I'm not using WPF, I just want to get coordinates dynamically)<br />\n<pre><code>var g = new BidirectionalGraph&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;();\n// some code building the graph\n\nvar graphLayout = new GraphLayout&lt;VertexControl, IEdge&lt;VertexControl&gt;, BidirectionalGraph&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;&gt;();\ngraphLayout.Graph = g;\ngraphLayout.LayoutAlgorithmType = &quot;FreeFR&quot;;\n\nLayeredTopologicalSortAlgorithm&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt; algo = new LayeredTopologicalSortAlgorithm&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;(g);\nalgo.Compute();\n\nVertexControl vertex = g.Vertices.ElementAt(1);\ndouble x = GraphCanvas.GetX(graphLayout.GetVertexControl(vertex)); // NaN\ndouble y = GraphCanvas.GetY(graphLayout.GetVertexControl(vertex)); // NaN\n</code></pre>\n\n",
+    "PostedDate": "2014-07-01T07:47:02.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1262089",
+    "ThreadId": "79745",
+    "Html": "Problem solved<br />\n<pre><code>this.algo = new FRLayoutAlgorithm&lt;VertexControl, IEdge&lt;VertexControl&gt;, BidirectionalGraph&lt;VertexControl, IEdge&lt;VertexControl&gt;&gt;&gt;(g);\nalgo.Compute();\n\n//positions here -&gt; this.algo.VertexPositions </code></pre>\n\n",
+    "PostedDate": "2014-07-02T11:44:06.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

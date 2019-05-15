@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1106143",
+    "ThreadId": "461813",
+    "Html": "Hi All,\r<br />\n<br />\nDo we have any example / direction that uses pure Windows Form? I followed the example from <a href=\"http://sachabarber.net/?p=815\" rel=\"nofollow\">http://sachabarber.net/?p=815</a> but not sure how to implement this in a From.\r<br />\n<br />\nThanks for any help / guidance /direction.<br />\n",
+    "PostedDate": "2013-10-10T11:38:50.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1106276",
+    "ThreadId": "461813",
+    "Html": "Hi, all visualization stuff is binded to WPF. You can get layout algorithms from this library but you need to implement all the controls for WinForms for this library (including zoom control if you need it).\r<br />\nThe other way is to use Interop logic for WPF hosting inside WinForms but this approach have some disadvantages:<br />\n<ul>\n<li>Slow performance is very likely</li>\n<li>Additional libraries/framework requirements</li>\n</ul>\n",
+    "PostedDate": "2013-10-10T23:24:32.437-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

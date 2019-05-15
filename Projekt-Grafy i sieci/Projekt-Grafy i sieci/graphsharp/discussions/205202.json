@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "419065",
+    "ThreadId": "205202",
+    "Html": "<p>&nbsp;</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">I create custom MyGraphLayout:GraphLayout class, set to its property Graph my custom BidirectionalGraph&lt;&lt;&gt;&gt; instance</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">When content of any my vertex changing, graphLayout does not repaint this text.</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">How to manually repaint GraphLayout?</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">Graphlayout.Relayout() - fails</div>\r\n<p>\r\n<p>I create custom MyGraphLayout:GraphLayout class, set to its property Graph my custom BidirectionalGraph&lt;&lt;&gt;&gt; instance</p>\r\n<p>When content of any my vertex changing, graphLayout does not repaint this text.</p>\r\n<p>How to manually repaint GraphLayout?</p>\r\n<p>Graphlayout.Relayout() - fails</p>\r\n</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-17T00:59:35.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

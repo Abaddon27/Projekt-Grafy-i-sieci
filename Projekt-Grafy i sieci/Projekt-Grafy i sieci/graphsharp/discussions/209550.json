@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "431866",
+    "ThreadId": "209550",
+    "Html": "<p>I'd like to lock the vertices / nodes of my graph in place, so that the user is not able to move them around by dragging. &nbsp;What is the easiest way of doing this?</p>",
+    "PostedDate": "2010-04-16T02:57:25.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "431877",
+    "ThreadId": "209550",
+    "Html": "<p>From a hunt through the source code I've discovered that the way to do this is to set the WPFExtensions IsDragEnabled property to false on the VertexControl using styles:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">Style</span> <span style=\"color:red\">TargetType</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">{x:Type gc:VertexControl}</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">&gt;</span>\r\n  <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">Setter</span> <span style=\"color:red\">Property</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">WPFExtensions_AttachedBehaviours:DragBehaviour.IsDragEnabled</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">Value</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">False</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">/&gt;</span>\r\n<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">Style</span><span style=\"color:blue\">&gt;</span></pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2010-04-16T03:34:37.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "663091",
+    "ThreadId": "209550",
+    "Html": "<p>Setting this to False doesn't do the trick for me. Although I can see, that the DragBehaviour isn't used anymore (no more infos in output window) I still can drag the vertices around.<br />Anyone got an idea, where to look from here?</p>",
+    "PostedDate": "2011-08-25T01:42:28.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

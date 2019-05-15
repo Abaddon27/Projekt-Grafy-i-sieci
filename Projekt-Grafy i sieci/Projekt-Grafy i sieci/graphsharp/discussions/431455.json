@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "994298",
+    "ThreadId": "431455",
+    "Html": "\r\n<p>Hi guys, is it possible to display multiple edges from source node to target node?</p>\r\n",
+    "PostedDate": "2013-01-30T11:41:09.83-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "995562",
+    "ThreadId": "431455",
+    "Html": "Yes, it is possible, but you need to write your own EdgeRouting algorithm to do that. With the actual implementation it displays the multiple edges on top of each other.<br />\n",
+    "PostedDate": "2013-02-02T06:15:06.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "996408",
+    "ThreadId": "431455",
+    "Html": "Do you mean edge control or edgeRouting... I have only seen one Abstract EdgeRouting algorithm class so far, and that's it. <br />\n",
+    "PostedDate": "2013-02-04T15:36:30.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "996450",
+    "ThreadId": "431455",
+    "Html": "I meant EdgeRouting algorithm. You need to write your own EdgeRouting algorithm that gives back different routes for the edges between the same nodes.\r<br />\nYou don't need to modify the Edge Control, if it gets the proper route, coordinates from the routing algorithm it will display the edges properly.<br />\n",
+    "PostedDate": "2013-02-04T17:32:47.473-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "996593",
+    "ThreadId": "431455",
+    "Html": "Should I do so by implementing a SimpleTreeLayout with the IEdgeRouting interface?<br />\n",
+    "PostedDate": "2013-02-05T03:54:28.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

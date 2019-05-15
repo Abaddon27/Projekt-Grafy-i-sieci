@@ -1,0 +1,234 @@
+[
+  {
+    "Id": "194645",
+    "ThreadId": "57576",
+    "Html": "<p>Hi palesz,</p>\r\n<p>As the latest information on homepage is &bdquo;Silverlight support is on the way&rdquo;, I would like to ask how advanced are the works and when do you plan to issue some preliminary version.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-26T23:41:51.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "195233",
+    "ThreadId": "57576",
+    "Html": "<p>In about 3-4 weeks.</p>",
+    "PostedDate": "2009-05-28T07:38:33.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "206754",
+    "ThreadId": "57576",
+    "Html": "<p>Are you still on target to support sliverlight?&nbsp; Looking to use it in a sliverlight application.</p>",
+    "PostedDate": "2009-06-29T13:27:06.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213763",
+    "ThreadId": "57576",
+    "Html": "<p>I'm very interested in silverlight support for graph#. When will it be released?</p>\r\n<p>&nbsp;</p>\r\n<p>sry for bad english, its not my native</p>",
+    "PostedDate": "2009-07-20T04:57:09.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "215123",
+    "ThreadId": "57576",
+    "Html": "<p>Hi palesz,</p>\r\n<p>You said the graph# will be support sliverlight! I Very much looking forward to see the support sliverlight Graph#!&nbsp; But how long we will need to wait?</p>",
+    "PostedDate": "2009-07-22T23:51:16.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "226125",
+    "ThreadId": "57576",
+    "Html": "<p>Hi palesz,</p>\r\n<p>The support sliverlight Graph#, When will be released? I was look forward to see it!!</p>\r\n<p>Tks a lot!</p>",
+    "PostedDate": "2009-08-20T19:39:40.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227208",
+    "ThreadId": "57576",
+    "Html": "<p>I'm also very interested in silverlight support for graph#.&nbsp; Do you have any timeframe?</p>",
+    "PostedDate": "2009-08-24T13:11:56.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "237722",
+    "ThreadId": "57576",
+    "Html": "<p>Hi palesz,</p>\r\n<p>I see &quot;Silverlight support is on the way&rdquo; for a long time,I would like to know if you have any timeframe and see the released version?</p>\r\n<p>thanks a lot,palesz!</p>",
+    "PostedDate": "2009-09-23T02:24:31.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245324",
+    "ThreadId": "57576",
+    "Html": "<p>What is required for Silverlight support. I am wondering if I may be able to help.</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2009-10-13T16:05:57.147-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245329",
+    "ThreadId": "57576",
+    "Html": "<p>When you are developing for silverlight, there are certain things you can not use.&nbsp; Basically, the silverlight&nbsp;.net framework&nbsp;is a subset of full .net framework.&nbsp; I haven't taken a look in a little while, but some of the Interfaces and attributes used are not available, as well as some classes such as the vector class.</p>",
+    "PostedDate": "2009-10-13T16:21:14.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245330",
+    "ThreadId": "57576",
+    "Html": "<p>Something like this?<br><a href=\"http://blogs.msdn.com/avip/archive/2008/06/23/trivial-physics-simulations-in-silverlight-part-2.aspx\">http://blogs.msdn.com/avip/archive/2008/06/23/trivial-physics-simulations-in-silverlight-part-2.aspx</a>&nbsp;</p>",
+    "PostedDate": "2009-10-13T16:31:29.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "245334",
+    "ThreadId": "57576",
+    "Html": "<p>Yes,&nbsp; but I think the vector class conversion would be the easy part,&nbsp; I'm not sure about the other interfaces and attributes</p>",
+    "PostedDate": "2009-10-13T16:34:58.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291793",
+    "ThreadId": "57576",
+    "Html": "<p>Does Graph# already supports Silverlight?</p>\r\n<p>If so, can anyone provide me an example?</p>\r\n<p>thanks</p>\r\n<p>daniela da cruz</p>",
+    "PostedDate": "2010-02-17T10:24:48.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452352",
+    "ThreadId": "57576",
+    "Html": "<p>Hi,</p>\r\n<p>Have you managed to progres this, I'd very much like an early version as I have an internal R&amp;D project that needs Graphs in Silverlight.</p>\r\n<p>Many Thanks, and keep up the great work, Matt</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-07T01:42:52.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452387",
+    "ThreadId": "57576",
+    "Html": "Hi.\r\n\r\nTake a look at: http://dot2silverlight.codeplex.com/\r\n\r\nIf you want we can cooperate to make the project progress faster.\r\n\r\nThanks \r\nRegards\r\nDaniela",
+    "PostedDate": "2010-06-07T03:58:38.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "466115",
+    "ThreadId": "57576",
+    "Html": "<p>Hi,</p>\r\n<p>It has been a long time for the silverlight support. Can i ask if you're still working on it ?</p>\r\n<p>regards,</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-11T22:12:53.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "468252",
+    "ThreadId": "57576",
+    "Html": "<p>I join my voice to eledra to ask when and if the silverlight version will be out. Thank you.</p>",
+    "PostedDate": "2010-07-16T08:49:17.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "472750",
+    "ThreadId": "57576",
+    "Html": "<p>+1 on Silverlight support.&nbsp; When?</p>",
+    "PostedDate": "2010-07-26T10:51:06.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "492799",
+    "ThreadId": "57576",
+    "Html": "<p>Any news about silverlight support?</p>",
+    "PostedDate": "2010-09-13T07:30:53.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "493486",
+    "ThreadId": "57576",
+    "Html": "<p>Sorry guys but there won't be any Silverlight support for at least 2-3 months. Sorry, but in the last 8-9 months I work 12+ hours per day on my daily job (I'm pretty tired at the moment), I don't have any free time now.</p>",
+    "PostedDate": "2010-09-14T13:01:25.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496290",
+    "ThreadId": "57576",
+    "Html": "<p>I'm trying to compile it for Silverlight (the algorithms part only), and there indeed are some issues, but it looks managable.</p>\r\n<p>So far I had to implement/stub</p>\r\n<p>* Vector</p>\r\n<p>* Rect extensions</p>\r\n<p>* Debug</p>\r\n<p>* TraceSource</p>\r\n<p>And I've 21 errors for Point.operator-, which will require manual attention.</p>\r\n<p>However there is one thing peculiar: In the following snippet:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">var</span> spaDijkstra =\r\n<span style=\"color:blue\">  new</span> UndirectedDijkstraShortestPathAlgorithm&lt;Vertex, Edge&gt;( undirected, ( edge ) =&gt; weights[edge], ShortestDistanceRelaxer.Instance );\r\n<br><br></pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>ShortestDistanceRelaxer does not exist. Is this part of QuickGraph? If so what's the best way around this issue?<br><br>Update: Btw, I've successfully compiled GraphSharp for Silverlight 4.0, by commenting out the ShortestDistanceRelaxer. <br>SL 3.0 does not work, since it does not contain some classes.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-20T19:50:31.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496461",
+    "ThreadId": "57576",
+    "Html": "@Sukru: replace ShortestDistanceRelaxer.Instance by<br><br>QuickGraph.Algorithms.DistanceRelaxers.ShortestDistance",
+    "PostedDate": "2010-09-21T05:34:10.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496570",
+    "ThreadId": "57576",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>Sukru wrote:</strong><br>\r\n<p>I'm trying to compile it for Silverlight (the algorithms part only), and there indeed are some issues, but it looks managable.</p>\r\n<p>So far I had to implement/stub</p>\r\n<p>* Vector</p>\r\n<p>* Rect extensions</p>\r\n<p>* Debug</p>\r\n<p>* TraceSource</p>\r\n<p>And I've 21 errors for Point.operator-, which will require manual attention.</p>\r\n<p>However there is one thing peculiar: In the following snippet:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">var</span> spaDijkstra =\r\n<span style=\"color:blue\">  new</span> UndirectedDijkstraShortestPathAlgorithm&lt;Vertex, Edge&gt;( undirected, ( edge ) =&gt; weights[edge], ShortestDistanceRelaxer.Instance );\r\n<br><br></pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>ShortestDistanceRelaxer does not exist. Is this part of QuickGraph? If so what's the best way around this issue?<br><br>Update: Btw, I've successfully compiled GraphSharp for Silverlight 4.0, by commenting out the ShortestDistanceRelaxer. <br>SL 3.0 does not work, since it does not contain some classes.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n</blockquote>\r\n<p>&nbsp;I just didn't know what to do with alot of those attributes that are being used.</p>",
+    "PostedDate": "2010-09-21T09:07:15.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496730",
+    "ThreadId": "57576",
+    "Html": "<p>Thanks, QuickGraph.Algorithms.DistanceRelaxers.ShortestDistance worked (I mean compiled).</p>\r\n<p>I'll test the compiled code, and if it works, it'll make my day...</p>",
+    "PostedDate": "2010-09-21T14:55:24.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504704",
+    "ThreadId": "57576",
+    "Html": "<p>Hi Sukru,</p>\r\n<p>Can you share your advances ?</p>",
+    "PostedDate": "2010-10-09T02:55:34.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "506392",
+    "ThreadId": "57576",
+    "Html": "<p>Ok,</p>\r\n<p>It worked with all the algorithms, except for the force based one. I already had my own drawing code, thus I was able to visually compare them with the WPF based original ones.</p>",
+    "PostedDate": "2010-10-12T21:07:42.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "579045",
+    "ThreadId": "57576",
+    "Html": "<p>Due to request, I've shared the modified project at:</p>\r\n<p>http://dl.dropbox.com/u/1355498/GraphSharp/GraphSharp.Silverlight.7z</p>\r\n<p>Compiled versions (debug/release) are also in the Bin/ directory.</p>",
+    "PostedDate": "2011-03-11T07:03:34.31-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "604142",
+    "ThreadId": "57576",
+    "Html": "<p>Thanks Sukru, will check your project out!!</p>",
+    "PostedDate": "2011-04-28T07:32:28.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621830",
+    "ThreadId": "57576",
+    "Html": "<blockquote style=\"padding-bottom: 0px; font-style: italic; margin: 0.25em 1em 0px; padding-left: 0.25em; padding-right: 0.25em; padding-top: 0px; border: #ccc 0.1em solid;\"><strong>sukru wrote:</strong><br />\r\n<p>Due to request, I've shared the modified project at:</p>\r\n<p>http://dl.dropbox.com/u/1355498/GraphSharp/GraphSharp.Silverlight.7z</p>\r\n<p>Compiled versions (debug/release) are also in the Bin/ directory.</p>\r\n</blockquote>\r\n<p>The code I am posting is a method you didn't implment&nbsp;in the <span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\">SupportExtensions </span></span></span>class of your Silverlight verison of Graph#. Thank you Sukru for doing the hard work.</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">public</span> <span style=\"color: blue;\">static</span> <span style=\"color: blue;\">bool</span> IntersectsWith(<span style=\"color: blue;\">this</span> Rect a, Rect b)\r\n{\r\n    <span style=\"color: blue;\">double</span> aXmin = a.X;             <span style=\"color: green;\">//Left</span>\r\n    <span style=\"color: blue;\">double</span> aXmax = a.X + a.Width;   <span style=\"color: green;\">//Right</span>\r\n    <span style=\"color: blue;\">double</span> aYmin = a.Y;             <span style=\"color: green;\">//Top</span>\r\n    <span style=\"color: blue;\">double</span> aYmax = a.Y + a.Height;  <span style=\"color: green;\">//Bottom</span>\r\n\r\n    <span style=\"color: blue;\">double</span> bXmin = b.X;             <span style=\"color: green;\">//Left</span>\r\n    <span style=\"color: blue;\">double</span> bXmax = b.X + b.Width;   <span style=\"color: green;\">//Right</span>\r\n    <span style=\"color: blue;\">double</span> bYmin = b.Y;             <span style=\"color: green;\">//Top</span>\r\n    <span style=\"color: blue;\">double</span> bYmax = b.Y + b.Height;  <span style=\"color: green;\">//Bottom</span>\r\n\r\n    <span style=\"color: green;\">//Checks Rect b Top-Left</span>\r\n    <span style=\"color: blue;\">if</span> (((aXmin &lt;= bXmin) &amp;&amp; (bXmin &lt;= aXmax)) &amp;&amp; ((aYmin &lt;= bYmin) &amp;&amp; (bYmin &lt;= aYmax)))\r\n        <span style=\"color: blue;\">return</span> <span style=\"color: blue;\">true</span>;\r\n\r\n    <span style=\"color: green;\">//Checks Rect b Bottom-Left</span>\r\n    <span style=\"color: blue;\">if</span> (((aXmin &lt;= bXmin) &amp;&amp; (bXmin &lt;= aXmax)) &amp;&amp; ((aYmin &lt;= bYmax) &amp;&amp; (bYmax &lt;= aYmax)))\r\n        <span style=\"color: blue;\">return</span> <span style=\"color: blue;\">true</span>;\r\n\r\n    <span style=\"color: green;\">//Checks Rect b Top-Right</span>\r\n    <span style=\"color: blue;\">if</span> (((aXmin &lt;= bXmax) &amp;&amp; (bXmax &lt;= aXmax)) &amp;&amp; ((aYmin &lt;= bYmin) &amp;&amp; (bYmin &lt;= aYmax)))\r\n        <span style=\"color: blue;\">return</span> <span style=\"color: blue;\">true</span>;\r\n\r\n    <span style=\"color: green;\">//Checks Rect b Bottm-Right</span>\r\n    <span style=\"color: blue;\">if</span> (((aXmin &lt;= bXmax) &amp;&amp; (bXmax &lt;= aXmax)) &amp;&amp; ((aYmin &lt;= bYmax) &amp;&amp; (bYmax &lt;= aYmax)))\r\n        <span style=\"color: blue;\">return</span> <span style=\"color: blue;\">true</span>;\r\n\r\n    <span style=\"color: green;\">//No Overlap</span>\r\n    <span style=\"color: blue;\">return</span> <span style=\"color: blue;\">false</span>;\r\n}\r\n</pre>\r\n</div>",
+    "PostedDate": "2011-06-01T23:30:15.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

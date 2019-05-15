@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "637988",
+    "ThreadId": "264059",
+    "Html": "\r\n<p>I am new in graph#, so tutorial is great to me. Tutorial from youtube:&nbsp;&nbsp;<a href=\"http://www.youtube.com/watch?v=VTbuvkaPGxE\">http://www.youtube.com/watch?v=VTbuvkaPGxE</a>&nbsp;is good when I coded. However when I replace the type of data from\r\n BidirectionalGraph to UndirectedGraph,(both interface and data type of variable g) there is no error as well as no graph on layout window. I wonder what happened. Anyone could explain and give me a sample code.</p>\r\n<p>Thanks a lot!</p>\r\n",
+    "PostedDate": "2011-07-06T02:57:34.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

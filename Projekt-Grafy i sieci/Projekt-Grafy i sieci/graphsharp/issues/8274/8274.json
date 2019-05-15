@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi all. When I was trying to bind a BidirectionalGraph graph with one vertex and zero edges ArgumentOutOfRangeException was thrown (on applying FSA overlap removing algorithm).\r\n\r\nFound that changing LayoutAlgorithmBase constructor in the file graphsharp\\Source\\Graph#\\Algorithms\\Layout\\LayoutAlgorithmBase.cs from:\r\n\r\n\t\tprotected LayoutAlgorithmBase( TGraph visitedGraph, IDictionary<TVertex, Point> vertexPositions )\r\n\t\t{\r\n            this.visitedGraph = visitedGraph;\r\n\t\t\tif ( vertexPositions != null )\r\n\t\t\t\tthis.vertexPositions = new Dictionary<TVertex, Point>( vertexPositions );\r\n\t\t\telse\r\n\t\t\t\tthis.vertexPositions = new Dictionary<TVertex, Point>( visitedGraph.VertexCount );\r\n\t\t}\r\nto something like this:\r\n....\r\n            else\r\n            {\r\n                this.vertexPositions = new Dictionary<TVertex, Point>(visitedGraph.VertexCount);\r\n                foreach (var vertex in visitedGraph.Vertices)\r\n                {\r\n                    this.vertexPositions.Add(vertex, new Point());\r\n                }\r\n            }\r\n...\r\nfixes the problem.\r\n\r\nStack trace (sorry for message in Russian - it is \"Index was out of range. Must be non-negative and less than the size of the collection\"):\r\nSystem.ArgumentOutOfRangeException: Индекс за пределами диапазона. Индекс должен быть положительным числом, а его размер не должен превышать размер коллекции.\r\n\r\nИмя параметра: index\r\n\r\n   в System.ThrowHelper.ThrowArgumentOutOfRangeException()\r\n\r\n   в System.Collections.Generic.List`1.get_Item(Int32 index)\r\n\r\n   в GraphSharp.Algorithms.OverlapRemoval.FSAAlgorithm`2.HorizontalImproved() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\OverlapRemoval\\FSAAlgorithm.cs:строка 164\r\n\r\n   в GraphSharp.Algorithms.OverlapRemoval.FSAAlgorithm`2.RemoveOverlap() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\OverlapRemoval\\FSAAlgorithm.cs:строка 35\r\n\r\n   в GraphSharp.Algorithms.OverlapRemoval.OverlapRemovalAlgorithmBase`2.InternalCompute() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\OverlapRemoval\\OverlapRemovalAlgorithmBase.cs:строка 48\r\n\r\n   в GraphSharp.Algorithms.AlgorithmBase.Compute() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\AlgorithmBase.cs:строка 36\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.OverlapRemoval(IDictionary`2 positions, IDictionary`2 sizes) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 537\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.OnLayoutIterationFinished(IDictionary`2 vertexPositions, String message) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 439\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.OnLayoutIterationFinished(ILayoutIterationEventArgs`1 iterArgs) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 422\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.OnLayoutFinished() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 457\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.<Layout>b__16(Object s, EventArgs e) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 299\r\n\r\n   в GraphSharp.Algorithms.AlgorithmBase.OnFinished(EventArgs e) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\AlgorithmBase.cs:строка 79\r\n\r\n   в GraphSharp.Algorithms.AlgorithmBase.EndComputation() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\AlgorithmBase.cs:строка 112\r\n\r\n   в GraphSharp.Algorithms.AlgorithmBase.Compute() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#\\Algorithms\\AlgorithmBase.cs:строка 37\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.Layout(Boolean continueLayout) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 301\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.Relayout() в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.cs:строка 128\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.OnRelayoutInduction(Boolean tryKeepControls) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.DependencyProperties.cs:строка 396\r\n\r\n   в GraphSharp.Controls.GraphLayout`3.Graph_PropertyChanged(DependencyObject obj, DependencyPropertyChangedEventArgs e) в C:\\projects\\RCA\\graphsharp\\Source\\Graph#.Controls\\Controls\\GraphLayout.DependencyProperties.cs:строка 384\r\n\r\n   в System.Windows.DependencyObject.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\r\n\r\n   в System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)\r\n\r\n   в System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)\r\n\r\n   в System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)\r\n\r\n   в System.Windows.DependencyObject.InvalidateProperty(DependencyProperty dp)\r\n\r\n   в System.Windows.Data.BindingExpressionBase.Invalidate(Boolean isASubPropertyChange)\r\n\r\n   в System.Windows.Data.BindingExpression.TransferValue(Object newValue, Boolean isASubPropertyChange)\r\n\r\n   в System.Windows.Data.BindingExpression.ScheduleTransfer(Boolean isASubPropertyChange)\r\n\r\n   в MS.Internal.Data.ClrBindingWorker.NewValueAvailable(Boolean dependencySourcesChanged, Boolean initialValue, Boolean isASubPropertyChange)\r\n\r\n   в MS.Internal.Data.PropertyPathWorker.UpdateSourceValueState(Int32 k, ICollectionView collectionView, Object newValue, Boolean isASubPropertyChange)\r\n\r\n   в MS.Internal.Data.ClrBindingWorker.OnSourcePropertyChanged(Object o, String propName)\r\n\r\n   в MS.Internal.Data.PropertyPathWorker.System.Windows.IWeakEventListener.ReceiveWeakEvent(Type managerType, Object sender, EventArgs e)\r\n\r\n   в System.Windows.WeakEventManager.DeliverEventToList(Object sender, EventArgs args, ListenerList list)\r\n\r\n   в System.ComponentModel.PropertyChangedEventManager.OnPropertyChanged(Object sender, PropertyChangedEventArgs args)\r\n\r\n",
+    "LastUpdatedDate": "2011-04-26T07:30:02.85-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-04-26T07:30:02.587-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ArgumentOutOfRangeException on applying FSA overlap removing",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8274
+  },
+  "FileAttachments": [
+    {
+      "FileId": 232522,
+      "FileName": "LayoutAlgorithmBase.cs.diff",
+      "DownloadUrl": ".\\232522"
+    }
+  ],
+  "Comments": []
+}

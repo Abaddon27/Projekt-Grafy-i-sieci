@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1041097",
+    "ThreadId": "443023",
+    "Html": "I want to display an edge from a vertex to itself, however the GraphLayout control does not do that? What should I do?<br />\n",
+    "PostedDate": "2013-05-08T15:02:00.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1043651",
+    "ThreadId": "443023",
+    "Html": "You need to modify EdgeRouteToPointConverter to render special Path object in case Source and Target properties values belongs to the same Vertex.<br />\n",
+    "PostedDate": "2013-05-14T22:59:41.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

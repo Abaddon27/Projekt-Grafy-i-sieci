@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "227881",
+    "ThreadId": "67033",
+    "Html": "<p><span style=\"font-size:small\"><span>\r\n<p>Hello,</p>\r\n<p>Is there an ETA for the documentation yet? I've tried the tutorial and my first impressions are very encouraging; Graph# looks like it has great potential. However, without documentation and/or more examples, getting up to speed looks like it will be quite time-consuming. If the documentation is likely to be months away then I'll just have to bite the bullet and get stuck in. But if there is likely to be even a draft of some documentation in the next few days or weeks it may make more sense for me to wait until that arrives, as it would hopefully save some time. Similarly some simple self-contained examples of things like graphs with mixtures of vertex and edge types, each displayed differently, or hierarchical graphs, or dynamically changing graphs, would be really useful as a supplement to the documentation.</p>\r\n<p>Kevin</p>\r\n</span></span></p>",
+    "PostedDate": "2009-08-26T04:15:06.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "236827",
+    "ThreadId": "67033",
+    "Html": "<p>I second this - GraphSharp is a great little package but documentation would really make it a killer component!</p>",
+    "PostedDate": "2009-09-21T03:36:28.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "237033",
+    "ThreadId": "67033",
+    "Html": "<p>Can only agree. A documentation would be very encouraging to use this promising technology.</p>",
+    "PostedDate": "2009-09-21T13:42:10.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "412659",
+    "ThreadId": "67033",
+    "Html": "<p>Same here..</p>",
+    "PostedDate": "2010-03-01T05:22:41.727-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

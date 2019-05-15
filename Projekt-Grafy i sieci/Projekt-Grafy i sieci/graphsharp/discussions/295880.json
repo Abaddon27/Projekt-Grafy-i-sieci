@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "743424",
+    "ThreadId": "295880",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>does anyone know if it is possilbe to connect two vertex with mouse event?&nbsp;</p>\r\n<p>Maybe with Drag&amp;Drop oder with a menuitem in contextmenu?</p>\r\n<p>Is there an event?&nbsp;</p>\r\n<p>Thank you for your help!</p>\r\n",
+    "PostedDate": "2012-02-06T09:46:13.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "745206",
+    "ThreadId": "295880",
+    "Html": "<p>Okay I realized it by using Drag&amp;Drop :)</p>\r\n<p>But now I have the problem of moving Verticles.&nbsp;</p>\r\n<p>If I drag a vertex it comes with my mouse pointer.&nbsp;</p>\r\n<p>How can I set a vertex to fix, so that it cannot move?</p>",
+    "PostedDate": "2012-02-07T07:11:06.283-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "746747",
+    "ThreadId": "295880",
+    "Html": "<p>Maybe I receive an answer if I change my question?</p>\r\n<p>I can drag&amp;drop my verticles arround but my problem is, the vertex thinks he is still selected.</p>\r\n<p>So the effect: when I drag&amp;drop a vertex somewhere and my mousepointer goes over the dragged vertex I can still move it without any MouseDown.&nbsp;</p>\r\n<p>This ist not nice. Please can anyone help?</p>",
+    "PostedDate": "2012-02-08T01:12:59.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "748624",
+    "ThreadId": "295880",
+    "Html": "<p>Okay by changing the dll I get my result...</p>",
+    "PostedDate": "2012-02-09T07:35:51.107-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "820766",
+    "ThreadId": "295880",
+    "Html": "<p>i'm trying to do the same, can you post some sample please?</p>",
+    "PostedDate": "2012-04-06T03:25:21.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

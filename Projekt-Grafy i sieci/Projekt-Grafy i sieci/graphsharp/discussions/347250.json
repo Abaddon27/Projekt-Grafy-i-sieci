@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "805210",
+    "ThreadId": "347250",
+    "Html": "It would make it much easier to get started with.",
+    "PostedDate": "2012-03-04T11:01:40.137-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "849414",
+    "ThreadId": "347250",
+    "Html": "<p>Yes, please submit a NuGet package.</p>",
+    "PostedDate": "2012-06-15T01:20:52.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "885502",
+    "ThreadId": "347250",
+    "Html": "<p>+1</p>",
+    "PostedDate": "2012-07-22T03:12:53.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913627",
+    "ThreadId": "347250",
+    "Html": "<p>As no one else did it - we did it:</p>\r\n<p><a href=\"http://nuget.org/packages/GraphSharp\">http://nuget.org/packages/GraphSharp</a></p>",
+    "PostedDate": "2012-09-17T09:07:21.1-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913958",
+    "ThreadId": "347250",
+    "Html": "\r\n<p>Cool! Thanks!<br>\r\n<br>\r\nBut why Dependencies:<br>\r\nQuickGraph (= 3.3.51106.0) not just &gt;= 3.3.51106.0? The latest <a href=\"http://nuget.org/packages/QuickGraph\">\r\nQuickGraph</a> is 3.6.61119.7. And they work fine together, I tested.</p>\r\n",
+    "PostedDate": "2012-09-18T00:33:09.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913963",
+    "ThreadId": "347250",
+    "Html": "<p>The latest QuickGraph <strong>NuGet Package</strong> installs only for .NET 4 - but I need 3.5 (for some special reasons).</p>",
+    "PostedDate": "2012-09-18T00:45:59.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "914003",
+    "ThreadId": "347250",
+    "Html": "<p>Still don't understand why have you set a strict dependency instead of loose? Can't you set just unspecified version of QG by analogy with WPFtk?</p>",
+    "PostedDate": "2012-09-18T03:18:41.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "914008",
+    "ThreadId": "347250",
+    "Html": "<p>I've tried that and NuGet selected the highest Version. Then I get an error, that my Project can't reference QuickGraph in that Version because the Target Framework does not match.</p>\r\n<p>But I'm always open for improvements and tipps on how to make it better. If there is a way to reference Graph# with a 3.5 Project AND letting the QuickGraph reference unspecified, I'll update the package.</p>",
+    "PostedDate": "2012-09-18T03:31:48.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "914931",
+    "ThreadId": "347250",
+    "Html": "<p>+1 for this.</p>\r\n<p>I got an same error with higher QuickGraph version in Nuget.</p>",
+    "PostedDate": "2012-09-19T18:53:24.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "915315",
+    "ThreadId": "347250",
+    "Html": "<p>I have an idea: can't you produce two versions - one bound to currently used version of QG, and another - to the latest? What do you think?<br /><br />And thank you anyway! That's great you found a time for all this stuff.</p>",
+    "PostedDate": "2012-09-20T11:42:29.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

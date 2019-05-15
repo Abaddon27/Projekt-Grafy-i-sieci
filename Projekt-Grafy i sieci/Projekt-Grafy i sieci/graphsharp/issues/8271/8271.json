@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Opening a graphml file that uses a repfic to identify the graphml namesapce will fail parsing with \"Cannot find graphml node.\r\n\r\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<dml:graphml xmlns:dml=\"http://graphml.graphdrawing.org/xmlns\">\r\n  <dml:graph id=\"G\" edgedefault=\"directed\" parse.nodes=\"8\" parse.edges=\"7\" parse.order=\"nodesfirst\" parse.nodeids=\"free\" parse.edgeids=\"free\" Title=\"1711091512\">\r\n    <dml:node id=\"EPBEMIST\" />\r\n    <dml:node id=\"HQTYMP27XP\" />\r\n    <dml:node id=\"REIFBXP\" />\r\n    <dml:edge id=\"2011-03-02T11:52:11-2011-03-03T07:50:15\" source=\"EPBEMIST\" target=\"EPBEMIST\" />\r\n    <dml:edge id=\"2011-03-03T07:50:15-2011-03-03T07:51:45\" source=\"EPBEMIST\" target=\"EPBEMIST\" />\r\n    <dml:edge id=\"2011-03-03T07:51:45-2011-03-03T11:28:01\" source=\"EPBEMIST\" target=\"HQTYMP27XP\" />\r\n    <dml:edge id=\"2011-03-03T11:28:01-2011-03-03T11:28:42\" source=\"HQTYMP27XP\" target=\"HQTYMP27XP\" />\r\n    <dml:edge id=\"2011-03-03T11:28:42-2011-03-03T16:04:03\" source=\"HQTYMP27XP\" target=\"REIFBXP\" />\r\n    <dml:edge id=\"2011-03-03T16:04:03-2011-03-03T16:07:40\" source=\"REIFBXP\" target=\"REIFBXP\" />\r\n    <dml:edge id=\"2011-03-03T16:07:40-2011-03-03T16:07:45\" source=\"REIFBXP\" target=\"HQTYMP27XP\" />\r\n    <dml:edge id=\"2011-03-03T16:07:45-2011-03-03T16:07:46\" source=\"HQTYMP27XP\" target=\"HQTYMP27XP\" />\r\n    <dml:edge id=\"2011-03-03T16:07:46-2011-03-03T16:08:04\" source=\"HQTYMP27XP\" target=\"REIFBXP\" />\r\n    <dml:edge id=\"2011-03-03T16:08:04-2011-03-03T16:08:05\" source=\"REIFBXP\" target=\"REIFBXP\" />\r\n    <dml:edge id=\"2011-03-03T16:08:05-2011-03-03T16:08:06\" source=\"REIFBXP\" target=\"REIFBXP\" />\r\n  </dml:graph>\r\n</dml:graphml>\r\n\r\nMaking http://graphml.graphdrawing.org/xmlns the default namesapce and removing the dml prefix allows parsing.",
+    "LastUpdatedDate": "2011-04-20T01:05:35.753-07:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2011-03-06T08:03:08.787-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Opening dml file fails if graphml is not defualt namespace in Xml",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8271
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

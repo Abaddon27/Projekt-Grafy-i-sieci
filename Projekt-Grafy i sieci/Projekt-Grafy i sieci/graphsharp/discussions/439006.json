@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1025060",
+    "ThreadId": "439006",
+    "Html": "please help, I am Russian and bad know English.<br />\nCan I add the labels on the arrows?<br />\nIf yes, please give me a simple example implementation<br />\n",
+    "PostedDate": "2013-04-03T12:42:59.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1031624",
+    "ThreadId": "439006",
+    "Html": "Если вопрос еще акутален, что именно требуется сделать?<br />\n",
+    "PostedDate": "2013-04-17T02:40:14.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1031787",
+    "ThreadId": "439006",
+    "Html": "Можешь дать пример рисования графа с помощью этой библиотеки? полагаю рисование на форме али на чем-нибудь другом.<br />\n",
+    "PostedDate": "2013-04-17T06:42:43.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1032718",
+    "ThreadId": "439006",
+    "Html": "Пример можно скачать, в любом случае придется разбираться. Например для начала нужно создать свои типы, например:<br />\n<pre><code>    public class TestGraphLayout : GraphLayout&lt;GVertex, IEdge&lt;GVertex&gt;, IBidirectionalGraph&lt;GVertex, IEdge&lt;GVertex&gt;&gt;&gt; { }\n\n    public class TestGraph : BidirectionalGraph&lt;GVertex, IEdge&lt;GVertex&gt;&gt;\n    {\n        public TestGraph() { }\n\n        public TestGraph(bool allowParallelEdges)\n            : base(allowParallelEdges) { }\n\n        public TestGraph(bool allowParallelEdges, int vertexCapacity)\n            : base(allowParallelEdges, vertexCapacity) { }\n    }</code></pre>\n\nГде, TestGraphLayout - собсно поле для отрисовки графа, TestGraph - сам граф с данными, GVertex - свой класс для данных о вертексе, GEdge - свой класс данных о связи.\r<br />\n<br />\nКласс GVertex может быть абсолютно любой. GEdge класс например такой, с возможностью задания весового значения:<br />\n<pre><code>    public class GEdge: WeightedEdge&lt;GVertex&gt;\n    {\n        public GEdge(GVertex source, GVertex target, double weight = 0)\n            : base(source, target, weight)\n        {\n        }\n    }</code></pre>\n\nНу и все, дальше создаешь сначала GVertex экземпляры, потом связи GEdge (ибо для них нужны готовые вертексы). В TestGraph пихаешь это все, там методы есть AddVertex, AddEdge вроде. Потом TestGraphLayout. Graph присваиваешь заполненный экземпляр TestGraph. Вроде все...\r<br />\n<br />\n<br />\nДа, я сейчас пишу либу свою на основе Graph#, думаю скоро выложу и надеюсь получше выйдет, а то этот проект давно заброшен...<br />\n",
+    "PostedDate": "2013-04-18T14:52:27.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1033088",
+    "ThreadId": "439006",
+    "Html": "Большое спасибо. Попробую.<br />\n",
+    "PostedDate": "2013-04-19T08:23:27.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

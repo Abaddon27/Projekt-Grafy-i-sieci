@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "849726",
+    "ThreadId": "359807",
+    "Html": "\r\n<p>Does GraphSharp&nbsp;<span>support nested subgraph like Graphviz fdp layout? The link is:</span><a rel=\"nofollow\" href=\"http://www.graphviz.org/content/fdpclust\">http://www.graphviz.org/content/fdpclust</a></p>\r\n",
+    "PostedDate": "2012-06-15T16:46:22.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070298",
+    "ThreadId": "359807",
+    "Html": "Did you get the solution for it? Even I want the same functionality.<br />\n",
+    "PostedDate": "2013-07-18T21:55:52.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1070315",
+    "ThreadId": "359807",
+    "Html": "It looks like CompoundFDP layout but i don't know what's the status of this feature in Graph#.<br />\n",
+    "PostedDate": "2013-07-18T23:01:18.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

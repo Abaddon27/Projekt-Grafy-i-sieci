@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1311840",
+    "ThreadId": "569399",
+    "Html": "Hello Everyone!<br />\n<br />\nIs there a way to use GraphSharp for class diagrams (UML)?<br />\nI mean sure it is, but is there a way to add kinks to the edges? It really doesn't look like a class diagramm, when the associations are all straight lines.<br />\n<br />\nThanks! :)<br />\n<br />\n€dit:<br />\nWith kinks I mean the association between &quot;Mischling&quot; and &quot;Wolf&quot; from this picture.<br />\n<img src=\"http://timpt.de/img/2.gif\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2014-10-09T05:16:50.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

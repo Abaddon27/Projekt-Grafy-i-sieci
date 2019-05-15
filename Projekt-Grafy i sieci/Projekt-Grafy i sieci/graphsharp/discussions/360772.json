@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "853104",
+    "ThreadId": "360772",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>Great library, I have been using GraphViz and would like my own interactive UI. One thing I can't work out is to how to space everything so they don't overlap, no matter what values I enter and can't seem to make it work. I am adding 100 or so vertices and\r\n they are just clumped in the middle, except when using the Circle layout.</p>\r\n<p>I would like the size of the layout to expand according to the size of the graph with no overlap.</p>\r\n<p>Any help appreciated.</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2012-06-25T00:03:32.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

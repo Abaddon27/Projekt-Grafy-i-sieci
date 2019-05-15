@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "459370",
+    "ThreadId": "217158",
+    "Html": "Hi all!\r\n\r\nTo begin with - thanks for a really great control!\r\n\r\nI've worked from the example found in TestWindow.xaml in the Sample-project.\r\nI've begun with a quick and dirty drag and drop functionality which positions a vertex on the drop point like this:\r\n\r\npublic void DoDragDropCallback(object sender, DragEventArgs e) {\r\n   // layout is of type TestGraphLayout and lies inside the zoomcontrol on the page.\r\n   Point position = e.GetPosition(layout);\r\n   PocVertex v = new PocVertex(&quot;Some text on the VC&quot;);\r\n   layout.AddVertexInMyCustomMethod(v, position); // This is my custom method.\r\n}\r\n\r\npublic class TestGraphLayout : GraphLayout&lt;PocVertex, IEdge&lt;PocVertex&gt;, BidirectionalGraph&lt;PocVertex, IEdge&lt;PocVertex&gt;&gt;&gt; {\r\n\r\n   public void AddVertexInMyCustomMethod(PocVertex vertex, Point position) {\r\n      _currentVertex = vertex;\r\n      _currentPosition = position;\r\n      base.Graph.AddVertex(vertex); // This forces a relayout of the graph (which I don't want it to do).\r\n   }\r\n\r\n   // Overridden method which is called when the forced relayout is done.\r\n   protected override void InitializePosition(PocVertex vertex) {\r\n      if (_currentVertex != vertex) {\r\n         base.InitializePosition(vertex);\r\n      } else {\r\n         VertexControl vc = _vertexControls[_currentVertex];\r\n         SetX(vc, _currentPosition.X);\r\n         SetY(vc, _currentPosition.Y);\r\n         _currentVertex = null;\r\n      }\r\n   }\r\n}\r\n\r\nBut the problem is that the graph is relayout:ed which moves the vertices around (I want the layout to be static until a user explicitly calls Layout() or ContinueLayout()).\r\n\r\nI understand that if I position a vertex outside the graphcanvas, i.e. outside it in the zoom-control I need to recalculate the size of the graphcanvas.\r\n\r\nBut is there another way to solve this problem (i.e. use another graph than BidirectionalGraph) and is the retreived relative position correct in the DoDragDropCallback?\r\n\r\nKind regards,\r\nRichard",
+    "PostedDate": "2010-06-24T02:12:13.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "493658",
+    "ThreadId": "217158",
+    "Html": "<p>I'd like to know the same thing.&nbsp; I want the user to be able to kick off an automatic layout on demand, but only when they demand it.&nbsp; So when&nbsp;a user adds a vertex or adds an edge, nothing else changes except that the new vertex shows up&nbsp;or the new edge shows up.&nbsp; The user would drag it where it wants it, and the user's layout would be respected until they initiated a re-layout.</p>\r\n<p>&nbsp;</p>\r\n<p>Is that possible?</p>",
+    "PostedDate": "2010-09-14T22:49:46.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "580352",
+    "ThreadId": "217158",
+    "Html": "<p>\"Is that possible?\"<br />i guess not((((((((&nbsp;</p>",
+    "PostedDate": "2011-03-14T14:48:21.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "984927",
+    "ThreadId": "217158",
+    "Html": "\r\n<p>I need the same thing. The removed vertex should disappear but the others should\r\n<span id=\"result_box\" lang=\"en\"><span>maintain the position.<br>\r\n</span></span></p>\r\n",
+    "PostedDate": "2013-01-10T04:53:10.887-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "993560",
+    "ThreadId": "217158",
+    "Html": "\r\n<p>The way I did this is by using the <em>CanLayout&nbsp; </em>property of the <em>\r\nGraphLayout</em> class. It is protected and only has a <em>get</em> accessor so I overwrote it in my custom graph layout class, so that it returns a settable value:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>public class PocGraphLayout : GraphLayout&lt;PocVertex, PocEdge, PocGraph&gt;\n{\n        private bool shouldLayout = true;\n\n        protected override bool CanLayout\n        {\n            get { return shouldLayout; }\n        }\n\n        public bool ShouldLayout\n        {\n            get { return shouldLayout; }\n            set { shouldLayout = value; }\n        }\n\n        ......\n}\n</pre>\r\n</div>\r\n<p>Now I can set the <em>ShouldLayout</em> property to false before I delete an item and the graph won't re-layout. Unfortunately, setting it back to true right after you delete the item will cause it to re-layout anyway. So I had to set it to true at all places\r\n that required the graph to re-layout - when you change the layout type, when you load a file, when you create a new graph, when you add new vertices or edges (unless you want it to not re-layout when these are added, in which case you still have to set it\r\n to false) and possibly some more place I'm forgetting.</p>\r\n<p>Hope that helps someone.</p>\r\n",
+    "PostedDate": "2013-01-29T03:58:57.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

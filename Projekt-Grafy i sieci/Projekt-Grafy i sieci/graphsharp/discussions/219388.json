@@ -1,0 +1,146 @@
+[
+  {
+    "Id": "467114",
+    "ThreadId": "219388",
+    "Html": "when i drag any vertex (node) on top or at left side.. it drags very rapidly towards the direction which is bit annoying but when i drag towards right or bottom side it drags the vertex reasoably... is there any way to fix  this issue. ",
+    "PostedDate": "2010-07-14T00:29:52.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467123",
+    "ThreadId": "219388",
+    "Html": "<p>This is because of the zooming control. Remove it or wait for me to post an example somewhat this week.</p>",
+    "PostedDate": "2010-07-14T00:53:30.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467131",
+    "ThreadId": "219388",
+    "Html": "<p>I am having overlap issue when graph vertexes drawn in left to right order.&nbsp;</p>",
+    "PostedDate": "2010-07-14T01:13:10.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467134",
+    "ThreadId": "219388",
+    "Html": "Increase the overlap properties. See the sample.",
+    "PostedDate": "2010-07-14T01:16:35.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467173",
+    "ThreadId": "219388",
+    "Html": "<p>&nbsp;</p>\r\n<pre>i have increased horizontal overlap properties ... but in-vein. Can you please post solution or fix solution in coming release of graphsharp. <br></pre>\r\n<pre><br></pre>\r\n<pre>Thanks,</pre>\r\n<pre><br></pre>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-14T03:26:57.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467582",
+    "ThreadId": "219388",
+    "Html": "<p>Thanks&nbsp;<a id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl06_UserNameLink\" href=\"http://www.codeplex.com/site/users/view/promontis\">promontis</a>&nbsp;I hope to see solution proper solution for drag/drop sensitivity and overlapping. &nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks again.&nbsp;</p>",
+    "PostedDate": "2010-07-14T22:50:12.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "498455",
+    "ThreadId": "219388",
+    "Html": "<p>I'm having the same problem.&nbsp; Do you have a solution for it?&nbsp; I tried to understandhow the ﻿Arrangeoverride and MeasureOverride in GraphCanvas.cs&nbsp;work to fix the problem.&nbsp; However, I couldn't figure how the code work.&nbsp; What does the ﻿Translation vecter do?&nbsp; Please help.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2010-09-25T15:25:07.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "559622",
+    "ThreadId": "219388",
+    "Html": "\r\n<p>I second that, please do anybody know how to reduce the sensitivity with the zoom control enable ?</p>\r\n",
+    "PostedDate": "2011-02-02T11:29:24.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "736224",
+    "ThreadId": "219388",
+    "Html": "<p>Something new about this topic?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2012-02-02T00:32:59.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052970",
+    "ThreadId": "219388",
+    "Html": "Any help with this issues still will be appreciated :) Struggling with it for a couple of days already...<br />\n",
+    "PostedDate": "2013-06-05T01:15:36.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052978",
+    "ThreadId": "219388",
+    "Html": "I'm not sure if this is the problem you mean but I've made some progress on the dragged vertex bouncing around when you drag it top or left, by setting the AnimationLenght property of the zoomControl to 0. Of course that means that zooming is not very smooth but I fixed that by setting the AnimationLenght to 0 when a vertex is clicked and back to half a second when the mouse is released. Hope that helps somewhat.\r<br />\n<br />\nAlso, this is unrelated, but you can set the MaxZoomDelta of the zoomControl so it won't zoom out a lot more than it zooms in (I set it to 2).<br />\n",
+    "PostedDate": "2013-06-05T01:33:04.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1052993",
+    "ThreadId": "219388",
+    "Html": "Thanks, i haven't checked an animation yet but i'll give it a look. The main problem is very fast area scrolling  to the left and top sides when dragging vertex. Idealy i want to achieve smooth resizing (same speed as moving to other sides) while dragging vertex to the specified sides.<br />\n",
+    "PostedDate": "2013-06-05T02:06:14.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1058057",
+    "ThreadId": "219388",
+    "Html": "Still struggling with that issue. Very annoying...  If anyone have some ideas please advice.\r<br />\n<br />\nI'v got the same behaviour using Xceed Zoombox... <em>sigh</em><br />\n",
+    "PostedDate": "2013-06-18T01:00:26.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1060858",
+    "ThreadId": "219388",
+    "Html": "Finally got some results. Unfortunately with an old ZoomControl :) So anyone in Graph# may find this interesting. <br />\nCheck last paragraph here: <a href=\"https://graphx.codeplex.com/wikipage?title=Odd%20vertex%20drag%20behaviour%20%28left%20%2f%20top%20sides%29\" rel=\"nofollow\">https://graphx.codeplex.com/wikipage?title=Odd%20vertex%20drag%20behaviour%20%28left%20%2f%20top%20sides%29</a><br />\n<br />\nYou can check GraphX source code, file <em>GraphAreaBase.cs</em> to see <em>UseNativeObjectArrange</em> prop implementation. It changes how arranging works and the methods that are modified are similar to <em>GraphCanvas.cs</em> ones in Graph#.<br />\n<br />\nStill this method have some impact on usability. At least <em>ZoomControl.ZoomToFill()</em> method now is unaccurate because new arranging uses direct coordinates instead of translation and vertices might don't fit into the container area.<br />\n",
+    "PostedDate": "2013-06-25T05:33:40.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354384",
+    "ThreadId": "219388",
+    "Html": "Hi\r<br />\n<br />\ncan you pls tell me step by step what i have to do?\r<br />\n<br />\npanthernet stated some solution, but i have no idea to apply that solution :/\r<br />\n<br />\nis there any other solution to that problem?\r<br />\n<br />\ni even got that bouncing when i remove the zommcontrol :(\r<br />\n<br />\ngreetings\r<br />\nXDskynet<br />\n",
+    "PostedDate": "2015-02-20T09:11:23.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354391",
+    "ThreadId": "219388",
+    "Html": "Hi! There was much changes in how the engine handles vertices placement. Can't tell you right now how to completely fix it in GraphSharp, but i've fixed it in GraphX quiet long time ago. \r<br />\n<br />\nThe fix described in my prev post is for VERY OLD GraphX version which is available here: \r<br />\n<a href=\"https://github.com/panthernet/GraphX--old-version-v1-/blob/master/GraphX/Controls/GraphAreaBase.cs\" rel=\"nofollow\">https://github.com/panthernet/GraphX--old-version-v1-/blob/master/GraphX/Controls/GraphAreaBase.cs</a>\r<br />\n<br />\nYou can look how UseNativeObjectArrange property affects the controls and try to implement it similary in GraphSharp.<br />\n",
+    "PostedDate": "2015-02-20T09:26:49.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354593",
+    "ThreadId": "219388",
+    "Html": "hi\r<br />\n<br />\nthank you very much\r<br />\n<br />\nso if i take the 2.1.7 release of graphX, i dont have to fix this problem anymore?\r<br />\n<br />\ngreetings\r<br />\nXDskynet<br />\n",
+    "PostedDate": "2015-02-21T07:30:23.98-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1354612",
+    "ThreadId": "219388",
+    "Html": "Yes, you can download showcase app and check what you need: <a href=\"https://github.com/panthernet/GraphX/releases\" rel=\"nofollow\">https://github.com/panthernet/GraphX/releases</a>\r<br />\nCheck the bottom of the page.<br />\n",
+    "PostedDate": "2015-02-21T08:55:08.05-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

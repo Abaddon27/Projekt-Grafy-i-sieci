@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "598376",
+    "ThreadId": "254162",
+    "Html": "\r\n<p>Is there any way for me to tell the layout that the edges between two nodes shouldn't overlap each other. I have a directed graph where node U has an edge to V and V has an edge to U, however, the drawing is putting these edges on top of each other. Very\r\n hard to see what is going on. The two edges seem to be anchored at the same point on these nodes and I need something to fix that.</p>\r\n",
+    "PostedDate": "2011-04-16T04:47:13.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598384",
+    "ThreadId": "254162",
+    "Html": "<p>Nvm, I ended up splitting the nodes so that no two nodes are pointing to each other. This also appears to work very well with the ﻿﻿﻿Sugiyama layout algorithm.</p>",
+    "PostedDate": "2011-04-16T05:54:10.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

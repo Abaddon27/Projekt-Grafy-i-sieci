@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "830021",
+    "ThreadId": "353975",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>I've just started using Graph# and was able to show a bidirectional graph.&nbsp; However, I would like to add a feature to my graph where the user can collapse a node (i.e. hide its outgoing edges and their destination nodes).&nbsp; I couldn't find any examples\r\n from searching.&nbsp; Can anyone suggest a way to do this?</p>\r\n<p>Thanks,</p>\r\n<p>Felix</p>\r\n",
+    "PostedDate": "2012-04-29T19:18:24.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

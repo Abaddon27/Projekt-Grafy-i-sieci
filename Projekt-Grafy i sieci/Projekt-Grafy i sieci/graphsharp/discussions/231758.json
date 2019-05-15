@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "510361",
+    "ThreadId": "231758",
+    "Html": "<p>How to remove the last vertex in graph and refresh it? I try to do it - it deletes in db, but still shows the only element on screen.</p>",
+    "PostedDate": "2010-10-21T02:00:11.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "535211",
+    "ThreadId": "231758",
+    "Html": "\r\n<p>You have to remove the vertex from the QuickGraph datasource. Then, the graph layout will refresh itself.</p>\r\n<p>&nbsp;</p>\r\n<p>BadAng</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-12-13T13:46:32.9-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "640285",
+    "ThreadId": "231758",
+    "Html": "<p>So on the other hand - is it possible to remove the vertex from the graph, but prevent the layout from refreshing?</p>",
+    "PostedDate": "2011-07-11T01:13:17.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "642565",
+    "ThreadId": "231758",
+    "Html": "<p>Yes =D all you need to do is go to the OnMutated &nbsp;function and comment out the Relayout(); call</p>",
+    "PostedDate": "2011-07-14T12:16:03.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "642920",
+    "ThreadId": "231758",
+    "Html": "<p>yes you can change CanLayout property from protected to public, when you false it, it prevent the graph layout from refreshing</p>\r\n<p>sorry for my poor English writing</p>",
+    "PostedDate": "2011-07-15T06:42:13.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

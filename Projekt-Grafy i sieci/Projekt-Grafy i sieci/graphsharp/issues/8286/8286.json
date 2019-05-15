@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "If the GraphLayout control is not shown (e.g. it is in a tab that is not selected) when the control initializes (or when the Graph property is set), the initial layout that is done is wrong because the vertex control sizes passed to the layout algorithm are all zero.\r\n\r\nI have attached a patch that fixes this problem by deferring layout of a control that is not visible until it becomes visible.",
+    "LastUpdatedDate": "2013-04-23T05:42:33.807-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2013-04-23T05:42:33.59-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Initial layout wrong if GraphLayout is not initially visible (e.g. in hidden tab)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 8286
+  },
+  "FileAttachments": [
+    {
+      "FileId": 667611,
+      "FileName": "graphsharp not initially visible patch",
+      "DownloadUrl": ".\\667611"
+    }
+  ],
+  "Comments": []
+}

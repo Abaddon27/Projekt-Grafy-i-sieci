@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "493230",
+    "ThreadId": "227147",
+    "Html": "<p>Hi there,</p>\r\n<p>i've got a problem when i try to change the background color of a vertex (using the trigger -defined in the source of g#)</p>\r\n<p>i changed the highlightTrigger so that now it becomes active when i press the mouse button (not when i step over a vertex)</p>\r\n<p>and in these following lines i get the value of the new background color from a property inside a class of mine (that's because maybe i just want a red back color one time, then maybe a blue one or a green one..i simply update the <span style=\"color:#000000\">HighlightedBackgroundColor</span> property with the new one, so that it can be read every time i click ).</p>\r\n<p><span style=\"color:#800000\"><span style=\"color:#0000ff\">&lt;</span>Trigger</span> <span style=\"color:#ff0000\">Property</span><span style=\"color:#0000ff\">=&quot;GraphSharp_Controls:GraphElementBehaviour.IsHighlighted&quot;</span> <span style=\"color:#ff0000\">Value</span><span style=\"color:#0000ff\">=&quot;true&quot;&gt;</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style=\"color:#800000\"><span style=\"color:#0000ff\">&lt;</span>Setter</span> <span style=\"color:#ff0000\">Property</span><span style=\"color:#0000ff\">=&quot;</span><span style=\"color:#0000ff\">Background</span><span style=\"color:#0000ff\">&quot;</span> <span style=\"color:#ff0000\">Value</span><span style=\"color:#0000ff\">=&quot;{</span><span style=\"color:#800000\">Binding </span><span style=\"color:#ff0000\">Path</span><span style=\"color:#0000ff\">=(myNamespace:myClass.HighlightedBackgroundColor)}&quot;/&gt;</span><br><span style=\"color:#800000\"><span style=\"color:#0000ff\">&nbsp;&lt;/</span>Trigger<span style=\"color:#0000ff\">&gt;</span></span></p>\r\n<p>the problem is that i'm able to do this only once for every single vertex (tho every new color i choose is correctly passed to <span style=\"color:#000000\">HighlightedBackgroundColor) : so when i click on a vertex the background will always use the first color the property had. It looks like the trigger is activated just the first time for every vertex.</span></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"color:#000000\">any idea?</span></p>",
+    "PostedDate": "2010-09-14T03:32:53.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "494929",
+    "ThreadId": "227147",
+    "Html": "<p>problem solved!&nbsp;</p>\r\n<p>thanks</p>",
+    "PostedDate": "2010-09-17T05:53:11.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

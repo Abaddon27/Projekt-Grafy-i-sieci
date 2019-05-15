@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1251013",
+    "ThreadId": "546982",
+    "Html": "My .xaml looks like<br />\n<pre><code>&lt;Grid&gt;\n        &lt;Grid.Resources&gt;\n        &lt;/Grid.Resources&gt;\n        &lt;graphSharp:GraphLayout x:Name=&quot;graphLayout&quot; \n                                Graph=&quot;{Binding ElementName=root, Path=GraphToVisualize}&quot;\n                                LayoutAlgorithmType=&quot;FR&quot;\n                                OverlapRemovalAlgorithmType=&quot;FSA&quot;\n                                HighlightAlgorithmType=&quot;Simple&quot;\n                                /&gt;\n    &lt;/Grid&gt;</code></pre>\n\nand the code behind is<br />\n<pre><code>public partial class MainWindow : Window {\n        private IBidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt; graphToVisualize;\n\n        public IBidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt; GraphToVisualize {\n            get { return graphToVisualize; }\n        }\n\n        public MainWindow() {\n            CreateGraph();\n\n            InitializeComponent();\n        }\n\n        private void CreateGraph() {\n            var g = new BidirectionalGraph&lt;object, IEdge&lt;object&gt;&gt;();\n\n            string[] verticies = new string[5];\n\n            for (int i = 0; i &lt; 5; i++) {\n                verticies[i] = i.ToString();\n                g.AddVertex(verticies[i]);\n            }\n\n            g.AddEdge(new Edge&lt;object&gt;(verticies[0], verticies[1]));\n            g.AddEdge(new Edge&lt;object&gt;(verticies[2], verticies[3]));\n            g.AddEdge(new Edge&lt;object&gt;(verticies[0], verticies[4]));\n\n            graphToVisualize = g;\n        }\n    }</code></pre>\n\nThis produces huge arrows between my vertices.  Any help would be greatly appreciated.\r<br />\n<br />\nThanks!!!<br />\n",
+    "PostedDate": "2014-05-29T14:09:06.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251095",
+    "ThreadId": "546982",
+    "Html": "Hi, i think you should look into XAML template for EdgeControl. There you can change edge thickness and all visual stuff.<br />\n",
+    "PostedDate": "2014-05-29T22:18:25.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251213",
+    "ThreadId": "546982",
+    "Html": "Where can I find that?\r<br />\nThanks Panthernet<br />\n",
+    "PostedDate": "2014-05-30T05:34:46.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251233",
+    "ThreadId": "546982",
+    "Html": "<a href=\"https://graphsharp.codeplex.com/SourceControl/latest#Source/Graph#.Controls/Themes/Generic.xaml\" rel=\"nofollow\">https://graphsharp.codeplex.com/SourceControl/latest#Source/Graph#.Controls/Themes/Generic.xaml</a>\r<br />\n<br />\nI don't know what exactly you don't like in the visual representation but if you think that vertices are situated too close to each other you should also look at overlap removal algorithm parameters to set minimum intervals.\r<br />\n<br />\nHonestly, i haven't touched Graph# for a while as i'm developing its &quot;successor&quot; - GraphX for .NET.<br />\n",
+    "PostedDate": "2014-05-30T05:59:33.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1251261",
+    "ThreadId": "546982",
+    "Html": "Ohh I see, I am looking through the GraphX solution now.  Looks amazing Thanks!<br />\n",
+    "PostedDate": "2014-05-30T06:53:22.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "1457151",
+    "ThreadId": "649298",
+    "Html": "I tried more than 500 nodes and edges,but I found that the Graph # didn't word very well.\r<br />\nI want to know how to sovle  this problem.<br />\n",
+    "PostedDate": "2015-12-24T18:03:40.55-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1457167",
+    "ThreadId": "649298",
+    "Html": "I think none of the WPF based  and feature rich visualization engines can be performant for large amount of vertices, though you can do some tricks.\r<br />\n<br />\nLet me advice you to try <a href=\"https://github.com/panthernet/GraphX\" rel=\"nofollow\">https://github.com/panthernet/GraphX</a> . I can't say it is much performant but you can give it a try to see if it will be sufficient for your needs. Also you can try to Cache canvas into a bitmap to speed up rendering. This will make zooming and interacting with graph less efficient but you will navigate large graphs with better performance. You need the <strong>CacheMode</strong> property.<br />\n",
+    "PostedDate": "2015-12-25T00:58:14.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1457287",
+    "ThreadId": "649298",
+    "Html": "Thank you for your advise,it is very useful.<br />\n",
+    "PostedDate": "2015-12-27T16:47:34.347-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1458163",
+    "ThreadId": "649298",
+    "Html": "I tried the ways that you told me serveral days ago,but it still couldn't statisfy our team's need,especially GraphX.<br />\nwe want to visualize a large amount of data for displaying  a social network and we want to get the effect like <strong>Gephi</strong>.<br />\nThanks for your attention.<br />\n",
+    "PostedDate": "2016-01-06T01:20:48.487-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1458252",
+    "ThreadId": "649298",
+    "Html": "I see, Gephi looks cool :) Also the 3d acceleration is very performance efficient for large data displays and allows to implement some cool effects. I want to do smth similar using GraphX core but haven't done that yet.<br />\n",
+    "PostedDate": "2016-01-06T11:19:16.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

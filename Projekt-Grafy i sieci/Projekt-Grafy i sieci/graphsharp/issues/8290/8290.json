@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When you're editing a graph this can be empty. However if you try to layou this empty graph with simple tree layout algoritm you get an exception in method GenerateSpanningTree of source file SimpleTreeLayoutAlgoritm.cs. I fixed changing \r\nvb.Enqueue(VisitedGraph.Vertices.OrderBy(v => VisitedGraph.InDegree(v)).First()); \r\nby \r\n            if (VisitedGraph.VertexCount > 0)\r\n            {\r\n                vb.Enqueue(VisitedGraph.Vertices.OrderBy(v => VisitedGraph.InDegree(v)).First());\r\n            }\r\n",
+    "LastUpdatedDate": "2013-10-31T16:18:35.84-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2013-10-31T16:18:35.653-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "bug in Simple tree layout algorithm when graph is empty",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 8290
+  },
+  "FileAttachments": [
+    {
+      "FileId": 751818,
+      "FileName": "SimpleTreeLayoutAlgorithm.cs",
+      "DownloadUrl": ".\\751818"
+    }
+  ],
+  "Comments": []
+}

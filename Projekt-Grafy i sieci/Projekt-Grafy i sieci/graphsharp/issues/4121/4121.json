@@ -1,0 +1,51 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "I am just starting with Graph# and if I'm going through with it, I'll be needing to extend QuickGraph as well.\r\nSo the first thing I tried is to switch to the current QuickGraph version (36564, using 3.0).\r\n\r\nIt turns out the Graph# example application requires a tiny change: removing an argument in a method call.\r\nAfter that it will compile and run just fine.\r\n\r\nI haven't done any other testing, and the updated QuickGraph.dll isn't included.\r\nThis is just for your information.",
+    "LastUpdatedDate": "2011-04-20T01:06:38.83-07:00",
+    "PlannedForRelease": "GraphSharp v1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "graphsharp",
+    "ReportedDate": "2009-09-28T01:49:00.72-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "update for QuickGraph",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 4121
+  },
+  "FileAttachments": [
+    {
+      "FileId": 212450,
+      "FileName": "to-QuickGraph-36564.diff",
+      "DownloadUrl": ".\\212450"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Update for the newest Quickgraph version.",
+      "PostedDate": "2011-04-20T01:06:38.83-07:00",
+      "Id": 34492
+    }
+  ]
+}
