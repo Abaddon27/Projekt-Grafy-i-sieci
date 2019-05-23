@@ -201,6 +201,13 @@ namespace Projekt_Grafy_i_sieci.Pages
                 }
                 Console.WriteLine();
             }
+
+            int a = algorytm2.Algorytm.Dijkstry(graph.matrix, 0);
+            string txt = "_0" + (a + 1);
+            Console.WriteLine(txt);
+
+            TextBox tx = (TextBox)(LogicalTreeHelper.FindLogicalNode(grid1, txt));
+            Console.WriteLine(tx.Text);
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
