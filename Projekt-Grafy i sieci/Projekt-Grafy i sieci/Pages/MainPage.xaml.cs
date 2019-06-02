@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
 using Projekt_Grafy_i_sieci.Library;
+using Projekt_Grafy_i_sieci.Windows;
 
 namespace Projekt_Grafy_i_sieci.Pages
 {
@@ -166,7 +167,7 @@ namespace Projekt_Grafy_i_sieci.Pages
             }
         }
 
-        private void CreateMatrix(object sender, RoutedEventArgs e)
+        private void RunAlgorythm(object sender, RoutedEventArgs e)
         {
             int counter = CountRow();
             Graph graph = new Graph(counter, counter);
@@ -202,12 +203,22 @@ namespace Projekt_Grafy_i_sieci.Pages
                 Console.WriteLine();
             }
 
-            int a = algorytm2.Algorytm.Dijkstry(graph.matrix, 0);
+            int a = algorytm2.Algorytm.BestPlace(graph.matrix);
             string txt = "_0" + (a + 1);
             Console.WriteLine(txt);
+            try
+            {
+                TextBox tx = (TextBox)LogicalTreeHelper.FindLogicalNode(grid1, txt);
+                Console.WriteLine(tx.Text);
 
-            TextBox tx = (TextBox)(LogicalTreeHelper.FindLogicalNode(grid1, txt));
-            Console.WriteLine(tx.Text);
+                Button tx2 = (Button)LogicalTreeHelper.FindLogicalNode(grid1, "Wynik");
+                tx2.Content = tx.Text;
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -248,5 +259,6 @@ namespace Projekt_Grafy_i_sieci.Pages
                 tx.Visibility = Visibility.Visible;
             }
         }
+
     }
 }

@@ -10,21 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GraphSharp;
+using QuickGraph;
+using GraphSharp.Controls;
 
-namespace Projekt_Grafy_i_sieci.Pages
+namespace Projekt_Grafy_i_sieci.Windows
 {
     /// <summary>
-    /// Logika interakcji dla klasy GraphMaker.xaml
+    /// Logika interakcji dla klasy Graph.xaml
     /// </summary>
-    public partial class GraphMaker : Page
+    public partial class GraphWindow : Window
     {
-        public GraphMaker()
+        public GraphWindow()
         {
-            
             InitializeComponent();
+            
         }
     }
 }

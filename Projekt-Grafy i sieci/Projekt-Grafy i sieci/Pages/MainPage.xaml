@@ -103,8 +103,9 @@
         <TextBox Name="_80" Text="H" Grid.Column="0" Grid.Row="8"/>
         <TextBox Name="_90" Text="I" Grid.Column="0" Grid.Row="9"/>
         <TextBox Name="_100" Text="J" Grid.Column="0" Grid.Row="10"/>
-        <Button Content="Zamień na liste" HorizontalAlignment="Left" Margin="317,11,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="CreateMatrix" Grid.Column="11"/>
-        <Button Content="Dodaj wierchułek" HorizontalAlignment="Left" Margin="317,23,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="AddTextBoxMatrix" Grid.Column="11" Grid.Row="1"/>
+        <Button Content="Wynik" HorizontalAlignment="Left" Margin="317,23,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="RunAlgorythm" Grid.Column="11" Grid.Row="1"/>
+        <Button Content="Dodaj wierchułek" HorizontalAlignment="Left" Margin="317,11,-418,0" VerticalAlignment="Top" Width="132" Height="29" Grid.RowSpan="2" Click="AddTextBoxMatrix" Grid.Column="11"/>
+        <Button Name="Wynik" Content="0" Grid.Column="11" HorizontalAlignment="Left" Margin="346,26,-390,0" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Top" Width="75" Focusable="False" IsHitTestVisible="False"/>
 
     </Grid>
 </Page>

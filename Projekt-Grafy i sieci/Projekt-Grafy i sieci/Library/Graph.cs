@@ -13,7 +13,5 @@ namespace Projekt_Grafy_i_sieci.Library
         {
             matrix = new int[i, j];
         }
-
-        
     }
 }
