@@ -216,6 +216,8 @@ namespace Projekt_Grafy_i_sieci.Pages
             }
             catch (Exception)
             {
+                Button tx2 = (Button)LogicalTreeHelper.FindLogicalNode(grid1, "Wynik");
+                tx2.Content = "Brak";
                 return;
             }
 
