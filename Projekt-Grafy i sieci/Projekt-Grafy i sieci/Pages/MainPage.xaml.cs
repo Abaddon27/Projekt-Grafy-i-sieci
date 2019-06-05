@@ -13,8 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Text.RegularExpressions;
-using Projekt_Grafy_i_sieci.Library;
-using Projekt_Grafy_i_sieci.Windows;
+
+
 
 namespace Projekt_Grafy_i_sieci.Pages
 {
