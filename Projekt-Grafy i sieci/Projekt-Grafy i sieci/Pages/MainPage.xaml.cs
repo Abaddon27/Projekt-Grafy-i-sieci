@@ -262,5 +262,9 @@ namespace Projekt_Grafy_i_sieci.Pages
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainPage());
+        }
     }
 }
